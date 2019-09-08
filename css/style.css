@@ -348,15 +348,18 @@ nav {
               line-height: 20px; }
           .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
             padding: 0px 25px;
-            width: 100%; }
+            width: 100%;
+            outline: 0; }
           .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="postal_code"] {
             width: 120px;
             margin: 0 auto;
-            text-align: center; }
+            text-align: center;
+            outline: 0; }
           .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="radius"] {
             width: 120px;
             margin: 0 auto;
-            text-align: center; }
+            text-align: center;
+            outline: 0; }
           .hpsf .sfv form .uzp-row div[class*="uzp-col"] .uzp__input-addon {
             display: none; }
 

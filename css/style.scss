@@ -430,16 +430,19 @@ nav {
           input[name="query"] {
             padding: 0px 25px;
             width: 100%;
+            outline: 0;
           }
           input[name="postal_code"] {
             width: 120px;
             margin: 0 auto;
             text-align: center;
+            outline: 0;
           }
           input[name="radius"] {
             width: 120px;
             margin: 0 auto;
             text-align: center;
+            outline: 0;
           }
           .uzp__input-addon {
             display: none;
