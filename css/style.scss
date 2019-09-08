@@ -382,6 +382,7 @@ nav {
             padding: 0px 43px;
             width: auto;
             color: #ffffff;
+            cursor: pointer;
             &:after {
               content: "";
               background: lighten($orange, 5%);
