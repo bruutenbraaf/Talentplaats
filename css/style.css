@@ -305,7 +305,8 @@ nav {
             overflow: hidden;
             border: none;
             padding: 0px 43px;
-            width: auto; }
+            width: auto;
+            color: #ffffff; }
             .hpsf .sfv form .uzp-row div[class*="uzp-col"] button[type="submit"]:after {
               content: "";
               background: #ff751a;
