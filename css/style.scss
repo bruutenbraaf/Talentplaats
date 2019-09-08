@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800&display=swap");
+
+// Colors
+$lightgray: #cfcedf;
+$midnight: #2d2d46;
+$orange: #ff6600;
+$blue: #1772dd;
+$calltoaction: #1cd265;
+
+// font family
+$muli: "Muli", sans-serif;
+
+// Searchform homepagina
+$hpformheight: 72px;
+
+// body
+
+* {
+  font-family: $muli;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #f5f5fa;
+}
+
+// Navigation
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  background: #ffffff;
+  .row {
+    height: 80px;
+    .branding {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 0;
+        height: 100%;
+        width: 50vw;
+        background: $blue;
+        z-index: -1;
+      }
+    }
+    .menu {
+      margin: 0;
+      padding: 0;
+      margin-right: -15px;
+      margin-left: -15px;
+      li {
+        float: left;
+        list-style: none;
+        a {
+          font-family: $muli;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: #2d2d46;
+          margin: 0px 15px;
+          position: relative;
+          &:hover {
+            text-decoration: none;
+          }
+          &:after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            background: $orange;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .mg_nav {
+      width: 24px;
+      height: 24px;
+      margin-left: 62px;
+      display: flex;
+      align-items: center;
+      div {
+        span {
+          width: 18px;
+          height: 2px;
+          border-radius: 99px;
+          background: $midnight;
+          margin: 3px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Header
+
+.header {
+  margin-top: 80px;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: "";
+    background-image: url(../img/watermark.svg);
+    background-repeat: no-repeat;
+    width: 322px;
+    min-height: 100%;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-40%);
+    top: 20px;
+    background-size: contain;
+    z-index: 1;
+  }
+  .row {
+    min-height: 460px;
+    .d-flex {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 30px;
+      padding-bottom: calc(#{$hpformheight} / 2 + 30px);
+    }
+    .int {
+      position: relative;
+      .inner {
+        z-index: 3;
+        h1,
+        h2,
+        h3,
+        h4 {
+          font-family: $muli;
+          color: #ffffff;
+          font-weight: 800;
+          font-size: 32px;
+          line-height: 40px;
+        }
+        p {
+          font-family: $muli;
+          color: #ffffff;
+          font-size: 18px;
+          line-height: 23px;
+        }
+        .btn {
+          border-radius: 5px;
+          padding: 12px 25px;
+          color: #ffffff;
+          font-weight: bold;
+          position: relative;
+          z-index: 2;
+          overflow: hidden;
+          &:after {
+            content: "";
+            background: lighten($calltoaction, 5%);
+            width: 50px;
+            height: 50px;
+            right: -51px;
+            top: -25px;
+            border-radius: 99px;
+            position: absolute;
+            z-index: -1;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover:after {
+            transform: scale(14);
+          }
+          &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $calltoaction;
+            z-index: -2;
+            top: 0;
+            left: 0px;
+            position: absolute;
+          }
+        }
+        .secondair {
+          background: none;
+          padding: 12px 20px;
+          text-decoration: underline;
+          &:after {
+            display: none;
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+      &:after {
+        content: "";
+        background: $blue;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        height: 100%;
+        width: 50vw;
+        z-index: 0;
+      }
+    }
+    .nopadding {
+      padding: 30px 0px;
+    }
+    .lvh {
+      display: flex;
+      .block {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+      }
+      h3 {
+        font-family: $muli;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #ffffff;
+        margin-bottom: 0px;
+      }
+      .inner {
+        width: calc(100% - 76px);
+        float: left;
+        a {
+          color: #ffffff;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          height: 38px;
+        }
+      }
+      .arws {
+        margin-left: auto;
+        display: flex;
+        .next {
+          transform: rotate(180deg);
+        }
+        .next,
+        .prev {
+          width: 38px;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+          }
+        }
+      }
+      .dots {
+        ul {
+          list-style: none;
+          clear: both;
+          display: block;
+          margin: 0px;
+          padding: 0px;
+          margin-top: 14px;
+          margin-left: -14px;
+          li {
+            float: left;
+            button {
+              opacity: 0.25;
+              text-indent: -9999px;
+              -webkit-appearance: none;
+              outline: none;
+              cursor: pointer;
+              max-width: 12px;
+              width: 12px;
+              height: 12px;
+              padding: 0px;
+              background: #fff;
+              border-radius: 999px;
+              margin: 0 14px;
+              box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+          .slick-active {
+            button {
+              opacity: 0.8;
+              box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+      }
+    }
+    .lvhi {
+      width: 100%;
+      .inner {
+        display: block;
+      }
+    }
+  }
+  .imghdr {
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 0;
+    background-size: cover;
+  }
+}
+
+.hpsf {
+  margin-top: calc(#{-$hpformheight} / 2);
+  position: relative;
+  z-index: 2;
+  .sfv {
+    background: #ffffff;
+    border-top: 1px solid $lightgray;
+    border-right: 0px solid $lightgray;
+    border-bottom: 1px solid $lightgray;
+    border-left: 1px solid $lightgray;
+    border-radius: 10px 10px 10px 10px;
+    height: $hpformheight;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    form {
+      width: 100%;
+      label {
+        display: none;
+      }
+      .uzp-row {
+        width: 100%;
+        height: $hpformheight;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        div:first-child {
+          width: 100% !important;
+        }
+        div[class*="uzp-col"] {
+          padding: 0px;
+          width: auto;
+          button[type="submit"] {
+            height: $hpformheight;
+            border-radius: 0 10px 10px 0;
+            font-family: Muli, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            z-index: 2;
+            position: relative;
+            background: none;
+            overflow: hidden;
+            border: none;
+            padding: 0px 43px;
+            width: auto;
+            &:after {
+              content: "";
+              background: lighten($orange, 5%);
+              width: 50px;
+              height: 50px;
+              right: -51px;
+              top: -25px;
+              border-radius: 99px;
+              position: absolute;
+              z-index: -1;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+            }
+            &:hover:after {
+              transform: scale(14);
+            }
+            &:before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background: $orange;
+              z-index: -2;
+              top: 0;
+              left: 0px;
+              position: absolute;
+            }
+          }
+          input {
+            height: 52px;
+            border: 0px;
+            color: $midnight;
+            font-family: $muli;
+            font-size: 16px;
+            border-right: 1px solid rgba($lightgray, 0.25);
+            &::placeholder {
+              color: $lightgray;
+              font-family: $muli;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px !important;
+              line-height: 20px;
+            }
+          }
+          input[name="query"] {
+            padding: 0px 25px;
+          }
+          input[name="postal_code"] {
+            width: 120px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          input[name="radius"] {
+            width: 120px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          .uzp__input-addon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
