@@ -27,7 +27,8 @@ function register_my_menus()
 {
 	register_nav_menus(
 		array(
-			'main_menu' => __('Hoofd Menu')
+			'main_menu' => __('Hoofd Menu'),
+			'socket_menu' => __('Socket Menu'),
 		)
 	);
 }
@@ -38,7 +39,7 @@ function nav_replace_vacansies($item_output, $item)
 {
 	if ('Vacatures' == $item->title) {
 		ob_start();
-		get_template_part( 'template-parts/vac-count' );
+		get_template_part('template-parts/vac-count');
 		return ob_get_clean();
 	}
 	return $item_output;
@@ -57,3 +58,38 @@ acf_add_options_page(array(
 	'position' => 3
 
 ));
+
+function excerpt($limit)
+{
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ", $excerpt) . '...';
+	} else {
+		$excerpt = implode(" ", $excerpt);
+	}
+	$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+	return $excerpt;
+}
+
+
+function arphabet_widgets_init() {
+	
+	register_sidebar( array(
+		'name'          => 'Footer een',
+		'id'            => 'footer_een',
+	) );
+	
+	register_sidebar( array(
+		'name'          => 'Footer twee',
+		'id'            => 'footer_twee',
+	) );	
+	
+	register_sidebar( array(
+		'name'          => 'Footer drie',
+		'id'            => 'footer_drie',
+	) );		
+	
+}
+
+add_action( 'widgets_init', 'arphabet_widgets_init' );

@@ -63,6 +63,7 @@ jQuery(window).scroll(function(event) {
   readingIndicator.width(scrollPercentageString);
 });
 
+
 jQuery('.countnumber').each(function () {
     jQuery(this).prop('Counter',0).animate({
         Counter: jQuery(this).text()
