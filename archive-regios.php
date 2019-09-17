@@ -5,48 +5,63 @@ get_header(); ?>
 <section class="header-reg" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
     <div class="container">
         <div class="row">
-            <div class="col-md-12  text-center">
-                <?php the_field('regios_overzicht_title', 'option'); ?>
-                <?php the_field('regios_overzicht_intro', 'option'); ?>
+            <div class="col-md-12 text-center d-flex align-items-center col-reg">
+                <div class="inner">
+                    <?php the_field('regios_overzicht_title', 'option'); ?>
+                    <?php the_field('regios_overzicht_intro', 'option'); ?>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
-<?php if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('');
-} ?>
-
-<?php $terms = get_terms('regio'); ?>
-<ul>
-    <?php foreach ($terms as $term) { ?>
-        <li>
-            <?php echo $term->name; ?>
-
-            <?php
-                $termid = $term->term_id;
-                $args = array(
-                    'post_type' => 'regios',
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'regio',
-                            'field' => 'term_id',
-                            'terms' => $termid
-                        )
-                    )
-                );
-                $loop = new WP_Query($args); ?>
-            <?php if ($loop->have_posts()) : ?>
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
-        </li>
-
-    <?php } ?>
-</ul>
+<section class="regi">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 breadcrumbs">
+                <?php if (function_exists('yoast_breadcrumb')) {
+                    yoast_breadcrumb('');
+                } ?>
+            </div>
+            <div class="col-md-12">
+                <?php $terms = get_terms('regio'); ?>
+                <?php foreach ($terms as $term) { ?>
+                    <div class="regio">
+                        <div class="regio--name">
+                            <h2><?php _e('Regio', 'talentplaats'); ?> <span><?php echo $term->name; ?></span></h2>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="inner">
+                            <?php
+                                $termid = $term->term_id;
+                                $args = array(
+                                    'post_type' => 'regios',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'regio',
+                                            'field' => 'term_id',
+                                            'terms' => $termid
+                                        )
+                                    )
+                                );
+                                $loop = new WP_Query($args); ?>
+                            <?php if ($loop->have_posts()) : ?>
+                                <div class="row">
+                                    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                        <div class="col-md-4">
+                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        </div>
+                                    <?php endwhile; ?>
+                                    <?php wp_reset_postdata(); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+</section>
 
 
 

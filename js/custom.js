@@ -34,6 +34,16 @@ jQuery( "body" ).on('click', '.hamburger', function() {
     jQuery('.newsletter--bar').animate({'height': 'toggle'}, 200);
   });
 
+
+  jQuery(document).ready(function() {
+
+    jQuery("body").on('click', '.regio--name', function() {
+      jQuery(this).next('.inner').slideToggle(200);
+      jQuery(this).toggleClass('is--open');
+    });
+  });
+
+
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {
