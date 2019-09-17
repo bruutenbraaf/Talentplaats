@@ -73,23 +73,342 @@ function excerpt($limit)
 }
 
 
-function arphabet_widgets_init() {
-	
-	register_sidebar( array(
+function arphabet_widgets_init()
+{
+
+	register_sidebar(array(
 		'name'          => 'Footer een',
 		'id'            => 'footer_een',
-	) );
-	
-	register_sidebar( array(
+	));
+
+	register_sidebar(array(
 		'name'          => 'Footer twee',
 		'id'            => 'footer_twee',
-	) );	
-	
-	register_sidebar( array(
+	));
+
+	register_sidebar(array(
 		'name'          => 'Footer drie',
 		'id'            => 'footer_drie',
-	) );		
-	
+	));
 }
 
-add_action( 'widgets_init', 'arphabet_widgets_init' );
+add_action('widgets_init', 'arphabet_widgets_init');
+
+
+function option_page_posttypes()
+{
+	$args  = array('public'   => true, '_builtin' => false);
+	$excluded_post_types = array('reviews', 'nieuws', 'vakgebieden');
+	$custom_post_types = get_post_types($args);
+	foreach ($custom_post_types as $custom_post_type) {
+		if (in_array($custom_post_type, $excluded_post_types)) { } else {
+			if (function_exists('acf_add_options_page')) {
+
+				$formated_string = str_replace('_', " ", $custom_post_type);
+
+				acf_add_options_sub_page(array(
+					'page_title'     => 'overzicht options ' . $formated_string . '',
+					'menu_title'    => 'overzicht options ' . $formated_string . '',
+					'parent_slug'    => 'edit.php?post_type=' . $custom_post_type . '',
+				));
+
+				$prefix = str_replace("_", "-", $custom_post_type);
+				$acf_pre = 'acf-options-overzicht-options-';
+				$compiled_acf = $acf_pre .= $prefix;
+
+				acf_add_local_field_group(array(
+					'key' => 'overzicht_options_' . $custom_post_type . '',
+					'title' => 'overzicht options ' . $formated_string . '',
+					'fields' => array(
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_title',
+							'label' => 'Overzicht titel',
+							'name' => '' . $custom_post_type . '_overzicht_title',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "header" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_intro',
+							'label' => 'Overzicht intro',
+							'name' => '' . $custom_post_type . '_overzicht_intro',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "header" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_afbeelding',
+							'label' => 'Overzicht afbeelding',
+							'name' => '' . $custom_post_type . '_overzicht_afbeelding',
+							'type' => 'image',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "header" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '100',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_titlecontent',
+							'label' => 'Overzicht titel content',
+							'name' => '' . $custom_post_type . '_overzicht_titlecontent',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "content" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_introcontent',
+							'label' => 'Overzicht intro',
+							'name' => '' . $custom_post_type . '_overzicht_introcontent',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "content" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_seo',
+							'label' => 'Overzicht SEO tekst',
+							'name' => '' . $custom_post_type . '_overzicht_seo',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond onder de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '100',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_vacatures',
+							'label' => 'Toon vacatures?',
+							'name' => '' . $custom_post_type . '_overzicht_vacatures',
+							'type' => 'true_false',
+							'ui' => 1,
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond onder de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '100',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_vacturetitel',
+							'label' => 'Tekst boven vacatures',
+							'name' => '' . $custom_post_type . '_overzicht_vacturetitel',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond onder de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '100',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+					),
+					'location' => array(
+						array(
+							array(
+								'param' => 'options_page',
+								'operator' => '==',
+								'value' => $compiled_acf,
+							),
+						),
+					),
+					'menu_order' => 0,
+					'position' => 'normal',
+					'style' => 'default',
+					'label_placement' => 'top',
+					'instruction_placement' => 'label',
+					'hide_on_screen' => '',
+				));
+			}
+		}
+	}
+}
+add_action('init', 'option_page_posttypes');
+
+
+function option_page_posttypes_two()
+{
+	$args  = array('public'   => true, '_builtin' => false);
+	$excluded_post_types = array('reviews', 'vakgebieden', 'opleidingen');
+	$custom_post_types = get_post_types($args);
+	foreach ($custom_post_types as $custom_post_type) {
+		if (in_array($custom_post_type, $excluded_post_types)) { } else {
+			if (function_exists('acf_add_options_page')) {
+
+				$formated_string = str_replace('_', " ", $custom_post_type);
+
+				acf_add_options_sub_page(array(
+					'page_title'     => 'overzicht options ' . $formated_string . '',
+					'menu_title'    => 'overzicht options ' . $formated_string . '',
+					'parent_slug'    => 'edit.php?post_type=' . $custom_post_type . '',
+				));
+
+				$prefix = str_replace("_", "-", $custom_post_type);
+				$acf_pre = 'acf-options-overzicht-options-';
+				$compiled_acf = $acf_pre .= $prefix;
+
+				acf_add_local_field_group(array(
+					'key' => 'overzicht_options_' . $custom_post_type . '',
+					'title' => 'overzicht options ' . $formated_string . '',
+					'fields' => array(
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_intro',
+							'label' => 'Overzicht intro',
+							'name' => '' . $custom_post_type . '_overzicht_intro',
+							'type' => 'wysiwyg',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "header" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => '' . $custom_post_type . '_overzicht_afbeelding',
+							'label' => 'Overzicht afbeelding',
+							'name' => '' . $custom_post_type . '_overzicht_afbeelding',
+							'type' => 'image',
+							'prefix' => '',
+							'instructions' => 'Dit veld wordt getoond in de "header" van de pagina.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '100',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+					),
+					'location' => array(
+						array(
+							array(
+								'param' => 'options_page',
+								'operator' => '==',
+								'value' => $compiled_acf,
+							),
+						),
+					),
+					'menu_order' => 0,
+					'position' => 'normal',
+					'style' => 'default',
+					'label_placement' => 'top',
+					'instruction_placement' => 'label',
+					'hide_on_screen' => '',
+				));
+			}
+		}
+	}
+}
+add_action('init', 'option_page_posttypes_two');

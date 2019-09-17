@@ -128,7 +128,7 @@ get_header(); ?>
                                 <?php the_sub_field('titel'); ?>
                                 <?php the_sub_field('content'); ?>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12 int">
                                 <?php $opleidingen_om_te_tonen = get_sub_field('opleidingen_om_te_tonen'); ?>
                                 <?php if ($opleidingen_om_te_tonen) : ?>
                                     <div class="edu--items">
@@ -191,14 +191,9 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="edu--items-bg">
-                        <svg width="823" height="279" class="edu--bg-t" viewBox="0 0 823 279" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 51.0955C41.614 119.712 100.073 176.696 169.957 216.544C245.647 259.702 331.79 281.076 418.863 278.303C505.936 275.531 590.546 248.72 663.34 200.834C730.551 156.621 785.27 96.0325 822.44 24.9074L769.485 0C736.941 61.3757 689.43 113.676 631.228 151.962C567.442 193.922 493.302 217.416 417.004 219.845C340.705 222.275 265.222 203.545 198.898 165.728C138.382 131.222 87.643 82.0507 51.2649 22.8696L0 51.0955Z" fill="#FF6600" />
-                        </svg>
-                        <svg width="823" height="279" class="edu--bg-b" viewBox="0 0 823 279" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 51.0955C41.614 119.712 100.073 176.696 169.957 216.544C245.647 259.702 331.79 281.076 418.863 278.303C505.936 275.531 590.546 248.72 663.34 200.834C730.551 156.621 785.27 96.0325 822.44 24.9074L769.485 0C736.941 61.3757 689.43 113.676 631.228 151.962C567.442 193.922 493.302 217.416 417.004 219.845C340.705 222.275 265.222 203.545 198.898 165.728C138.382 131.222 87.643 82.0507 51.2649 22.8696L0 51.0955Z" fill="#FF6600" />
-                        </svg>
-                    </div>
+                    <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1051 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
+                    </svg>
                 </section>
             <?php elseif (get_row_layout() == 'reviews') : ?>
                 <section class="rev">
@@ -301,14 +296,9 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="abh--items-bg">
-                        <svg width="857" height="580" class="fbg" viewBox="0 0 857 580" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M98.1606 170.823C159.989 139.307 228.859 123.803 298.439 125.892C374.696 128.182 448.834 151.515 512.657 193.311C576.48 235.108 627.502 293.74 660.081 362.724C689.808 425.669 703.125 494.996 698.949 564.267L757.084 570.603C762.386 490.611 747.234 410.465 712.906 337.777C675.725 259.05 617.498 192.139 544.662 144.44C471.826 96.7408 387.218 70.1127 300.192 67.4995C219.842 65.0866 140.32 83.2327 69.1159 120.067L98.1606 170.823Z" fill="#1772DD" />
-                        </svg>
-                        <svg width="857" height="580" class="lbg" viewBox="0 0 857 580" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M98.1606 170.823C159.989 139.307 228.859 123.803 298.439 125.892C374.696 128.182 448.834 151.515 512.657 193.311C576.48 235.108 627.502 293.74 660.081 362.724C689.808 425.669 703.125 494.996 698.949 564.267L757.084 570.603C762.386 490.611 747.234 410.465 712.906 337.777C675.725 259.05 617.498 192.139 544.662 144.44C471.826 96.7408 387.218 70.1127 300.192 67.4995C219.842 65.0866 140.32 83.2327 69.1159 120.067L98.1606 170.823Z" fill="#1772DD" />
-                        </svg>
-                    </div>
+                    <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1024 753" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 33.9999C97 20.6666 312.6 39.1999 423 220C561 446 679 648 811 688C916.6 720 996.333 724 1023 722" stroke="#1772DD" stroke-width="60" />
+                    </svg>
                 </section>
             <?php elseif (get_row_layout() == 'inschrijven') : ?>
                 <section class="insc">
@@ -349,6 +339,9 @@ get_header(); ?>
                 <?php endif; ?>
             <?php elseif (get_row_layout() == 'scheiding') : ?>
                 <div class="sch">
+                    <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1024 377" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 356C135.667 212 528.2 -49.9999 1021 54.0001" stroke="#FF6600" stroke-width="60" />
+                    </svg>
                 </div>
             <?php elseif (get_row_layout() == 'laatste_nieuws') : ?>
                 <section class="lnws">
@@ -415,8 +408,7 @@ get_header(); ?>
                             slidesToScroll: 1,
                             fade: true,
                             dots: true,
-                            prevArrow: jQuery('.prev'),
-                            nextArrow: jQuery('.next'),
+                            arrows: false,
                             appendDots: jQuery(".nws--dots"),
                         });
                     });

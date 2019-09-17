@@ -75,3 +75,14 @@ jQuery('.countnumber').each(function () {
         }
     });
 });
+
+jQuery('a[href*=\\#]').on('click', function (event) {
+  target = jQuery(this).attr('href');
+  if (target === '#') {
+      event.preventDefault();
+      return;
+  } else if (target.slice(0, 1) === '#') {
+      event.preventDefault();
+      jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top }, 1000);
+  }
+});
