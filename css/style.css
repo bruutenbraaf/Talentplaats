@@ -2325,4 +2325,7 @@ th {
     background-position: center;
     background-repeat: no-repeat; }
 
+.open {
+  display: block; }
+
 /*# sourceMappingURL=style.css.map */
