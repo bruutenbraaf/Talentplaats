@@ -2877,6 +2877,8 @@ th {
 
 .header-reg {
   position: relative;
+  background-size: cover;
+  background-position: center center;
   &:after {
     content: "";
     width: 100%;
@@ -2971,8 +2973,4 @@ th {
     background-position: center;
     background-repeat: no-repeat;
   }
-}
-
-.open {
-  display: block;
 }

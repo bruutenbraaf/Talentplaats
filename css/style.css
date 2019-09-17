@@ -2255,7 +2255,9 @@ th {
     margin-right: 10px; }
 
 .header-reg {
-  position: relative; }
+  position: relative;
+  background-size: cover;
+  background-position: center center; }
   .header-reg:after {
     content: "";
     width: 100%;
@@ -2325,8 +2327,5 @@ th {
     background-size: 6px;
     background-position: center;
     background-repeat: no-repeat; }
-
-.open {
-  display: block; }
 
 /*# sourceMappingURL=style.css.map */
