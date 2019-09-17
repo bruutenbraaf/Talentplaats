@@ -2309,9 +2309,10 @@ th {
       font-size: 16px;
       line-height: 34px;
       color: #cfcedf; }
-.regi .is--open span h2 span {
+
+.is--open h2 span {
   color: #ff6600; }
-.regi .is--open svg {
+.is--open svg {
   transform: rotate(180deg); }
 
 .dark {

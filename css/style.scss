@@ -2946,15 +2946,14 @@ th {
       }
     }
   }
-  .is--open {
-    span {
-      h2 span {
-        color: $orange;
-      }
-    }
-    svg {
-      transform: rotate(180deg);
-    }
+}
+
+.is--open {
+  h2 span {
+    color: $orange;
+  }
+  svg {
+    transform: rotate(180deg);
   }
 }
 
@@ -2975,5 +2974,5 @@ th {
 }
 
 .open {
-  display:block;
+  display: block;
 }
