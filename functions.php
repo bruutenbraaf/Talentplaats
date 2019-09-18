@@ -104,7 +104,7 @@ function option_page_posttypes()
 		if (in_array($custom_post_type, $excluded_post_types)) { } else {
 			if (function_exists('acf_add_options_page')) {
 
-				$formated_string = str_replace('_', " ", $custom_post_type);
+				$formated_string = str_replace('_', "-", $custom_post_type);
 
 				acf_add_options_sub_page(array(
 					'page_title'     => 'overzicht options ' . $formated_string . '',
@@ -330,7 +330,7 @@ function option_page_posttypes_two()
 		if (in_array($custom_post_type, $excluded_post_types)) { } else {
 			if (function_exists('acf_add_options_page')) {
 
-				$formated_string = str_replace('_', " ", $custom_post_type);
+				$formated_string = str_replace('_', "-", $custom_post_type);
 
 				acf_add_options_sub_page(array(
 					'page_title'     => 'overzicht options ' . $formated_string . '',
