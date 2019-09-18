@@ -38,7 +38,7 @@ jQuery( "body" ).on('click', '.hamburger', function() {
   jQuery(document).ready(function() {
 
     jQuery("body").on('click', '.regio--name', function() {
-      jQuery(this).next('.inner').slideToggle(200);
+      jQuery(this).next('.branches').slideToggle(200);
       jQuery(this).toggleClass('is--open');
     });
   });

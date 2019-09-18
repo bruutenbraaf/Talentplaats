@@ -40,7 +40,8 @@ span,
 path,
 a,
 .vkgb--inner,
-.all {
+.all,
+.regio--name h2:after {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2899,9 +2900,15 @@ th {
   }
   h2,
   h1,
-  p,
   h3,
   h4 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 34px;
+    color: #ffffff;
+  }
+  p {
     color: #ffffff;
   }
 }
@@ -2934,17 +2941,40 @@ th {
         right: 0px;
         top: 10px;
       }
-    }
-    .inner {
-      background: #ffffff;
-      border-radius: 5px;
-      padding: 20px 60px;
-      margin: 20px 0px;
-      display: none;
+      h2 {
+        display: inherit;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          height: 2px;
+          width: 0%;
+          background: $orange;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
       a {
-        font-size: 16px;
-        line-height: 34px;
-        color: $lightgray;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .branches {
+      display: none;
+      .inner {
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 20px 60px;
+        margin: 20px 0px;
+        a {
+          font-size: 16px;
+          line-height: 34px;
+          color: $lightgray;
+        }
       }
     }
   }
@@ -2972,5 +3002,22 @@ th {
     background-size: 6px;
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+.brnch {
+  .breadcrumbs {
+    padding: 10px 15px 20px 15px;
+  }
+  .overview {
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px 60px;
+    margin: 20px 0px;
+    a {
+      font-size: 16px;
+      line-height: 34px;
+      color: $lightgray;
+    }
   }
 }

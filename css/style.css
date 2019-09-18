@@ -22,7 +22,8 @@ span,
 path,
 a,
 .vkgb--inner,
-.all {
+.all,
+.regio--name h2:after {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2275,9 +2276,14 @@ th {
     min-height: 282px; }
   .header-reg h2,
   .header-reg h1,
-  .header-reg p,
   .header-reg h3,
   .header-reg h4 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 34px;
+    color: #ffffff; }
+  .header-reg p {
     color: #ffffff; }
 
 .regi .breadcrumbs {
@@ -2301,16 +2307,32 @@ th {
       position: absolute;
       right: 0px;
       top: 10px; }
-  .regi .regio .inner {
-    background: #ffffff;
-    border-radius: 5px;
-    padding: 20px 60px;
-    margin: 20px 0px;
+    .regi .regio .regio--name h2 {
+      display: inherit;
+      position: relative; }
+      .regi .regio .regio--name h2:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0%;
+        background: #ff6600; }
+      .regi .regio .regio--name h2:hover:after {
+        width: 100%; }
+    .regi .regio .regio--name a:hover {
+      text-decoration: none; }
+  .regi .regio .branches {
     display: none; }
-    .regi .regio .inner a {
-      font-size: 16px;
-      line-height: 34px;
-      color: #cfcedf; }
+    .regi .regio .branches .inner {
+      background: #ffffff;
+      border-radius: 5px;
+      padding: 20px 60px;
+      margin: 20px 0px; }
+      .regi .regio .branches .inner a {
+        font-size: 16px;
+        line-height: 34px;
+        color: #cfcedf; }
 
 .is--open h2 span {
   color: #ff6600; }
@@ -2327,5 +2349,17 @@ th {
     background-size: 6px;
     background-position: center;
     background-repeat: no-repeat; }
+
+.brnch .breadcrumbs {
+  padding: 10px 15px 20px 15px; }
+.brnch .overview {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px 60px;
+  margin: 20px 0px; }
+  .brnch .overview a {
+    font-size: 16px;
+    line-height: 34px;
+    color: #cfcedf; }
 
 /*# sourceMappingURL=style.css.map */

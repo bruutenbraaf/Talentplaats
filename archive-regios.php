@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <?php $achtergrond_afbeelding = get_field('regios_overzicht_afbeelding', 'option'); ?>
-<section class="header-reg" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
+<section class="header-reg" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" alt="<?php echo $achtergrond_afbeelding['alt']; ?>" <?php } ?>>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center d-flex align-items-center col-reg">
@@ -25,6 +25,7 @@ get_header(); ?>
             <div class="col-md-12">
                 <?php $terms = get_terms('regio'); ?>
                 <?php foreach ($terms as $term) { ?>
+                    <?php $term_link = get_term_link($term); ?>
                     <div class="regio">
                         <div class="regio--name">
                             <h2><?php _e('Regio', 'talentplaats'); ?> <span><?php echo $term->name; ?></span></h2>
@@ -32,35 +33,45 @@ get_header(); ?>
                                 <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div class="inner">
-                            <?php
-                                $termid = $term->term_id;
-                                $args = array(
-                                    'post_type' => 'regios',
-                                    'tax_query' => array(
-                                        array(
-                                            'taxonomy' => 'regio',
-                                            'field' => 'term_id',
-                                            'terms' => $termid
+                        <div class="branches">
+                            <div class="inner">
+                                <?php
+                                    $termid = $term->term_id;
+                                    $args = array(
+                                        'post_type' => 'regios',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'regio',
+                                                'field' => 'term_id',
+                                                'terms' => $termid
+                                            )
                                         )
-                                    )
-                                );
-                                $loop = new WP_Query($args); ?>
-                            <?php if ($loop->have_posts()) : ?>
-                                <div class="row">
-                                    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                                        <div class="col-md-4">
-                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                        </div>
-                                    <?php endwhile; ?>
-                                    <?php wp_reset_postdata(); ?>
+                                    );
+                                    $loop = new WP_Query($args); ?>
+                                <?php if ($loop->have_posts()) : ?>
+                                    <div class="row">
+                                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                            <div class="col-md-4">
+                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </div>
+                                        <?php endwhile; ?>
+                                        <?php wp_reset_postdata(); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 justify-content-end d-flex">
+                                    <a class="all" href="<?php echo $term_link; ?>">
+                                        <?php _e('Lees meer over', 'talentplaats'); ?> <?php echo $term->name; ?>
+                                    </a>
                                 </div>
-                            <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
             </div>
         </div>
+    </div>
 </section>
 
 
