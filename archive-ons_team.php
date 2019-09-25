@@ -29,7 +29,7 @@ get_header(); ?>
                 <?php the_field('ons-team_overzicht_titlecontent', 'option'); ?>
                 <?php the_field('ons-team_overzicht_introcontent', 'option'); ?>
             </div>
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-8 offset-md-2 int">
                 <?php if (have_posts()) : ?>
                     <div class="row">
                         <?php while (have_posts()) : the_post(); ?>
@@ -52,6 +52,9 @@ get_header(); ?>
             </div>
         </div>
     </div>
+    <svg class="bg" reserveAspectRatio="none" viewBox="0 0 1051 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
+    </svg>
 </section>
 
 <section class="pagination">

@@ -1,7 +1,32 @@
-emergence.init({
-    offsetBottom: 20,
-    reset: false
+skrollr.init({
+  forceHeight: false
 });
+
+
+function checkForInput(element) {
+  // element is passed to the function ^
+  
+  const $label = jQuery(element).siblings('label');
+
+  if (jQuery(element).val().length > 0) {
+    $label.addClass('input-has-value');
+    jQuery(element).addClass('val');
+  } else {
+    $label.removeClass('input-has-value');
+    jQuery(element).removeClass('val');
+  }
+}
+
+// The lines below are executed on page load
+jQuery('input').each(function() {
+  checkForInput(this);
+});
+
+// The lines below (inside) are executed on change & keyup
+jQuery('input').on('change keyup', function() {
+  checkForInput(this);  
+});
+
 
 jQuery(window).scroll(function() {    
     var scroll = jQuery(window).scrollTop();
@@ -18,13 +43,14 @@ jQuery(window).scroll(function() {
   });
 
 jQuery( "body" ).on('click', '.hamburger', function() {
-    jQuery('.mobile-nav').animate({'height': 'toggle'}, 200);
-    jQuery('main').toggleClass('blurred');
-    jQuery('.mt-btns').toggleClass('displayed');
-    jQuery('.hamburger div:nth-child(1)').toggleClass('first');
-    jQuery('.hamburger div:nth-child(2)').toggleClass('middle');
-    jQuery('.hamburger div:nth-child(3)').toggleClass('last');
+  jQuery('.mgm').toggleClass('clickable');
+    jQuery('.l').animate({'height': 'toggle'}, 400);
+    jQuery('.r').animate({'width': 'toggle'}, 400);
+    jQuery('.mgm h2').toggleClass('is--visible');
+    jQuery('.news-nav').toggleClass('is--visible');
+    jQuery('.mgm--nav li').toggleClass('is--shown');
   });
+
 
   jQuery( "body" ).on('click', '.search-button', function() {
     jQuery('.search--form').animate({'height': 'toggle'}, 200);

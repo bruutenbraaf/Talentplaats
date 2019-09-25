@@ -130,13 +130,28 @@ h2 {
 // Navigation
 
 nav {
-  position: relative;
+  top: 0;
+  left: 0;
+  position: fixed;
   width: 100vw;
   height: 80px;
   display: flex;
   align-items: center;
   z-index: 99;
   background: #ffffff;
+  .main_nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: 80px;
+    .menu-hoofdmenu-container {
+      margin-left: auto;
+      width: 100%;
+      ul {
+        float: right;
+      }
+    }
+  }
   .row {
     height: 80px;
     .branding {
@@ -145,6 +160,10 @@ nav {
       min-height: 100%;
       position: relative;
       z-index: 2;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       &:after {
         content: "";
         position: absolute;
@@ -154,6 +173,27 @@ nav {
         width: 50vw;
         background: $blue;
         z-index: -1;
+      }
+    }
+    .main--nav {
+      width: 50%;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      .secondair {
+        color: $midnight;
+      }
+      .nav-ct {
+        border-left: 1px solid #cfcedf;
+        padding-left: 10px;
+        margin-left: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
     }
     .menu {
@@ -198,9 +238,10 @@ nav {
     .mg_nav {
       width: 24px;
       height: 24px;
-      margin-left: 62px;
+      margin-left: 0px;
       display: flex;
       align-items: center;
+      height: 80px;
       div {
         span {
           width: 18px;
@@ -249,6 +290,7 @@ nav {
 .header {
   overflow: hidden;
   position: relative;
+  padding-top: 80px;
   &:before {
     content: "";
     background-image: url(../img/watermark.svg);
@@ -1302,24 +1344,32 @@ footer {
 
 .int-archive {
   position: relative;
-  .bg {
-    background-image: url(../img/union.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  overflow: hidden;
+  svg {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100vw + 200px);
+    max-height: 100%;
+    position: absolute;
+    left: -100px;
+    z-index: 1;
   }
   .int-cont {
     padding-top: 100px;
     padding-bottom: 30px;
+    position: relative;
+    z-index: 2;
     p {
       font-size: 16px;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
     }
+  }
+  .int {
+    position: relative;
+    z-index: 2;
   }
 }
 $padding-edu: 20px;
@@ -1740,6 +1790,7 @@ $padding-edu: 20px;
   background: #ffffff;
   position: relative;
   border-top: 1px solid $lightgray;
+  padding-top: 80px;
   .imghdr {
     position: absolute;
     right: 0px;
@@ -1836,6 +1887,7 @@ $taxheight: 54px;
 .tax-header {
   background-size: cover;
   background-position: center center;
+  padding-top: 80px;
   .inner {
     min-height: 358px;
     .cnt {
@@ -2430,7 +2482,7 @@ $teamheight: 280px;
 // Vacature overzicht
 
 .header-vac {
-  padding: 70px 0px 80px 0px;
+  padding: 150px 0px 80px 0px;
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -3045,4 +3097,307 @@ th {
       background-position: top center;
     }
   }
+}
+
+// Contact pagina
+
+.ctnc--inner {
+  background: #ffffff;
+  padding: 70px 15px;
+}
+
+.contact {
+  margin-top: -54px;
+  position: relative;
+  .bread {
+    .row {
+      width: 100%;
+    }
+    .breadcrumbs {
+      color: $lightgray;
+      span {
+        a {
+          color: $lightgray;
+        }
+      }
+      .seperator {
+        background-image: url(../img/seperator--dark.svg);
+        background-size: 6px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .cntct-ofs {
+    background: #ffffff;
+    height: $taxheight;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    .left {
+      position: absolute;
+      bottom: 0;
+      left: -5px;
+    }
+    .right {
+      position: absolute;
+      bottom: 0;
+      right: -5px;
+    }
+    ul {
+      padding: 0;
+      margin: 0px;
+      li {
+        float: left;
+        list-style: none;
+        position: relative;
+        margin: 0px 20px;
+        &:after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $orange;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+        a {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 34px;
+          color: #2d2d46;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .current {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.frm_form_field {
+  position: relative;
+  label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 9;
+    pointer-events: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: $lightgray;
+    background: #ffffff;
+    padding: 4px;
+    outline: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:focus {
+      outline: 0;
+    }
+  }
+  input,
+  textarea {
+    outline: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid $lightgray;
+    border-radius: 3px;
+    margin: 20px 0px;
+  }
+}
+
+.input-has-value {
+  top: 19px !important;
+  color: $blue !important;
+}
+
+.val {
+  border-color: $blue !important;
+}
+
+.frm_hidden {
+  display: none;
+}
+
+.mgm {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  z-index: 88;
+  pointer-events: none;
+  .container {
+    position: relative;
+    z-index: 90;
+    .row {
+      height: 100vh;
+      padding: 100px 0px;
+    }
+  }
+  .l {
+    width: 50vw;
+    background: $blue;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: -1;
+  }
+  .r {
+    width: 50vw;
+    background: #ffffff;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: -1;
+  }
+  h2 {
+    color: #ffffff;
+    opacity: 0;
+    animation-delay: 0.2s;
+    right: 60px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-left: 30px;
+  }
+  .news-nav {
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    opacity: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    position: relative;
+    right: 60px;
+    a.smll-btn {
+      font-family: $muli;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 32px;
+      text-align: right;
+
+      color: $orange;
+    }
+    .nws--ct {
+      font-size: 16px;
+      color: $lightgray;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+    h3 {
+      font-family: $muli;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 120%;
+      color: $midnight;
+    }
+  }
+  .mgm--nav {
+    a {
+      font-family: $muli;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 32px;
+      color: $midnight;
+    }
+    ul {
+      margin: inherit;
+      margin-left: 30px;
+      padding: 0px;
+      li {
+        list-style: none;
+        opacity: 0;
+        margin-left: 60px;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  .news-nav:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.1}s;
+  }
+}
+
+@for $i from 1 through 10 {
+  .mgm--nav li:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.1}s;
+  }
+}
+
+.is--visible {
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.is--shown {
+  animation: navIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    right: 60px;
+  }
+  100% {
+    opacity: 1;
+    right: 30px;
+  }
+}
+
+@keyframes navIn {
+  0% {
+    opacity: 0;
+    margin-left: 60px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+.clickable {
+  pointer-events: all;
+}
+
+.scrolled {
+  width: 80% !important;
+}
+
+.is--scrolled {
+  width: 20% !important;
+}
+
+.cta-show {
+  width: 100% !important;
+  opacity: 1 !important;
 }
