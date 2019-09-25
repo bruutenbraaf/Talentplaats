@@ -26,8 +26,11 @@
                 <div class="d-flex main--nav" data-0="width:50%;" data-300="width:80%;">
                     <div class="main_nav">
                         <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
-                        <?php if (have_rows('sections')) : ?>
-                            <?php while (have_rows('sections')) : the_row(); ?>
+
+
+                        <?php $frontpage_id = get_option( 'page_on_front' );?>
+                        <?php if (have_rows('sections', $frontpage_id)) : ?>
+                            <?php while (have_rows('sections', $frontpage_id)) : the_row(); ?>
                                 <?php if (get_row_layout() == 'header') : ?>
                                     <?php if (have_rows('content_links')) : ?>
                                         <?php while (have_rows('content_links')) : the_row(); ?>

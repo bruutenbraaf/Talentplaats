@@ -193,7 +193,7 @@ get_header(); ?>
                     </div>
 
                     <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1051 644" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path style="stroke-dasharray: 100vw; stroke-dashoffset: -100vw; stroke-linecap: round;" data-bottom="stroke-dashoffset: 20vw;" data-300="stroke-dashoffset: -100vw;"d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
+                        <path d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
                     </svg>
                 </section>
             <?php elseif (get_row_layout() == 'reviews') : ?>
@@ -298,7 +298,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1024 753" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path style="stroke-dasharray: 100vw; stroke-dashoffset: 100vw; stroke-linecap: round;" data-bottom="stroke-dashoffset: -30vw;" data-300="stroke-dashoffset: 100vw;" d="M3 33.9999C97 20.6666 312.6 39.1999 423 220C561 446 679 648 811 688C916.6 720 996.333 724 1023 722" stroke="#1772DD" stroke-width="60" />
+                        <path  d="M3 33.9999C97 20.6666 312.6 39.1999 423 220C561 446 679 648 811 688C916.6 720 996.333 724 1023 722" stroke="#1772DD" stroke-width="60" />
                     </svg>
                 </section>
             <?php elseif (get_row_layout() == 'inschrijven') : ?>
@@ -341,7 +341,7 @@ get_header(); ?>
             <?php elseif (get_row_layout() == 'scheiding') : ?>
                 <div class="sch">
                     <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1024 377" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path style="stroke-dasharray: 100vw; stroke-dashoffset: -100vw; stroke-linecap: round;" data-bottom="stroke-dashoffset: 20vw;" data-0="stroke-dashoffset: -100vw;" d="M1 356C135.667 212 528.2 -49.9999 1021 54.0001" stroke="#FF6600" stroke-width="60" />
+                        <path d="M1 356C135.667 212 528.2 -49.9999 1021 54.0001" stroke="#FF6600" stroke-width="60" />
                     </svg>
                 </div>
             <?php elseif (get_row_layout() == 'laatste_nieuws') : ?>
