@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mgm--nav">
-                        <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
+                        <?php wp_nav_menu(array('theme_location' => 'mega_menu')); ?>
                     </div>
                 </div>
                 <div class="l">
