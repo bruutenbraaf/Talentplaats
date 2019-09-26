@@ -27,10 +27,7 @@ get_header(); ?>
                     yoast_breadcrumb('');
                 } ?>
             </div>
-            <div class="col-md-2">
-                <h2>Filters</h2>
-            </div>
-            <div class="col-md-10">
+            <div class="col-md-10 offset-md-1">
                 <?php the_content(); ?>
             </div>
         </div>

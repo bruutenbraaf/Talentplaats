@@ -2101,7 +2101,8 @@ footer {
 
 .vac-header {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff; }
+  background: #ffffff;
+  padding-top: 80px; }
   .vac-header h1 {
     font-weight: 800;
     font-size: 24px;
