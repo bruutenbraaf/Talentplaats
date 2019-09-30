@@ -18,14 +18,24 @@ function checkForInput(element) {
 }
 
 // The lines below are executed on page load
-jQuery('input').each(function() {
+jQuery('input, textarea').each(function() {
   checkForInput(this);
 });
 
 // The lines below (inside) are executed on change & keyup
-jQuery('input').on('change keyup', function() {
+jQuery('input, textarea').on('change keyup', function() {
   checkForInput(this);  
 });
+
+
+jQuery("input, textarea").focus(function(){
+  jQuery(this).parent().addClass("val");
+});
+
+jQuery("input, textarea").focusout(function(){
+  jQuery(this).parent().removeClass("val");
+});
+
 
 
 jQuery(window).scroll(function() {    

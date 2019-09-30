@@ -35,6 +35,15 @@ function register_my_menus()
 add_action('init', 'register_my_menus');
 
 
+function my_acf_init()
+{
+
+	acf_update_setting('google_api_key', 'AIzaSyBwjs5yVQERqyM-MUa52sJa1a7jeBHiEes');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+
 function nav_replace_vacansies($item_output, $item)
 {
 	if ('Vacatures' == $item->title) {
