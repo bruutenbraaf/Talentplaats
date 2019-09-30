@@ -3708,3 +3708,29 @@ input:focus {
     margin: 0px 15px;
   }
 }
+
+.nav-ct {
+  width: 0%;
+  opacity: 0;
+}
+
+.branding {
+  width: 50%;
+}
+
+.main--nav {
+  width: 50%;
+}
+
+.is__scrolled {
+  .branding {
+    width: 20%;
+  }
+  .main--nav {
+    width: 80% !important;
+  }
+  .nav-ct {
+    width: 100%;
+    opacity: 1;
+  }
+}

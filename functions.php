@@ -12,7 +12,7 @@ function talentplaats_scripts()
 	wp_enqueue_script('readmore', get_template_directory_uri() . '/js/readmore.min.js', array(), '1.0.0', false);
 	wp_enqueue_script('slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
 	wp_enqueue_script('niceselect', get_template_directory_uri() . '/js/jquery.nice-select.min.js', array(), '1.0.0', true);
-
+	wp_enqueue_script('skrollr', get_template_directory_uri() . '/js/skrollr.min.js', array(), '1.0.0', false);
 	wp_enqueue_style('bootcss', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style('niceselectcss', get_template_directory_uri() . '/css/nice-select.css');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');

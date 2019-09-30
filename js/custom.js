@@ -47,6 +47,14 @@ jQuery("input, textarea").focusout(function(){
   jQuery(this).parent().removeClass("val");
 });
 
+jQuery(window).scroll(function() {    
+  var scroll = jQuery(window).scrollTop();
+  if (scroll >= 600) {
+      jQuery("nav").addClass("is__scrolled");
+  } else {
+      jQuery("nav").removeClass("is__scrolled");
+  }
+});
 
 
 jQuery(window).scroll(function() {    

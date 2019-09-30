@@ -15,7 +15,7 @@
     <nav>
         <div class="container">
             <div class="row align-items-center d-flex">
-                <div class="branding" data-0="width:50%;" data-300="width:20%;">
+                <div class="branding">
                     <?php $logo = get_field('logo', 'option'); ?>
                     <a href="<?php echo get_home_url(); ?>">
                         <?php if ($logo) { ?>
@@ -23,7 +23,7 @@
                         <?php } ?>
                     </a>
                 </div>
-                <div class="d-flex main--nav" data-0="width:50%;" data-300="width:80%;">
+                <div class="d-flex main--nav">
                     <div class="main_nav">
                         <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
 
@@ -35,7 +35,7 @@
                                     <?php if (have_rows('content_links')) : ?>
                                         <?php while (have_rows('content_links')) : the_row(); ?>
                                             <?php if (have_rows('knoppen')) : ?>
-                                                <div class="nav-ct d-flex" data-0="width:0%; opacity:0;" data-300="width:100%; opacity: 1;">
+                                                <div class="nav-ct d-flex">
                                                     <?php while (have_rows('knoppen')) : the_row(); ?>
                                                         <?php $knop = get_sub_field('knop'); ?>
                                                         <?php if ($knop) { ?>

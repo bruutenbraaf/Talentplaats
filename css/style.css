@@ -2963,5 +2963,22 @@ input:focus {
   .nwsletter .nws--inner form {
     width: 100%;
     margin: 0px 15px; } }
+.nav-ct {
+  width: 0%;
+  opacity: 0; }
+
+.branding {
+  width: 50%; }
+
+.main--nav {
+  width: 50%; }
+
+.is__scrolled .branding {
+  width: 20%; }
+.is__scrolled .main--nav {
+  width: 80% !important; }
+.is__scrolled .nav-ct {
+  width: 100%;
+  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
