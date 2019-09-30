@@ -1,7 +1,18 @@
-skrollr.init({
-  forceHeight: false
-});
+jQuery(function () {
+  // initialize skrollr if the window width is large enough
+  if (jQuery(window).width() > 767) {
+    skrollr.init({
+      forceHeight: false,
+    });
+  }
 
+  // disable skrollr if the window is resized below 768px wide
+  jQuery(window).on('resize', function () {
+    if (jQuery(window).width() <= 1024) {
+      skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+    }
+  });
+});
 
 function checkForInput(element) {
   // element is passed to the function ^

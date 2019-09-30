@@ -50,6 +50,7 @@
         <?php endwhile; ?>
     <?php endif; ?>
 <?php } ?>
+</main> <?php // closing the main header.php ?>
 <footer <?php if (is_page_template('templates/contact.php')) { ?>class="nop" <?php } ?>>
     <div class="container">
         <div class="row">
@@ -156,7 +157,6 @@
         </div>
     </div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 

@@ -11,7 +11,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> id="skrollr-body">
+<body <?php body_class(); ?>>
     <nav>
         <div class="container">
             <div class="row align-items-center d-flex">
@@ -28,7 +28,7 @@
                         <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
 
 
-                        <?php $frontpage_id = get_option( 'page_on_front' );?>
+                        <?php $frontpage_id = get_option('page_on_front'); ?>
                         <?php if (have_rows('sections', $frontpage_id)) : ?>
                             <?php while (have_rows('sections', $frontpage_id)) : the_row(); ?>
                                 <?php if (get_row_layout() == 'header') : ?>
@@ -110,3 +110,6 @@
             </div>
         </div>
     </div>
+
+
+    <main id="skrollr-body">
