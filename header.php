@@ -26,8 +26,6 @@
                 <div class="d-flex main--nav">
                     <div class="main_nav">
                         <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
-
-
                         <?php $frontpage_id = get_option('page_on_front'); ?>
                         <?php if (have_rows('sections', $frontpage_id)) : ?>
                             <?php while (have_rows('sections', $frontpage_id)) : the_row(); ?>
@@ -56,6 +54,13 @@
                             <span></span>
                             <span></span>
                         </div>
+                    </div>
+                </div>
+                <div class="mobnav">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -108,6 +113,35 @@
                 <div class="r">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="inner">
+            <?php wp_nav_menu(array('theme_location' => 'mobile_menu')); ?>
+            <?php $frontpage_id = get_option('page_on_front'); ?>
+            <?php if (have_rows('sections', $frontpage_id)) : ?>
+                <?php while (have_rows('sections', $frontpage_id)) : the_row(); ?>
+                    <?php if (get_row_layout() == 'header') : ?>
+                        <?php if (have_rows('content_links')) : ?>
+                            <?php while (have_rows('content_links')) : the_row(); ?>
+                                <?php if (have_rows('knoppen')) : ?>
+                                    <div class="mob-btn d-flex">
+                                        <div>
+                                            <?php while (have_rows('knoppen')) : the_row(); ?>
+                                                <?php $knop = get_sub_field('knop'); ?>
+                                                <?php if ($knop) { ?>
+                                                    <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                                <?php } ?>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
     <main>
