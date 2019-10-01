@@ -40,7 +40,7 @@ if (!empty($location)) :
             <div class="col-md-10 offset-md-1">
                 <?php the_field('titel_contactpagina'); ?>
             </div>
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-5 offset-md-1 frm">
                 <?php the_field('contactform'); ?>
             </div>
             <div class="offset-md-1 col-md-4">

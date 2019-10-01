@@ -1060,15 +1060,6 @@ footer {
 .int-archive {
   position: relative;
   overflow: hidden; }
-  .int-archive svg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: calc(100vw + 200px);
-    max-height: 100%;
-    position: absolute;
-    left: -100px;
-    z-index: 1; }
   .int-archive .int-cont {
     padding-top: 100px;
     padding-bottom: 30px;
@@ -2811,6 +2802,23 @@ input:focus {
   display: none; }
 
 @media (max-width: 768px) {
+  .frm {
+    margin-bottom: 30px; }
+
+  .ovw-vac .arch--vac-item .arch--vac-item-inner .arch--inf div {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px; }
+
+  .arch-edu .edu--item .edu--inner .edu--inf div {
+    width: 100%;
+    margin-bottom: 5px; }
+
+  .vac-items-w .arch--vac-items .arch--vac-item .arch--vac-item-inner .arch--inf div {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px; }
+
   .mob-btn {
     margin-top: 80px;
     transition-delay: 1s;

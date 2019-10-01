@@ -25,9 +25,11 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
             </div>
+            <div class="col-md-5 offset-md-1 d-flex align-items-center lvh nopadding">
+                <div class="imghdr" style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="imghdr" style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
     </div>
 </section>
 

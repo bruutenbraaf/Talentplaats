@@ -15,11 +15,12 @@ get_header(); ?>
                     <?php the_field('opleidingen_overzicht_intro', 'option'); ?>
                 </div>
             </div>
+            <div class="col-md-5 offset-md-1 d-flex align-items-center lvh nopadding">
+                <?php $achtergrond_afbeelding = get_field('opleidingen_overzicht_afbeelding', 'option'); ?>
+                <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
+                </div>
+            </div>
         </div>
-    </div>
-    <?php $achtergrond_afbeelding = get_field('opleidingen_overzicht_afbeelding', 'option'); ?>
-    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
-    </div>
 </section>
 
 <section class="int-archive">
