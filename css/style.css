@@ -2118,7 +2118,9 @@ footer {
     font-size: 16px;
     line-height: 20px;
     color: #2d2d46;
-    margin: 0px 30px 0px 10px; }
+    margin-right: 30px; }
+    .vac-header .information-vacansie span svg {
+      margin-right: 5px; }
   .vac-header .refnr {
     font-size: 14px;
     color: #cfcedf; }
@@ -2802,8 +2804,22 @@ input:focus {
   display: none; }
 
 @media (max-width: 768px) {
+  .vac--inf .recruiter {
+    margin-top: 60px; }
+
+  .hdbtn {
+    justify-content: start !important; }
+
+  .vac-header .information-vacansie span {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block; }
+
   .frm {
     margin-bottom: 30px; }
+
+  .uzp .justify-content-end {
+    justify-content: start !important; }
 
   .ovw-vac .arch--vac-item .arch--vac-item-inner .arch--inf div {
     width: 100%;

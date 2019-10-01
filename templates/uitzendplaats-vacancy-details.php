@@ -56,7 +56,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 align-items-center justify-content-end d-flex">
+					<div class="col-md-4 align-items-center justify-content-end d-flex hdbtn">
 						<a href="#apply" class="btn"><?php _e('Direct solliciteren', 'talentplaats'); ?></a>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 			<hr>
 			<div class="container inf--vac">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-6">
 						<span class="posted">
 							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99984 1.99996C4.68613 1.99996 1.99984 4.68625 1.99984 7.99996C1.99984 11.3137 4.68613 14 7.99984 14C11.3135 14 13.9998 11.3137 13.9998 7.99996C13.9998 4.68625 11.3135 1.99996 7.99984 1.99996ZM0.666504 7.99996C0.666504 3.94987 3.94975 0.666626 7.99984 0.666626C12.0499 0.666626 15.3332 3.94987 15.3332 7.99996C15.3332 12.05 12.0499 15.3333 7.99984 15.3333C3.94975 15.3333 0.666504 12.05 0.666504 7.99996ZM7.99984 3.33329C8.36803 3.33329 8.6665 3.63177 8.6665 3.99996V7.58794L10.9646 8.73701C11.294 8.90167 11.4274 9.30212 11.2628 9.63143C11.0981 9.96075 10.6977 10.0942 10.3684 9.92958L7.70169 8.59624C7.47584 8.48332 7.33317 8.25247 7.33317 7.99996V3.99996C7.33317 3.63177 7.63165 3.33329 7.99984 3.33329Z" fill="#FF6600" />
@@ -76,7 +76,7 @@
 							</b>
 						</span>
 					</div>
-					<div class="col-md-6 d-flex justify-content-end">
+					<div class="col-md-6 col-6 d-flex justify-content-end">
 						<span class="refnr">
 							<?php _e('Referentie:', 'talentplaats'); ?> <?php echo $view_data->data->refno; ?>
 						</span>
