@@ -2812,12 +2812,12 @@ input:focus {
   transform-origin: left;
   margin-top: 6px; }
 .h--open span:nth-child(2) {
-  width: 0px;
+  width: 0px !important;
   margin-left: 10px; }
 .h--open span:last-child {
   transform: rotate(-45deg);
   transform-origin: left;
-  margin-top: 6px; }
+  margin-top: 6px !important; }
 
 @media (max-width: 768px) {
   .vac--inf .recruiter {
