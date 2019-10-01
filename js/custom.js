@@ -66,6 +66,7 @@ jQuery('.btp').on('click', function (e) {
 });
 
 jQuery("body").on('click', '.hamburger', function () {
+  jQuery(this).toggleClass('h--open');
   jQuery('.mgm').toggleClass('clickable');
   jQuery('.l').animate({ 'height': 'toggle' }, 400);
   jQuery('.r').animate({ 'width': 'toggle' }, 400);

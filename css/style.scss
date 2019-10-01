@@ -250,6 +250,10 @@ nav {
           background: $midnight;
           margin: 3px;
           display: block;
+          -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
       }
     }
@@ -3522,11 +3526,29 @@ input:focus {
 .mobile-nav {
   display: none;
 }
+
+.h--open {
+  span:first-child {
+    transform: rotate(45deg);
+    transform-origin: left;
+    margin-top: 6px;
+  }
+  span:nth-child(2) {
+    width: 0px;
+    margin-left: 10px;
+  }
+  span:last-child {
+    transform: rotate(-45deg);
+    transform-origin: left;
+    margin-top: 6px;
+  }
+}
 @media (max-width: 768px) {
   .vac--inf .recruiter {
     margin-top: 60px;
   }
   .hdbtn {
+    margin-top: 15px;
     justify-content: start !important;
   }
   .vac-header .information-vacansie span {
