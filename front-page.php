@@ -27,7 +27,7 @@ get_header(); ?>
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
                                     <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
-                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" <?php } ?>>
+                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
