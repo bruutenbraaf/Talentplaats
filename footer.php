@@ -43,6 +43,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </section>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -50,7 +51,8 @@
         <?php endwhile; ?>
     <?php endif; ?>
 <?php } ?>
-</main> <?php // closing the main header.php ?>
+</main> <?php // closing the main header.php 
+        ?>
 <footer <?php if (is_page_template('templates/contact.php')) { ?>class="nop" <?php } ?>>
     <div class="container">
         <div class="row">
