@@ -17,7 +17,14 @@ function talentplaats_scripts()
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'talentplaats_scripts');
-
+//* Remove type tag from script and style
+add_filter('style_loader_tag', 'codeless_remove_type_attr', 10, 2);
+add_filter('script_loader_tag', 'codeless_remove_type_attr', 10, 2);
+add_filter('autoptimize_html_after_minify', 'codeless_remove_type_attr', 10, 2);
+function codeless_remove_type_attr($tag, $handle='')
+{
+    return preg_replace("/type=['\"]text\/(javascript|css)['\"]/", '', $tag);
+}
 
 // Register menu's
 
