@@ -27,7 +27,7 @@ get_header(); ?>
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
                                     <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
-                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
+                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" <?php } ?>>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -250,7 +250,7 @@ get_header(); ?>
                             <?php $plaats_review_knop = get_sub_field('plaats_review_knop'); ?>
                             <?php if ($plaats_review_knop) { ?>
                                 <div class="col-4 d-flex justify-content-end pr">
-                                    <a class="all" href="<?php echo $plaats_review_knop['url']; ?>" target="<?php echo $plaats_review_knop['target']; ?>"><?php echo $plaats_review_knop['title']; ?></a>
+                                    <a class="all" href="<?php echo $plaats_review_knop['url']; ?>" <?php if ($plaats_review_knop['target']) { ?>target="<?php echo $plaats_review_knop['target']; ?>" <?php } ?>><?php echo $plaats_review_knop['title']; ?></a>
                                 </div>
                             <?php } ?>
                         </div>
@@ -288,7 +288,7 @@ get_header(); ?>
                                         <?php the_sub_field('tekst'); ?>
                                         <?php $knop = get_sub_field('knop'); ?>
                                         <?php if ($knop) { ?>
-                                            <a class="all" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                            <a class="all" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
                                         <?php } ?>
                                     </div>
                                 <?php endwhile; ?>
