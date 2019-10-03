@@ -15,7 +15,7 @@ get_header(); ?>
                                             <?php while (have_rows('knoppen')) : the_row(); ?>
                                                 <?php $knop = get_sub_field('knop'); ?>
                                                 <?php if ($knop) { ?>
-                                                    <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                                <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']);?> ?target="<?php echo $knop['target']; ?>"<?php }?>><?php echo $knop['title']; ?></a>
                                                 <?php } ?>
                                             <?php endwhile; ?>
                                         <?php endif; ?>
@@ -185,7 +185,7 @@ get_header(); ?>
                         <div class="col-md-12 d-flex justify-content-end">
                             <?php $alle_opleidingen_knop = get_sub_field('alle_opleidingen_knop'); ?>
                             <?php if ($alle_opleidingen_knop) { ?>
-                                <a class="all" href="<?php echo $alle_opleidingen_knop['url']; ?>" target="<?php echo $alle_opleidingen_knop['target']; ?>"><?php echo $alle_opleidingen_knop['title']; ?></a>
+                                <a class="all" href="<?php echo $alle_opleidingen_knop['url']; ?>" <?php if ($alle_opleidingen_knop['target']) { ?>target="<?php echo $alle_opleidingen_knop['target']; ?>" <?php } ?>><?php echo $alle_opleidingen_knop['title']; ?></a>
                             <?php } ?>
                         </div>
                     </div>
@@ -308,7 +308,7 @@ get_header(); ?>
                             <?php the_sub_field('content'); ?>
                             <?php $knop = get_sub_field('knop'); ?>
                             <?php if ($knop) { ?>
-                                <a class="btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>>><?php echo $knop['title']; ?></a>
                             <?php } ?>
                         </div>
                     </div>
