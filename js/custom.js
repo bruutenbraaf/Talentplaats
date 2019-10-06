@@ -1,3 +1,23 @@
+(function ($) {
+
+  'use strict';
+
+  if ('set' !== $.cookie('fc-pop')) {
+
+
+    $('.hide-fc').click(function () {
+      $.cookie('fc-pop', 'set', { expires: 7, path: '/' });
+      $('.fc').remove();
+    });
+
+  }
+
+  if('set' == $.cookie('fc-pop')) {
+    $('.fc').remove();
+  }
+
+}(jQuery));
+
 function checkForInput(element) {
   // element is passed to the function ^
 

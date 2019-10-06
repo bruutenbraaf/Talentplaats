@@ -251,12 +251,55 @@ nav {
           margin: 3px;
           display: block;
           -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
         }
       }
     }
+  }
+}
+
+// Feedback company
+
+.fc {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  background: $midnight;
+  z-index: 22;
+  color: #ffffff;
+  padding: 5px 0px;
+  font-family: $muli !important;
+  .__fbcw__bar-widget__content {
+    &:before {
+      content: "Wij scoren een ";
+      margin-right: 5px;
+      font-family: $muli !important;
+    }
+  }
+  .__fbcw__bar-widget {
+    justify-content: center !important;
+    .__fbcw__bar-widget__amount-of-reviews {
+      color: #ffffff !important;
+      font-family: $muli !important;
+    }
+  }
+  #right-Half {
+    fill: #ffffff !important;
+    opacity: 0.75 !important;
+  }
+  #left-Half {
+    fill: #f2c94c !important;
+  }
+  .__fbcw__bar-widget__feedback-company-branding--card-card-hidden {
+    display: none !important;
+  }
+  .hide-fc {
+    position: absolute;
+    right: 22px;
+    top: 9px;
   }
 }
 

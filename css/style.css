@@ -206,6 +206,37 @@ nav {
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
 
+.fc {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  background: #2d2d46;
+  z-index: 22;
+  color: #ffffff;
+  padding: 5px 0px;
+  font-family: "Muli", sans-serif !important; }
+  .fc .__fbcw__bar-widget__content:before {
+    content: "Wij scoren een ";
+    margin-right: 5px;
+    font-family: "Muli", sans-serif !important; }
+  .fc .__fbcw__bar-widget {
+    justify-content: center !important; }
+    .fc .__fbcw__bar-widget .__fbcw__bar-widget__amount-of-reviews {
+      color: #ffffff !important;
+      font-family: "Muli", sans-serif !important; }
+  .fc #right-Half {
+    fill: #ffffff !important;
+    opacity: 0.75 !important; }
+  .fc #left-Half {
+    fill: #f2c94c !important; }
+  .fc .__fbcw__bar-widget__feedback-company-branding--card-card-hidden {
+    display: none !important; }
+  .fc .hide-fc {
+    position: absolute;
+    right: 22px;
+    top: 9px; }
+
 .mega-menu {
   position: fixed;
   top: 0;

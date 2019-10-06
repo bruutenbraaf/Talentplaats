@@ -66,6 +66,47 @@
             </div>
         </div>
     </nav>
+    <div class="fc">
+        <!-- Feedback Company Widget (start) -->
+        <script type="text/javascript" id="__fbcw__35f783e3-96ce-476d-8803-f47574a533b9">
+            "use strict";
+            ! function() {
+                window.FeedbackCompanyWidgets = window.FeedbackCompanyWidgets || {
+                    queue: [],
+                    loaders: []
+                };
+                var options = {
+                    uuid: "35f783e3-96ce-476d-8803-f47574a533b9",
+                    version: "1.2.1",
+                    prefix: ""
+                };
+                if (
+                    void 0 === window.FeedbackCompanyWidget) {
+                    if (
+                        window.FeedbackCompanyWidgets.queue.push(options), !document.getElementById(
+                            "__fbcw_FeedbackCompanyWidget")) {
+                        var scriptTag = document.createElement("script");
+                        scriptTag.onload = function() {
+                                if (window.FeedbackCompanyWidget)
+                                    for (; 0 < window.FeedbackCompanyWidgets.queue.length;) options = window.FeedbackCompanyWidgets.queue.pop(),
+                                        window.FeedbackCompanyWidgets.loaders.push(
+                                            new window.FeedbackCompanyWidgetLoader(options))
+                            },
+                            scriptTag.id = "__fbcw_FeedbackCompanyWidget",
+                            scriptTag.src = "https://www.feedbackcompany.com/includes/widgets/feedback-company-widget.min.js", document.body.appendChild(scriptTag)
+                    }
+                } else window.FeedbackCompanyWidgets.loaders.push(
+                    new window.FeedbackCompanyWidgetLoader(options))
+            }();
+        </script>
+        <!-- Feedback Company Widget (end) -->
+        <div class="hide-fc">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711Z" fill="white" />
+            </svg>
+        </div>
+
+    </div>
 
 
     <div class="mgm">
