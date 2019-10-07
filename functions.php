@@ -21,23 +21,54 @@ add_action('wp_enqueue_scripts', 'talentplaats_scripts');
 add_filter('style_loader_tag', 'codeless_remove_type_attr', 10, 2);
 add_filter('script_loader_tag', 'codeless_remove_type_attr', 10, 2);
 add_filter('autoptimize_html_after_minify', 'codeless_remove_type_attr', 10, 2);
-function codeless_remove_type_attr($tag, $handle='')
+function codeless_remove_type_attr($tag, $handle = '')
 {
-    return preg_replace("/type=['\"]text\/(javascript|css)['\"]/", '', $tag);
+	return preg_replace("/type=['\"]text\/(javascript|css)['\"]/", '', $tag);
 }
 
 add_action('wp_loaded', 'prefix_output_buffer_start');
-function prefix_output_buffer_start() { 
-    ob_start("prefix_output_callback"); 
+function prefix_output_buffer_start()
+{
+	ob_start("prefix_output_callback");
 }
 
 add_action('shutdown', 'prefix_output_buffer_end');
-function prefix_output_buffer_end() { 
-    ob_end_flush(); 
+function prefix_output_buffer_end()
+{
+	ob_end_flush();
 }
 
-function prefix_output_callback($buffer) {
-    return preg_replace( "%[ ]type=[\'\"]text\/(javascript|css)[\'\"]%", '', $buffer );
+function prefix_output_callback($buffer)
+{
+	return preg_replace("%[ ]type=[\'\"]text\/(javascript|css)[\'\"]%", '', $buffer);
+}
+
+add_filter('style_loader_tag',  'clean_style_tag');
+add_filter('script_loader_tag', 'clean_script_tag');
+
+/**
+ * Clean up output of stylesheet <link> tags
+ */
+function clean_style_tag($input)
+{
+	preg_match_all("!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches);
+	if (empty($matches[2])) {
+		return $input;
+	}
+	// Only display media if it is meaningful
+	$media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
+
+	return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
+}
+
+/**
+ * Clean up output of <script> tags
+ */
+function clean_script_tag($input)
+{
+	$input = str_replace("type='text/javascript' ", '', $input);
+
+	return str_replace("'", '"', $input);
 }
 
 // Register menu's
