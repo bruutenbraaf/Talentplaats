@@ -1,5 +1,34 @@
 <?php
 
+add_action( 'template_redirect', '8798saf_remove_template_redirect', 10, 2);
+
+function 8798saf_remove_template_redirect(){
+  ob_start( function( $buffer ){
+    $buffer = str_replace( array( 
+        '<script type="text/javascript">',
+        "<script type='text/javascript'>", 
+        "<script type='text/javascript' src=",
+        '<script type="text/javascript" src=',
+        '<style type="text/css">', 
+        "' type='text/css' media=", 
+        '<style type="text/css" media',
+        "' type='text/css'>"
+    ), 
+    array(
+        '<script>', 
+        "<script>", 
+        "<script src=",
+        '<script src=',
+        '<style>', 
+        "' media=", 
+        '<style media',
+        "' >"
+    ), $buffer );
+
+    return $buffer;
+  });
+};
+
 add_image_size('home', 960, 450, true);
 
 add_theme_support('post-thumbnails');
@@ -18,12 +47,6 @@ function talentplaats_scripts()
 }
 add_action('wp_enqueue_scripts', 'talentplaats_scripts');
 
-
-add_filter('script_loader_tag', 'clean_script_tag');
-  function clean_script_tag($input) {
-  $input = str_replace("type='text/javascript' ", '', $input);
-  return str_replace("'", '"', $input);
-}
 
 
 // Register menu's
