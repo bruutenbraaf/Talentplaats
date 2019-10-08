@@ -2,7 +2,7 @@
 
 add_action( 'template_redirect', '8798saf_remove_template_redirect', 10, 2);
 
-function 8798saf_remove_template_redirect(){
+function saf_remove_template_redirect(){
   ob_start( function( $buffer ){
     $buffer = str_replace( array( 
         '<script type="text/javascript">',
