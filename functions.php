@@ -17,8 +17,6 @@ function talentplaats_scripts()
 }
 add_action('wp_enqueue_scripts', 'talentplaats_scripts');
 
-
-
 // Register menu's
 
 function register_my_menus()
