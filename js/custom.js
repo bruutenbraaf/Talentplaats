@@ -2,7 +2,7 @@
 
   'use strict';
 
-  if ('set' !== $.cookie('fc-pop')) {
+  if ('set' !== jQuery.cookie('fc-pop')) {
 
 
     jQuery('.hide-fc').click(function () {
