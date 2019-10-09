@@ -2,18 +2,18 @@
 
   'use strict';
 
-  if ('set' !== jQuery.cookie('fc-pop')) {
+  if ('set' !== $.cookie('fc-pop')) {
 
 
-    jQuery('.hide-fc').click(function () {
-      jQuery.cookie('fc-pop', 'set', { expires: 7, path: '/' });
-      jQuery('.fc').remove();
+    $('.hide-fc').click(function () {
+      $.cookie('fc-pop', 'set', { expires: 7, path: '/' });
+      $('.fc').remove();
     });
 
   }
 
-  if('set' == jQuery.cookie('fc-pop')) {
-    jQuery('.fc').remove();
+  if('set' == $.cookie('fc-pop')) {
+    $('.fc').remove();
   }
 
 }(jQuery));
