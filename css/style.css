@@ -9,7 +9,8 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  background: #f5f5fa; }
+  background: #f5f5fa;
+  width: 100vw; }
 
 h2,
 h3,
