@@ -397,9 +397,7 @@ nav {
       padding-top: 30px;
       padding-bottom: calc(#{$hpformheight} / 2 + 30px);
     }
-    .int {
-      position: relative;
-      z-index: 44;
+    .lh {
       .inner {
         z-index: 3;
         padding-right: 30px;
@@ -420,15 +418,12 @@ nav {
           line-height: 23px;
         }
       }
-      &:after {
-        content: "";
-        background: $blue;
+      .bg {
         position: absolute;
-        right: -8px;
-        top: 0;
+        width: 50vw;
+        right:0px;
         height: 100%;
-        width: 100vw;
-        z-index: 0;
+        background: $blue;
       }
     }
     .nopadding {
