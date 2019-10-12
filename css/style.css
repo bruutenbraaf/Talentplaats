@@ -123,7 +123,8 @@ nav {
     display: flex;
     align-items: center;
     margin-left: auto;
-    height: 80px; }
+    height: 80px;
+    padding-right: 20px; }
     nav .main_nav .menu-hoofdmenu-container {
       margin-left: auto;
       width: 100%; }
@@ -159,15 +160,21 @@ nav {
       nav .row .main--nav .secondair {
         color: #2d2d46; }
       nav .row .main--nav .nav-ct {
+        padding-left: 0px;
+        margin-left: 0px;
+        padding-right: 0px;
         border-left: 1px solid #cfcedf;
-        padding-left: 10px;
-        margin-left: 10px;
         overflow: hidden;
         white-space: nowrap;
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
+    nav .row .container {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
     nav .row .menu {
       margin: 0;
       padding: 0;
@@ -219,6 +226,14 @@ nav {
         -moz-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
+
+.fw {
+  max-width: 100vw;
+  padding: 0px 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .fc {
   position: fixed;
@@ -3375,11 +3390,15 @@ input:focus {
   width: 50%; }
 
 .is__scrolled .branding {
-  width: 20%; }
+  width: 240px;
+  margin-left: -15px;
+  justify-content: center; }
 .is__scrolled .main--nav {
   width: 80% !important; }
 .is__scrolled .nav-ct {
   width: 100%;
-  opacity: 1; }
+  opacity: 1;
+  padding-left: 20px !important;
+  margin-left: 20px !important; }
 
 /*# sourceMappingURL=style.css.map */

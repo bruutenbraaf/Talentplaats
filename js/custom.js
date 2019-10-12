@@ -65,8 +65,10 @@ jQuery(window).scroll(function () {
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 600) {
     jQuery("nav").addClass("is__scrolled");
+    jQuery("nav .container").addClass("fw");
   } else {
     jQuery("nav").removeClass("is__scrolled");
+    jQuery("nav .container").removeClass("fw");
   }
 });
 
