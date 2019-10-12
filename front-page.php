@@ -25,7 +25,7 @@ get_header(); ?>
                             <div class="bg">
                             </div>
                         </div>
-                        <div class="col-md-5 offset-md-1 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
                                     <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
@@ -35,7 +35,7 @@ get_header(); ?>
                             <?php endif; ?>
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <div class="block">
+                                    <div class="block offset-md-1">
                                         <h3><?php the_sub_field('titel'); ?></h3>
                                         <div class="lvhi">
                                             <div class="inner">

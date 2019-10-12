@@ -398,6 +398,16 @@ nav {
       padding-bottom: calc(#{$hpformheight} / 2 + 30px);
     }
     .lh {
+      &:after{
+        content:'';
+        background: $blue;
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 50vw;
+        right:0px;
+        top:0;
+      }
       .inner {
         z-index: 3;
         padding-right: 30px;
@@ -528,10 +538,10 @@ nav {
     }
   }
   .imghdr {
-    width: calc(56vw + 15px);
+    width: 50vw;
     height: 100%;
     position: absolute;
-    left: -95px;
+    left: 0px;
     top: 0;
     z-index: -1;
     background-size: cover;

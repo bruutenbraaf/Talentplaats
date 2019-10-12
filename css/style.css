@@ -314,6 +314,15 @@ nav {
       padding-right: 15px;
       padding-top: 30px;
       padding-bottom: calc(72px / 2 + 30px); }
+    .header .row .lh:after {
+      content: '';
+      background: #1772dd;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 50vw;
+      right: 0px;
+      top: 0; }
     .header .row .lh .inner {
       z-index: 3;
       padding-right: 30px; }
@@ -418,10 +427,10 @@ nav {
       .header .row .lvhi .inner {
         display: block; }
   .header .imghdr {
-    width: calc(56vw + 15px);
+    width: 50vw;
     height: 100%;
     position: absolute;
-    left: -95px;
+    left: 0px;
     top: 0;
     z-index: -1;
     background-size: cover;
