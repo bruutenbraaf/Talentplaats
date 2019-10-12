@@ -6,11 +6,7 @@ get_header(); ?>
             <section class="header">
                 <div class="container">
                     <div class="row">
-<<<<<<< HEAD
-                        <div class="col-md-6 col-12">
-=======
                         <div class="col-md-6 col-12 d-flex align-items-center lh">
->>>>>>> parent of 30a5afd... Test
                             <?php if (have_rows('content_links')) : ?>
                                 <div class="inner">
                                     <?php while (have_rows('content_links')) : the_row(); ?>
@@ -29,11 +25,7 @@ get_header(); ?>
                             <div class="bg">
                             </div>
                         </div>
-<<<<<<< HEAD
-                        <div class="col-md-6 col-12">
-=======
                         <div class="col-md-6 d-flex align-items-center lvh">
->>>>>>> parent of 30a5afd... Test
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
                                     <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
