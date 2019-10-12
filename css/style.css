@@ -351,7 +351,9 @@ nav {
       position: relative;
       z-index: 22; }
     .header .row .lvh {
-      display: flex; }
+      display: flex;
+      position: inherit;
+      overflow: hidden; }
       .header .row .lvh .block {
         position: relative;
         z-index: 1;
@@ -430,7 +432,7 @@ nav {
     width: 50vw;
     height: 100%;
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 0;
     z-index: -1;
     background-size: cover;
