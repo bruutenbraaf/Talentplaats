@@ -35,7 +35,7 @@ get_header(); ?>
                             <?php endif; ?>
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <div class="block offset-md-1">
+                                    <!-- <div class="block offset-md-1">
                                         <h3><?php the_sub_field('titel'); ?></h3>
                                         <div class="lvhi">
                                             <div class="inner">
@@ -55,9 +55,9 @@ get_header(); ?>
                                             </div>
                                             <div class="dots">
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
-                                    <script>
+                                    <!-- <script>
                                         jQuery(document).ready(function() {
                                             jQuery('.lvhi .inner').slick({
                                                 infinite: true,
@@ -70,7 +70,7 @@ get_header(); ?>
                                                 appendDots: jQuery(".dots"),
                                             });
                                         });
-                                    </script>
+                                    </script> -->
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
