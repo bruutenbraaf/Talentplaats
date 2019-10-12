@@ -386,7 +386,7 @@ nav {
     position: absolute;
     z-index: 2;
     transform: translateX(-40%);
-    top: 20px;
+    top: 80px;
     background-size: contain;
     z-index: 1;
   }
@@ -398,7 +398,7 @@ nav {
       padding-top: 30px;
       padding-bottom: calc(#{$hpformheight} / 2 + 30px);
     }
-    .lh {
+    .int {
       &:after{
         content:'';
         background: $blue;

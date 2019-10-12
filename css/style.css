@@ -305,7 +305,7 @@ nav {
     position: absolute;
     z-index: 2;
     transform: translateX(-40%);
-    top: 20px;
+    top: 80px;
     background-size: contain;
     z-index: 1; }
   .header .row {
@@ -315,7 +315,7 @@ nav {
       padding-right: 15px;
       padding-top: 30px;
       padding-bottom: calc(72px / 2 + 30px); }
-    .header .row .lh:after {
+    .header .row .int:after {
       content: '';
       background: #1772dd;
       position: absolute;
@@ -324,24 +324,24 @@ nav {
       width: 50vw;
       right: 0px;
       top: 0; }
-    .header .row .lh .inner {
+    .header .row .int .inner {
       z-index: 3;
       padding-right: 30px; }
-      .header .row .lh .inner h1,
-      .header .row .lh .inner h2,
-      .header .row .lh .inner h3,
-      .header .row .lh .inner h4 {
+      .header .row .int .inner h1,
+      .header .row .int .inner h2,
+      .header .row .int .inner h3,
+      .header .row .int .inner h4 {
         font-family: "Muli", sans-serif;
         color: #ffffff;
         font-weight: 800;
         font-size: 32px;
         line-height: 40px; }
-      .header .row .lh .inner p {
+      .header .row .int .inner p {
         font-family: "Muli", sans-serif;
         color: #ffffff;
         font-size: 18px;
         line-height: 23px; }
-    .header .row .lh .bg {
+    .header .row .int .bg {
       position: absolute;
       width: 50vw;
       right: 0px;

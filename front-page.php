@@ -6,7 +6,7 @@ get_header(); ?>
             <section class="header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-12 d-flex align-items-center lh">
+                        <div class="col-md-6 col-12 d-flex align-items-center int">
                             <?php if (have_rows('content_links')) : ?>
                                 <div class="inner">
                                     <?php while (have_rows('content_links')) : the_row(); ?>
@@ -22,8 +22,6 @@ get_header(); ?>
                                     <?php endwhile; ?>
                                 </div>
                             <?php endif; ?>
-                            <div class="bg">
-                            </div>
                         </div>
                         <div class="col-md-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
@@ -64,18 +62,14 @@ get_header(); ?>
                                             });
                                         });
                                     </script>
+                                    <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
+                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
+                                    </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
-                <?php if (have_rows('content_rechts')) : ?>
-                    <?php while (have_rows('content_rechts')) : the_row(); ?>
-                        <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
-                        <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
             </section>
             <section class="hpsf">
                 <div class="container">
