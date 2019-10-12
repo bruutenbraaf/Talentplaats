@@ -34,12 +34,14 @@
                                         <?php while (have_rows('content_links')) : the_row(); ?>
                                             <?php if (have_rows('knoppen')) : ?>
                                                 <div class="nav-ct d-flex">
-                                                    <?php while (have_rows('knoppen')) : the_row(); ?>
-                                                        <?php $knop = get_sub_field('knop'); ?>
-                                                        <?php if ($knop) { ?>
-                                                            <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
-                                                        <?php } ?>
-                                                    <?php endwhile; ?>
+                                                    <div class="inner">
+                                                        <?php while (have_rows('knoppen')) : the_row(); ?>
+                                                            <?php $knop = get_sub_field('knop'); ?>
+                                                            <?php if ($knop) { ?>
+                                                                <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
+                                                            <?php } ?>
+                                                        <?php endwhile; ?>
+                                                    </div>
                                                 </div>
                                             <?php endif; ?>
                                         <?php endwhile; ?>

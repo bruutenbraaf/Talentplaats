@@ -122,12 +122,11 @@ nav {
   nav .main_nav {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    width: 100%;
     height: 80px;
     padding-right: 20px; }
     nav .main_nav .menu-hoofdmenu-container {
-      margin-left: auto;
-      width: 100%; }
+      margin-left: auto; }
       nav .main_nav .menu-hoofdmenu-container ul {
         float: right; }
   nav .row {
@@ -3394,11 +3393,12 @@ input:focus {
   margin-left: -15px;
   justify-content: center; }
 .is__scrolled .main--nav {
-  width: 80% !important; }
+  width: calc(100% - 240px) !important; }
 .is__scrolled .nav-ct {
-  width: 100%;
+  width: auto;
   opacity: 1;
   padding-left: 20px !important;
-  margin-left: 20px !important; }
+  margin-left: 20px !important;
+  margin-right: -20px; }
 
 /*# sourceMappingURL=style.css.map */
