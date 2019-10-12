@@ -316,7 +316,7 @@ nav {
       padding-bottom: calc(72px / 2 + 30px); }
     .header .row .int {
       position: relative;
-      z-index: 9; }
+      z-index: 44; }
       .header .row .int .inner {
         z-index: 3;
         padding-right: 30px; }
