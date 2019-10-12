@@ -106,7 +106,7 @@ add_action('widgets_init', 'arphabet_widgets_init');
 function option_page_posttypes()
 {
 	$args  = array('public'   => true, '_builtin' => false);
-	$excluded_post_types = array('reviews', 'nieuws', 'vakgebieden');
+	$excluded_post_types = array('reviews', 'nieuws');
 	$custom_post_types = get_post_types($args);
 	foreach ($custom_post_types as $custom_post_type) {
 		if (in_array($custom_post_type, $excluded_post_types)) { } else {
