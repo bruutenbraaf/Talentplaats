@@ -28,14 +28,7 @@ get_header(); ?>
                         <div class="col-md-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
-                                    <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                            <?php if (have_rows('content_rechts')) : ?>
-                                <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <!-- <div class="block offset-md-1">
+                                    <div class="block offset-md-1">
                                         <h3><?php the_sub_field('titel'); ?></h3>
                                         <div class="lvhi">
                                             <div class="inner">
@@ -55,9 +48,9 @@ get_header(); ?>
                                             </div>
                                             <div class="dots">
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
-                                    <!-- <script>
+                                    <script>
                                         jQuery(document).ready(function() {
                                             jQuery('.lvhi .inner').slick({
                                                 infinite: true,
@@ -70,12 +63,19 @@ get_header(); ?>
                                                 appendDots: jQuery(".dots"),
                                             });
                                         });
-                                    </script> -->
+                                    </script>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
+                <?php if (have_rows('content_rechts')) : ?>
+                    <?php while (have_rows('content_rechts')) : the_row(); ?>
+                        <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
+                        <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </section>
             <section class="hpsf">
                 <div class="container">
