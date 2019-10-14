@@ -129,7 +129,9 @@ nav {
     nav .main_nav .menu-hoofdmenu-container {
       margin-left: auto; }
       nav .main_nav .menu-hoofdmenu-container ul {
-        float: right; }
+        float: right;
+        display: flex;
+        align-items: center; }
   nav .row {
     height: 80px; }
     nav .row .branding {
@@ -211,6 +213,7 @@ nav {
           nav .row .menu li a:hover:after {
             width: 100%; }
       nav .row .menu ul.sub-menu {
+        display: block;
         position: absolute;
         margin-left: -15px;
         margin-right: -15px;
@@ -370,6 +373,31 @@ nav {
         -moz-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
+  nav .hours a {
+    background: #eeeeee;
+    padding: 12px 15px 12px 15px !important;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    nav .hours a:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 4px;
+      margin-right: 10px;
+      background-image: url(../img/duration.svg);
+      background-size: contain;
+      background-position: center;
+      display: inline-block; }
+    nav .hours a:hover {
+      background: #1cd265; }
+    nav .hours a:hover:after {
+      display: none; }
 
 .fw {
   max-width: 100vw;
@@ -3564,5 +3592,31 @@ input:focus {
     padding-left: 20px !important;
     margin-left: 20px !important;
     margin-right: -20px; }
+  .is__scrolled .hours a {
+    background: none;
+    padding: initial !important;
+    border-radius: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .is__scrolled .hours a:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 4px;
+      margin-right: 10px;
+      background-image: url(../img/duration.svg);
+      background-size: contain;
+      background-position: center;
+      display: inline-block;
+      display: none; }
+    .is__scrolled .hours a:hover {
+      background: none; }
+    .is__scrolled .hours a:hover:after {
+      display: block; }
 
 /*# sourceMappingURL=style.css.map */
