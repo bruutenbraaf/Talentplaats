@@ -1,3 +1,4 @@
+// Function for review bar
 (function ($) {
 
   'use strict';
@@ -32,16 +33,14 @@ function checkForInput(element) {
   }
 }
 
-// The lines below are executed on page load
+// Change lable
 jQuery('input, textarea').each(function () {
   checkForInput(this);
 });
 
-// The lines below (inside) are executed on change & keyup
 jQuery('input, textarea').on('change keyup', function () {
   checkForInput(this);
 });
-
 
 jQuery("input, textarea").focus(function () {
   jQuery(this).parent().addClass("val");
@@ -51,16 +50,19 @@ jQuery("input, textarea").focusout(function () {
   jQuery(this).parent().removeClass("val");
 });
 
+// Sub menu toggle
 jQuery("body").on('click', '.mobile-nav .menu-item-has-children', function () {
   jQuery(this).find('.sub-menu').slideToggle();
   jQuery(this).toggleClass('is--open');
 });
 
+// Mobile nav toggle
 jQuery("body").on('click', '.mobnav', function () {
   jQuery(this).toggleClass('is--active');
   jQuery('.mobile-nav').toggleClass('nav-open');
 });
 
+// Change nav class
 jQuery(window).scroll(function () {
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 600) {
@@ -72,7 +74,7 @@ jQuery(window).scroll(function () {
   }
 });
 
-
+// Make back to top visible
 jQuery(window).scroll(function () {
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 600) {
@@ -82,11 +84,13 @@ jQuery(window).scroll(function () {
   }
 });
 
+// Back to top
 jQuery('.btp').on('click', function (e) {
   e.preventDefault();
   jQuery('html, body').animate({ scrollTop: 0 }, '300');
 });
 
+// Hamburger menu
 jQuery("body").on('click', '.hamburger', function () {
   jQuery(this).toggleClass('h--open');
   jQuery('.mgm').toggleClass('clickable');
@@ -108,14 +112,13 @@ jQuery("body").on('click', '#newsletterbtn', function () {
 
 
 jQuery(document).ready(function () {
-
   jQuery("body").on('click', '.regio--name', function () {
     jQuery(this).next('.branches').slideToggle(200);
     jQuery(this).toggleClass('is--open');
   });
 });
 
-
+// Change nav class on scroll
 jQuery(window).scroll(function () {
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {
@@ -125,16 +128,7 @@ jQuery(window).scroll(function () {
   }
 });
 
-jQuery(window).scroll(function () {
-  var scroll = jQuery(window).scrollTop();
-  if (scroll >= 160) {
-    jQuery(".reading-progress").addClass("visible");
-  } else {
-    jQuery(".reading-progress").removeClass("visible");
-  }
-});
-
-
+// Reading progress
 jQuery(window).scroll(function (event) {
   var scrollTop = jQuery(window).scrollTop();
   docHeight = jQuery(document).height(),
@@ -145,19 +139,7 @@ jQuery(window).scroll(function (event) {
   readingIndicator.width(scrollPercentageString);
 });
 
-
-jQuery('.countnumber').each(function () {
-  jQuery(this).prop('Counter', 0).animate({
-    Counter: jQuery(this).text()
-  }, {
-    duration: 4000,
-    easing: 'swing',
-    step: function (now) {
-      jQuery(this).text(Math.ceil(now));
-    }
-  });
-});
-
+// Smoothscroll
 jQuery('a[href*=\\#]').on('click', function (event) {
   target = jQuery(this).attr('href');
   if (target === '#') {

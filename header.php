@@ -187,4 +187,5 @@
             <?php endif; ?>
         </div>
     </div>
+    <div class="reading-progress"></div>
     <main>

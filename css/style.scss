@@ -164,7 +164,7 @@ nav {
   .main_nav {
     display: flex;
     align-items: center;
-    width:100%;
+    width: 100%;
     height: 80px;
     padding-right: 20px;
     .menu-hoofdmenu-container {
@@ -233,6 +233,7 @@ nav {
       li {
         float: left;
         list-style: none;
+        position: relative;
         a {
           font-family: $muli;
           font-style: normal;
@@ -261,6 +262,103 @@ nav {
           &:hover:after {
             width: 100%;
           }
+        }
+      }
+      ul.sub-menu {
+        position: absolute;
+        margin-left: -15px;
+        margin-right: -15px;
+        top: 32px;
+        z-index: 44;
+        white-space: nowrap;
+        border-radius: 5px;
+        background: #fff;
+        opacity: 0;
+        z-index: 1;
+        pointer-events: none;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1 ease-in-out;
+        padding: 10px 0px;
+        &:before {
+          content: "";
+          width: 100%;
+          height: 20px;
+          position: absolute;
+          top: -20px;
+        }
+        li {
+          width: 100%;
+          position: relative;
+          margin: 8px 15px;
+          a {
+            color: $midnight;
+            opacity: 1;
+            z-index: 2;
+            text-decoration: none;
+          }
+        }
+        .current-menu-item > a {
+          z-index: 2;
+          text-decoration: none;
+          &:before {
+            content: "";
+            background: $midnight;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0px;
+            position: absolute;
+            z-index: -1;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        ul.sub-menu {
+          left: calc(100% - 20px);
+          top: 0;
+        }
+      }
+      .menu-item-has-children {
+        &:after {
+          content: "";
+          position: relative;
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          opacity: 0.5;
+          margin-left: 8px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2 ease-in-out;
+        }
+        &:hover {
+          &:after {
+            transform: rotate(180deg);
+            opacity: 1;
+          }
+        }
+      }
+      .menu-item-has-children:hover a {
+        opacity: 1;
+      }
+      .menu-item-has-children:hover > ul.sub-menu {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .current_page_ancestor {
+        a {
+          opacity: 1;
+        }
+        &:after {
+          opacity: 1;
         }
       }
     }
@@ -399,15 +497,15 @@ nav {
       padding-bottom: calc(#{$hpformheight} / 2 + 30px);
     }
     .int {
-      &:after{
-        content:'';
+      &:after {
+        content: "";
         background: $blue;
         position: absolute;
         z-index: -1;
         height: 100%;
         width: 50vw;
-        right:0px;
-        top:0;
+        right: 0px;
+        top: 0;
       }
       .inner {
         z-index: 3;
@@ -432,7 +530,7 @@ nav {
       .bg {
         position: absolute;
         width: 50vw;
-        right:0px;
+        right: 0px;
         height: 100%;
         background: $blue;
       }
@@ -550,6 +648,15 @@ nav {
     background-size: cover;
     background-position: center center;
   }
+}
+
+.reading-progress {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  z-index: 99;
+  height: 4px;
+  background: $orange;
 }
 
 // breadcrumbs
@@ -4227,7 +4334,7 @@ input:focus {
   box-shadow: rgba(183, 183, 183, 0.22) 0px 0px 23px;
   .branding {
     width: 240px;
-    margin-left:-15px;
+    margin-left: -15px;
     justify-content: center;
   }
   .main--nav {

@@ -312,7 +312,7 @@ get_header(); ?>
             </section>
         <?php elseif (get_row_layout() == 'tellers__counters') : ?>
             <?php if (have_rows('counters')) : ?>
-                <section class="cntrs">
+                <section class="cntrs" id="counter">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -323,7 +323,11 @@ get_header(); ?>
                                             <?php if ($icon) { ?>
                                                 <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
                                             <?php } ?>
-                                            <div class="countnumber"><?php the_sub_field('aantal'); ?></div>
+                                            <?php if (wp_is_mobile()) { ?>
+                                                <div class="countnumber <?php the_sub_field('counter_toevoeging'); ?>"><?php the_sub_field('aantal'); ?></div>
+                                            <?php } else { ?>
+                                                <div class="countnumber <?php the_sub_field('counter_toevoeging'); ?>" data-count="<?php the_sub_field('aantal'); ?>">0</div>
+                                            <?php } ?>
                                             <h5><?php the_sub_field('titel'); ?></h5>
                                         </div>
                                     <?php endwhile; ?>
@@ -332,6 +336,36 @@ get_header(); ?>
                         </div>
                     </div>
                 </section>
+                <script>
+                    var a = 0;
+                    jQuery(window).scroll(function() {
+
+                        var oTop = jQuery('#counter').offset().top - window.innerHeight;
+                        if (a == 0 && jQuery(window).scrollTop() > oTop) {
+                            jQuery('.countnumber').each(function() {
+                                var $this = jQuery(this),
+                                    countTo = $this.attr('data-count');
+                                jQuery({
+                                    countNum: $this.text()
+                                }).animate({
+                                        countNum: countTo
+                                    },
+
+                                    {
+                                        duration: 2000,
+                                        easing: 'swing',
+                                        step: function() {
+                                            $this.text(Math.floor(this.countNum));
+                                        },
+                                        complete: function() {
+                                            $this.text(this.countNum);
+                                        }
+                                    });
+                            });
+                            a = 1;
+                        }
+                    });
+                </script>
             <?php endif; ?>
         <?php elseif (get_row_layout() == 'scheiding') : ?>
             <div class="sch">
