@@ -2900,7 +2900,7 @@ th {
   float: left;
   margin: 0px 15px 0px 0px;
   pointer-events: all;
-  border: 1px solid #cfcedf; }
+  border: 1px solid #cfcedf !important; }
   .frm_checkbox input[type="checkbox"]:checked {
     background-image: url(../img/checked.svg);
     background-position: center center;
