@@ -3696,6 +3696,7 @@ th {
     float: left;
     margin: 0px 15px 0px 0px;
     pointer-events: all;
+    cursor: pointer;
     border: 1px solid $lightgray !important;
     &:checked {
       background-image: url(../img/checked.svg);
@@ -3705,6 +3706,7 @@ th {
     }
   }
   label {
+    cursor: pointer;
     position: initial;
     background: none;
     pointer-events: all;
