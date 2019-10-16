@@ -2864,7 +2864,7 @@ th {
   position: relative; }
   .frm_form_field label {
     position: absolute;
-    top: 50%;
+    top: 42px;
     left: 10px;
     transform: translateY(-50%);
     z-index: 9;
@@ -2898,9 +2898,9 @@ th {
   height: 16px;
   padding: 0px;
   float: left;
-  margin: 0px; }
+  margin: 0px 15px 0px 0px; }
 .frm_checkbox label {
-  position: relative;
+  position: initial;
   background: none; }
 
 .input-has-value {
