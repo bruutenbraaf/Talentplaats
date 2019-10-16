@@ -2902,7 +2902,9 @@ th {
   pointer-events: all;
   border: #cfcedf; }
   .frm_checkbox input[type="checkbox"]:checked {
-    background: #ff6600; }
+    background-image: url(../img/checked.svg);
+    background-position: center center;
+    background-size: 100%; }
 .frm_checkbox label {
   position: initial;
   background: none;

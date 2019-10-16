@@ -3698,7 +3698,9 @@ th {
     pointer-events: all;
     border: $lightgray;
     &:checked {
-      background: $orange;
+      background-image: url(../img/checked.svg);
+      background-position: center center;
+      background-size: 100%;
     }
   }
   label {
