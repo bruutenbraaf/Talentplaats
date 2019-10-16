@@ -2904,7 +2904,8 @@ th {
   .frm_checkbox input[type="checkbox"]:checked {
     background-image: url(../img/checked.svg);
     background-position: center center;
-    background-size: 100%; }
+    background-size: 100%;
+    border: 1px solid #2d2d46 !important; }
 .frm_checkbox label {
   position: initial;
   background: none;
