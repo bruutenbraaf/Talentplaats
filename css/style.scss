@@ -3695,6 +3695,7 @@ th {
     padding: 0px;
     float: left;
     margin: 0px 15px 0px 0px;
+    pointer-events: all;
     &:checked {
       background: $orange;
     }
