@@ -480,6 +480,18 @@ nav {
     top: 80px;
     background-size: contain;
     z-index: 1; }
+  .header ul {
+    margin: 15px -10px;
+    padding: 0px; }
+    .header ul li {
+      float: left;
+      margin: 0px 10px;
+      list-style: none; }
+      .header ul li svg {
+        fill: #ffffff;
+        max-height: 18px; }
+      .header ul li:hover svg {
+        fill: #ff6600; }
   .header .row {
     min-height: 460px; }
     .header .row .d-flex {
@@ -2756,6 +2768,10 @@ th {
     height: 365px;
     background-size: cover;
     background-position: top center; }
+  .members .member a:hover {
+    text-decoration: none; }
+    .members .member a:hover h3 {
+      color: #ff6600; }
 
 .ctnc--inner {
   background: #ffffff;
@@ -2875,6 +2891,17 @@ th {
     border: 1px solid #cfcedf;
     border-radius: 3px;
     margin: 20px 0px; }
+
+.frm_checkbox input[type="checkbox"] {
+  width: 16px;
+  max-width: 20px;
+  height: 16px;
+  padding: 0px;
+  float: left;
+  margin: 0px; }
+.frm_checkbox label {
+  position: relative;
+  background: none; }
 
 .input-has-value {
   top: 19px !important;

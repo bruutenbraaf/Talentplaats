@@ -36,16 +36,18 @@ get_header(); ?>
                     <div class="row">
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-md-6 member">
-                                <div class="inner">
-                                    <div class="team--member" style="background-image:urL(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="inner">
+                                        <div class="team--member" style="background-image:urL(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
+                                        </div>
+                                        <h3><?php the_title(); ?></h3>
+                                        <?php if (have_rows('informatie_team')) : ?>
+                                            <?php while (have_rows('informatie_team')) : the_row(); ?>
+                                                <span class="function"><?php the_sub_field('functie'); ?></span>
+                                            <?php endwhile; ?>
+                                        <?php endif; ?>
                                     </div>
-                                    <h3><?php the_title(); ?></h3>
-                                    <?php if (have_rows('informatie_team')) : ?>
-                                        <?php while (have_rows('informatie_team')) : the_row(); ?>
-                                            <span class="function"><?php the_sub_field('functie'); ?></span>
-                                        <?php endwhile; ?>
-                                    <?php endif; ?>
-                                </div>
+                                </a>
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>

@@ -150,3 +150,29 @@ jQuery('a[href*=\\#]').on('click', function (event) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top }, 1000);
   }
 });
+
+
+// No opener
+function noOpener(){
+  //get elements
+  var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"])');
+  if(e.length){
+      //loop through
+      for (i = 0; i < e.length; ++i){
+          //check for existing rel
+          var rel = e[i].getAttribute('rel');
+          if(rel){
+              //we don't want doubel noreferrer
+              rel = rel.replace('noreferrer','');
+              e[i].setAttribute('rel',rel+' noopener noreferrer nofollow');
+          }else{
+              e[i].setAttribute('rel','noopener noreferrer');   
+          }
+          
+      }
+  }
+}
+
+jQuery(document).ready(function() {
+  noOpener()
+});

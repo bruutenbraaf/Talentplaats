@@ -18,6 +18,13 @@ function talentplaats_scripts()
 }
 add_action('wp_enqueue_scripts', 'talentplaats_scripts');
 
+
+add_filter('script_loader_tag', 'clean_script_tag');
+  function clean_script_tag($input) {
+  $input = str_replace("type='text/javascript' ", '', $input);
+  return str_replace("'", '"', $input);
+}
+
 // Register menu's
 
 function register_my_menus()
