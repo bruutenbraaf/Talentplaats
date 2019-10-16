@@ -3714,6 +3714,10 @@ th {
   }
 }
 
+.uzp__form-group--has-error label {
+  color: inherit;
+}
+
 .input-has-value {
   top: 19px !important;
   color: $blue !important;

@@ -2914,6 +2914,9 @@ th {
   pointer-events: all;
   color: #2d2d46; }
 
+.uzp__form-group--has-error label {
+  color: inherit; }
+
 .input-has-value {
   top: 19px !important;
   color: #1772dd !important; }
