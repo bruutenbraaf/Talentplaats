@@ -3696,7 +3696,7 @@ th {
     float: left;
     margin: 0px 15px 0px 0px;
     pointer-events: all;
-    border: $lightgray;
+    border: 1px solid $lightgray;
     &:checked {
       background-image: url(../img/checked.svg);
       background-position: center center;
