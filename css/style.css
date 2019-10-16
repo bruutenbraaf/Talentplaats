@@ -2899,12 +2899,15 @@ th {
   padding: 0px;
   float: left;
   margin: 0px 15px 0px 0px;
-  pointer-events: all; }
+  pointer-events: all;
+  border: #cfcedf; }
   .frm_checkbox input[type="checkbox"]:checked {
     background: #ff6600; }
 .frm_checkbox label {
   position: initial;
-  background: none; }
+  background: none;
+  pointer-events: all;
+  color: #2d2d46; }
 
 .input-has-value {
   top: 19px !important;

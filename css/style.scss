@@ -3696,6 +3696,7 @@ th {
     float: left;
     margin: 0px 15px 0px 0px;
     pointer-events: all;
+    border: $lightgray;
     &:checked {
       background: $orange;
     }
@@ -3703,6 +3704,8 @@ th {
   label {
     position: initial;
     background: none;
+    pointer-events: all;
+    color: $midnight;
   }
 }
 
