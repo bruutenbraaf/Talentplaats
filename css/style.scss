@@ -3282,6 +3282,8 @@ $teamheight: 280px;
     overflow: hidden;
     border: 1px solid #eeeeee;
     background: #ffffff;
+    position: sticky;
+    top: 110px;
     .contact-person {
       background: $midnight;
       color: #ffffff;

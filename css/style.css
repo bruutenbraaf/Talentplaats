@@ -2593,7 +2593,9 @@ footer {
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid #eeeeee;
-    background: #ffffff; }
+    background: #ffffff;
+    position: sticky;
+    top: 110px; }
     .vac--inf .recruiter .contact-person {
       background: #2d2d46;
       color: #ffffff;
