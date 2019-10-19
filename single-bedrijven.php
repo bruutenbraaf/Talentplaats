@@ -1,15 +1,6 @@
 <?php
 get_header();
 ?>
-
-<?php
-$taxonomy_prefix = 'nieuws_categorie';
-$term_id = get_queried_object()->term_id;
-$term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
-$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-?>
-
-
 <section class="relation-header">
     <div class="container">
         <div class="row d-flex align-items-center">

@@ -11,12 +11,12 @@ get_header(); ?>
                             yoast_breadcrumb('');
                         } ?>
                     </div>
-                    <?php the_field('ons_netwerk_overzicht_title', 'option'); ?>
-                    <?php the_field('ons_netwerk_overzicht_intro', 'option'); ?>
+                    <?php the_field('bedrijven_overzicht_title', 'option'); ?>
+                    <?php the_field('bedrijven_overzicht_intro', 'option'); ?>
                 </div>
             </div>
             <div class="col-md-5 offset-md-1 d-flex align-items-center lvh nopadding">
-                <?php $achtergrond_afbeelding = get_field('ons_netwerk_overzicht_afbeelding', 'option'); ?>
+                <?php $achtergrond_afbeelding = get_field('bedrijven_overzicht_afbeelding', 'option'); ?>
                 <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
                 </div>
             </div>
@@ -28,8 +28,8 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center int-cont">
-                    <?php the_field('ons_netwerk_overzicht_titlecontent', 'option'); ?>
-                    <?php the_field('ons_netwerk_overzicht_introcontent', 'option'); ?>
+                    <?php the_field('bedrijven_overzicht_titlecontent', 'option'); ?>
+                    <?php the_field('bedrijven_overzicht_introcontent', 'option'); ?>
                 </div>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 the--post">
@@ -79,12 +79,12 @@ get_header(); ?>
     </div>
 </section>
 
-<?php if (get_field('ons_netwerk_overzicht_vacatures', 'option') == 1) { ?>
+<?php if (get_field('bedrijven_overzicht_vacatures', 'option') == 1) { ?>
     <section class="vac-items-w">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <?php the_field('ons_netwerk_overzicht_vacturetitel', 'option'); ?>
+                    <?php the_field('bedrijven_overzicht_vacturetitel', 'option'); ?>
                 </div>
                 <div class="col-md-12">
                     <div class="arch--vac-items">
@@ -96,13 +96,13 @@ get_header(); ?>
     </section>
 <?php } ?>
 
-<?php if (get_field('ons_netwerk_overzicht_seo', 'option')) { ?>
+<?php if (get_field('bedrijven_overzicht_seo', 'option')) { ?>
     <section class="s">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="int">
-                        <?php the_field('ons_netwerk_overzicht_seo', 'option'); ?>
+                        <?php the_field('bedrijven_overzicht_seo', 'option'); ?>
                     </div>
                 </div>
             </div>

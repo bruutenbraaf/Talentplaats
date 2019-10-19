@@ -3259,6 +3259,32 @@ input:focus {
       background-position: center center;
       background-repeat: no-repeat; }
 
+.search-form {
+  display: flex; }
+  .search-form label {
+    flex-grow: 11; }
+    .search-form label input {
+      width: 100%;
+      border: 1px solid #cfcedf;
+      padding: 10px 15px;
+      border-radius: 5px 0px 0px 5px; }
+  .search-form .search-submit {
+    flex-grow: 1;
+    background: #1cd265;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    height: 46px;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .search-form .search-submit:hover {
+      background: #3ce580;
+      cursor: pointer; }
+
 .mobile-nav {
   display: none; }
 

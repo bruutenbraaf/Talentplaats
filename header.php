@@ -119,10 +119,10 @@
                                 <?php $term_list = wp_get_post_terms($post->ID, 'nieuws_categorie', array("fields" => "all")); ?>
                                 <?php $count = 0; ?>
                                 <?php foreach ($term_list as $term) { ?>
-                                    <span class="nws--ct"><?php echo $term->name ?><?php if ($count <= $totalcount) { ?>,<?php } ?></span>
+                                    <span class="nws--ct"><?php echo $term->name ?></span>
                                     <?php $count++; ?>
                                 <?php } ?>
-                                <?php $totalcount = $count; ?>
+                                
                                 <h3><?php the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>" class="smll-btn"><?php _e('Bekijk artikel', 'talentplaats'); ?>
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
