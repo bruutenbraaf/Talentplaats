@@ -785,7 +785,7 @@ nav {
   position: fixed;
   left: 0;
   top: 80px;
-  z-index: 99;
+  z-index: 15;
   height: 4px;
   background: $orange;
 }
@@ -2329,6 +2329,11 @@ $taxheight: 54px;
   }
   .the--post {
     margin-bottom: 40px;
+    .date {
+      color: $lightgray;
+      padding-bottom: 10px;
+      display: block;
+    }
   }
   .in-post {
     background: #ffffff;
@@ -3257,7 +3262,6 @@ $teamheight: 280px;
 }
 
 .vac--inf {
-  background: #ffffff;
   padding: 60px 0px;
   .description-vacansie {
     p {
@@ -3277,6 +3281,7 @@ $teamheight: 280px;
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid #eeeeee;
+    background: #ffffff;
     .contact-person {
       background: $midnight;
       color: #ffffff;

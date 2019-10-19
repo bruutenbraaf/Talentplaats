@@ -35,24 +35,12 @@ $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 <div class="taxs">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 terms d-flex justify-content-center align-items-end">
-                <?php $terms = get_terms('nieuws_categorie');
-                $current = $term->name; ?>
-                <ul>
-                    <?php foreach ($terms as $term) { ?>
-                        <?php $term_link = get_term_link($term);
-                            if (is_wp_error($term_link)) {
-                                continue;
-                            } ?>
-                        <li <?php if ($term->name == $current) { ?>class="current" <?php } ?>><a href="<?php echo esc_url($term_link) ?>"> <?php echo $term->name ?> </a></li>
-                    <?php } ?>
-                </ul>
-                <svg width="5" height="5" class="left" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.5 3.5C5 2 5 0.65625 5 0.65625V5H0C0 5 2 5 3.5 3.5Z" fill="#F5F5FA" />
-                </svg>
-                <svg width="5" height="5" class="right" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 3.5C0 2 0 0.65625 0 0.65625V5H5C5 5 3 5 1.5 3.5Z" fill="#F5F5FA" />
-                </svg>
+            <div class="col-md-12 terms d-flex align-items-end">
+                <div class="breadcrumbs dark">
+                    <?php if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('');
+                    } ?>
+                </div>
             </div>
         </div>
     </div>
@@ -66,12 +54,9 @@ $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
                         <a href="<?php the_permalink(); ?>">
                             <div class="in-post">
                                 <div class="postimg d-flex justify-content-end" style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
-                                    <?php $theterms = wp_get_post_terms($post->ID, 'nieuws_categorie', array("fields" => "names")); ?>
-                                    <?php foreach ($theterms as $theterm) { ?>
-                                        <span class="tax-name"><?php echo $theterm; ?></span>
-                                    <?php } ?>
                                 </div>
                                 <div class="inf">
+                                    <span class="date"><?php echo the_time('j F Y');?></span>
                                     <h2><?php the_title(); ?></h2>
                                     <p><?php echo excerpt(20); ?></p>
                                 </div>
