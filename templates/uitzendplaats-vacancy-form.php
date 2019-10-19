@@ -30,7 +30,7 @@
 		</div>
 
 		<div class="uzp__form-group uzp-row">
-			<input type="text" class="uzp__form-control" id="inputEmail" name="email" placeholder="<?php _e('your@email.com', 'uitzendplaats'); ?>">
+			<input id="inputEmail" type="text" class="uzp__form-control" name="email" placeholder="<?php _e('your@email.com', 'uitzendplaats'); ?>">
 			<p class="uzp__help-block" data-validate-for="email"></p>
 		</div>
 

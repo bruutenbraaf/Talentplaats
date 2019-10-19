@@ -210,7 +210,7 @@
 						<h2><?php _e('Solliciteer <b>direct</b>', 'talentplaats'); ?></h2>
 						<textarea type="text" name="user" class="about-you" placeholder="Vertel iets over jezelf"></textarea>
 						</p>
-						<button class="btn">
+						<button class="btn apply">
 							<?php _e('Solliciteer', 'talentplaats'); ?>
 						</button>
 						</form>
@@ -218,7 +218,7 @@
 
 						<script>
 							jQuery(document).ready(function() {
-								jQuery("button").click(function() {
+								jQuery(".apply").click(function() {
 									var x = jQuery("textarea").val();
 									document.getElementById("inputMessage").value = x;
 									jQuery('.modal-bx').toggleClass('modal-visible');

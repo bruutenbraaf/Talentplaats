@@ -1189,29 +1189,25 @@ nav {
       color: #ffffff;
       margin-bottom: 20px; }
     .nwsletter .nws--inner form {
-      width: 100%; }
-      .nwsletter .nws--inner form #mc_embed_signup_scroll {
-        display: flex; }
-      .nwsletter .nws--inner form .mc-field-group {
-        width: 100%; }
-        .nwsletter .nws--inner form .mc-field-group input[type="email"] {
-          width: 100%;
-          background: #ffffff;
-          border-radius: 5px 0px 0px 5px;
-          border: none;
-          padding: 20px;
+      display: flex; }
+      .nwsletter .nws--inner form input {
+        flex-grow: 11;
+        background: #ffffff;
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        padding: 20px;
+        font-family: "Muli", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #2d2d46; }
+        .nwsletter .nws--inner form input::placeholder {
           font-family: "Muli", sans-serif;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
-          color: #2d2d46; }
-          .nwsletter .nws--inner form .mc-field-group input[type="email"]::placeholder {
-            font-family: "Muli", sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            color: #cfcedf; }
-      .nwsletter .nws--inner form input[type="submit"] {
+          color: #cfcedf; }
+      .nwsletter .nws--inner form .setmail {
         height: 64px;
         border-radius: 0 10px 10px 0;
         font-family: Muli, sans-serif;
@@ -1227,7 +1223,8 @@ nav {
         padding: 20px;
         width: auto;
         color: #ffffff;
-        cursor: pointer; }
+        cursor: pointer;
+        flex-grow: 2; }
     .nwsletter .nws--inner .nws--content {
       position: relative;
       z-index: 2; }
@@ -2498,12 +2495,18 @@ footer {
         position: relative;
         top: -2px; }
 
+.uzp button,
+.uzp a.uzp-button,
+.uzp input[type="button"],
+.uzp input[type="submit"] {
+  border: none !important; }
+
 #apply .about-you {
   width: 100%;
   min-height: 250px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #EEEEEE; }
+  border: 1px solid #eeeeee; }
 
 .modal-bx {
   opacity: 0;

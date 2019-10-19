@@ -1495,33 +1495,27 @@ $formmargin: 110px;
       margin-bottom: 20px;
     }
     form {
-      width: 100%;
-      #mc_embed_signup_scroll {
-        display: flex;
-      }
-      .mc-field-group {
-        width: 100%;
-        input[type="email"] {
-          width: 100%;
-          background: #ffffff;
-          border-radius: 5px 0px 0px 5px;
-          border: none;
-          padding: 20px;
+      display: flex;
+      input {
+        flex-grow: 11;
+        background: #ffffff;
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        padding: 20px;
+        font-family: $muli;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: $midnight;
+        &::placeholder {
           font-family: $muli;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
-          color: $midnight;
-          &::placeholder {
-            font-family: $muli;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            color: $lightgray;
-          }
+          color: $lightgray;
         }
       }
-      input[type="submit"] {
+      .setmail {
         height: 64px;
         border-radius: 0 10px 10px 0;
         font-family: Muli, sans-serif;
@@ -1538,6 +1532,7 @@ $formmargin: 110px;
         width: auto;
         color: #ffffff;
         cursor: pointer;
+        flex-grow: 2;
       }
     }
     .nws--content {
@@ -3170,13 +3165,20 @@ $teamheight: 280px;
   }
 }
 
+.uzp button,
+.uzp a.uzp-button,
+.uzp input[type="button"],
+.uzp input[type="submit"] {
+  border: none !important;
+}
+
 #apply {
   .about-you {
     width: 100%;
     min-height: 250px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
   }
 }
 
