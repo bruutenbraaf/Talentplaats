@@ -186,7 +186,6 @@
 								</a>
 							</div>
 							<div class="vac-act">
-								<a href="mailto:<?php echo $view_data->data->recruiter->data->email; ?>" class="btn grey" target="_blank"><?php _e('Stel een vraag', 'leerbouwen'); ?></a>
 								<a href="#apply" class="btn"><?php _e('Direct solliciteren', 'leerbouwen'); ?></a>
 							</div>
 						</div>
@@ -208,7 +207,47 @@
 			<div class="container app-form" id="apply">
 				<div class="row">
 					<div class="col-md-12">
-						<?php echo do_shortcode('[uitzendplaats_application_form]'); ?>
+						<h2><?php _e('Solliciteer <b>direct</b>', 'talentplaats'); ?></h2>
+						<textarea type="text" name="user" class="about-you" placeholder="Vertel iets over jezelf"></textarea>
+						</p>
+						<button class="btn">
+							<?php _e('Solliciteer', 'talentplaats'); ?>
+						</button>
+						</form>
+
+
+						<script>
+							jQuery(document).ready(function() {
+								jQuery("button").click(function() {
+									var x = jQuery("textarea").val();
+									document.getElementById("inputMessage").value = x;
+									jQuery('.modal-bx').toggleClass('modal-visible');
+								});
+								jQuery(".close-modal, .overlay").click(function() {
+									jQuery('.modal-bx').toggleClass('modal-visible');
+								});
+							});
+						</script>
+
+						<div class="modal-bx">
+							<div class="inner">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-10 offset-md-1">
+											<div class="close-modal">
+												<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7938 10.8313L21.3826 3.24249L18.5542 0.414062L10.9654 8.00287L3.47833 0.515808L0.649902 3.34424L8.13696 10.8313L0.169434 18.7988L2.99786 21.6273L10.9654 13.6597L19.0347 21.729L21.8631 18.9006L13.7938 10.8313Z" fill="white" />
+												</svg>
+											</div>
+											<div class="box">
+												<?php echo do_shortcode('[uitzendplaats_application_form]'); ?>
+											</div>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

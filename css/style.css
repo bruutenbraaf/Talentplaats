@@ -2498,6 +2498,69 @@ footer {
         position: relative;
         top: -2px; }
 
+#apply .about-you {
+  width: 100%;
+  min-height: 250px;
+  padding: 10px; }
+
+.modal-bx {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 8888;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .modal-bx .inner {
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 9999; }
+    .modal-bx .inner .box {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 5px; }
+    .modal-bx .inner .close-modal {
+      position: absolute;
+      right: 15px;
+      height: 20px;
+      top: -40px; }
+  .modal-bx .overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none; }
+
+.modal-visible {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .modal-visible .inner {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  .modal-visible .overlay {
+    opacity: 1;
+    pointer-events: all; }
+
 .vac-img {
   width: 100%;
   min-height: 50vh;
