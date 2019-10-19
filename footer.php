@@ -18,7 +18,7 @@
                                                 </div>
                                                 <div class="col-md-10 offset-md-1 text-center nws--content">
                                                     <form>
-                                                        <input class="thismail" val="" placeholder="Wat is uw e-mailadres?">
+                                                        <input class="thismail" placeholder="Wat is uw e-mailadres?">
                                                         <div class="setmail">
                                                             <?php _e('Aanmelden', 'talentplaats'); ?>
                                                         </div>
