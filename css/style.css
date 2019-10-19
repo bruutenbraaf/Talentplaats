@@ -44,6 +44,9 @@ a,
 p img {
   margin: 30px 0px 30px 0px;
   border-radius: 5px; }
+p a {
+  color: #2d2d46;
+  text-decoration: underline; }
 
 .btn {
   border-radius: 5px;
