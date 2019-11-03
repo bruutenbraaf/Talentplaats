@@ -26,7 +26,7 @@ get_header(); ?>
                         <div class="col-md-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <div class="block offset-md-1">
+                                    <div class="block offset-md-1 col-md-12">
                                         <h3><?php the_sub_field('titel'); ?></h3>
                                         <div class="lvhi">
                                             <div class="inner">
