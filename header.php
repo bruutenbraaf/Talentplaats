@@ -9,6 +9,17 @@
 
     <title><?php wp_title('&raquo;', 'true', 'right'); ?><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151246863-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151246863-1');
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -122,7 +133,7 @@
                                     <span class="nws--ct"><?php echo $term->name ?></span>
                                     <?php $count++; ?>
                                 <?php } ?>
-                                
+
                                 <h3><?php the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>" class="smll-btn"><?php _e('Bekijk artikel', 'talentplaats'); ?>
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
