@@ -179,4 +179,9 @@ jQuery(document).ready(function () {
 
 
 // Fill e-mail from footer form
-document.getElementById('inputEmail').value = jQuery.cookie('e-mailadres');
+var email = jQuery.cookie('e-mailadres');
+if (email == null) {
+}
+else {
+  document.getElementById('inputEmail').value = jQuery.cookie('e-mailadres');
+}
