@@ -2880,6 +2880,15 @@ th {
 .contact {
   margin-top: -54px;
   position: relative; }
+  .contact h1 {
+    font-family: "Muli", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 34px;
+    color: #2d2d46; }
+    .contact h1 strong,
+    .contact h1 b {
+      color: #ff6600; }
   .contact .bread .row {
     width: 100%; }
   .contact .bread .breadcrumbs {
