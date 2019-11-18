@@ -2918,6 +2918,9 @@ $teamheight: 280px;
   position: relative;
   background-size: cover;
   background-position: center center;
+  h1 {
+    color: #ffffff;
+  }
   .sngl-hpsf {
     margin-top: 30px;
   }
@@ -4552,6 +4555,8 @@ input:focus {
   .revimg {
     order: 1;
     .rev--img {
+      background-size: cover;
+      background-position: center center;
       height: 300px !important;
       border-radius: 5px 5px 0px 0px !important;
     }

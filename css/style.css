@@ -2307,6 +2307,8 @@ footer {
   position: relative;
   background-size: cover;
   background-position: center center; }
+  .header-vac h1 {
+    color: #ffffff; }
   .header-vac .sngl-hpsf {
     margin-top: 30px; }
   .header-vac:before {
@@ -3662,6 +3664,8 @@ input:focus {
   .revimg {
     order: 1; }
     .revimg .rev--img {
+      background-size: cover;
+      background-position: center center;
       height: 300px !important;
       border-radius: 5px 5px 0px 0px !important; }
 
