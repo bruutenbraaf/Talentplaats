@@ -119,6 +119,9 @@ h2 {
   .header h1 b {
     color: #ff6600; }
 
+a:hover {
+  text-decoration: none; }
+
 nav {
   top: 0;
   left: 0;
