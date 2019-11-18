@@ -30,7 +30,7 @@ a,
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
-ul {
+main ul li {
   font-size: 16px;
   line-height: 32px;
   color: #2d2d46;
