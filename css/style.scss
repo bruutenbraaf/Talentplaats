@@ -49,6 +49,13 @@ a,
   transition: all 0.2s ease-in-out;
 }
 
+ul {
+  font-size: 16px;
+  line-height: 32px;
+  color: $midnight;
+  opacity: 0.8;
+}
+
 .all {
   font-style: normal;
   font-weight: 600;
@@ -246,7 +253,7 @@ nav {
           font-weight: 600;
           font-size: 16px;
           line-height: 19px;
-          color: #2d2d46;
+          color: $midnight;
           margin: 0px 15px;
           position: relative;
           z-index: 99;
@@ -2304,7 +2311,7 @@ $taxheight: 54px;
           font-weight: 600;
           font-size: 16px;
           line-height: 34px;
-          color: #2d2d46;
+          color: $midnight;
           &:hover {
             text-decoration: none;
           }
@@ -2414,7 +2421,7 @@ $taxheight: 54px;
     color: $midnight;
   }
   blockquote {
-    color: #2d2d46;
+    color: $midnight;
     position: relative;
     padding-left: 40px;
     margin-top: 60px;
@@ -2874,7 +2881,7 @@ $teamheight: 280px;
 
 .qoute {
   blockquote {
-    color: #2d2d46;
+    color: $midnight;
     position: relative;
     padding-left: 40px;
     margin-bottom: 60px;
@@ -3160,7 +3167,7 @@ $teamheight: 280px;
       font-weight: bold;
       font-size: 16px;
       line-height: 20px;
-      color: #2d2d46;
+      color: $midnight;
       svg {
         margin-right: 5px;
         position: relative;
@@ -3737,7 +3744,7 @@ th {
           font-weight: 600;
           font-size: 16px;
           line-height: 34px;
-          color: #2d2d46;
+          color: $midnight;
           &:hover {
             text-decoration: none;
           }

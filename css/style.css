@@ -30,6 +30,12 @@ a,
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
+ul {
+  font-size: 16px;
+  line-height: 32px;
+  color: #2d2d46;
+  opacity: 0.8; }
+
 .all {
   font-style: normal;
   font-weight: 600;
