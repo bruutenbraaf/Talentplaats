@@ -1582,6 +1582,10 @@ footer {
       font-size: 16px;
       line-height: 20px;
       color: $lightgray;
+      &:hover {
+        text-decoration: none;
+        color: $midnight;
+      }
     }
   }
   .ang-by {
@@ -4000,8 +4004,13 @@ input:focus {
       font-size: 16px;
       line-height: 32px;
       text-align: right;
-
       color: $orange;
+      &:hover {
+        color: $midnight;
+        svg {
+          margin-left: 5px;
+        }
+      }
     }
     .nws--ct {
       font-size: 16px;
@@ -4024,6 +4033,9 @@ input:focus {
       font-size: 16px;
       line-height: 32px;
       color: $midnight;
+      &:hover {
+        color: $orange;
+      }
     }
     ul {
       margin: inherit;

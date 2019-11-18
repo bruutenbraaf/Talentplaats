@@ -1261,6 +1261,10 @@ footer {
       font-size: 16px;
       line-height: 20px;
       color: #cfcedf; }
+      footer ul a:hover,
+      footer li a:hover {
+        text-decoration: none;
+        color: #2d2d46; }
   footer .ang-by {
     margin: 20px 0px; }
     footer .ang-by img {
@@ -3150,6 +3154,10 @@ input:focus {
       line-height: 32px;
       text-align: right;
       color: #ff6600; }
+      .mgm .news-nav a.smll-btn:hover {
+        color: #2d2d46; }
+        .mgm .news-nav a.smll-btn:hover svg {
+          margin-left: 5px; }
     .mgm .news-nav .nws--ct {
       font-size: 16px;
       color: #cfcedf;
@@ -3167,6 +3175,8 @@ input:focus {
     font-size: 16px;
     line-height: 32px;
     color: #2d2d46; }
+    .mgm .mgm--nav a:hover {
+      color: #ff6600; }
   .mgm .mgm--nav ul {
     margin: inherit;
     margin-left: 30px;
