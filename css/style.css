@@ -965,10 +965,11 @@ nav {
         margin-top: -40px;
         margin-bottom: -14px;
         margin-left: -15px;
-        background-size: calc(100% + 2px);
         border-radius: 5px;
         overflow: hidden;
-        background-position: -1px -2px; }
+        background-position: -1px -2px;
+        background-size: cover;
+        background-position: center center; }
       .rev .rev--items .rev--item .rating {
         background-image: url(../img/rating.svg);
         width: 151px;
