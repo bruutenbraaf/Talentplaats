@@ -3574,6 +3574,10 @@ input:focus {
   .is--open:after {
     transform: rotate(180deg); } }
 @media (max-width: 768px) {
+  .header .imghdr {
+    height: 50vw;
+    position: relative; }
+
   .nwsletter .nws--inner form .setmail {
     margin-right: 30px; }
 
