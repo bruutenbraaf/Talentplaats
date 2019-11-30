@@ -1932,6 +1932,12 @@ footer {
   border-radius: 5px;
   height: auto; }
 
+.p-share {
+  padding: 30px 15px; }
+
+#SideShareBlock .fa-stack {
+  margin-bottom: 10px; }
+
 .intressting {
   padding-top: 60px; }
   .intressting h2 {
@@ -1993,8 +1999,11 @@ footer {
     justify-content: center;
     margin-left: 12px;
     overflow: hidden;
-    position: relative;
-    cursor: pointer; }
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 0px;
+    z-index: 55; }
     .intressting .next:after {
       content: "";
       background: #257fe8;

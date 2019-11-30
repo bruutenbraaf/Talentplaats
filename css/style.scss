@@ -2467,6 +2467,18 @@ $taxheight: 54px;
   }
 }
 
+// Share post 
+
+.p-share {
+  padding: 30px 15px;
+}
+
+#SideShareBlock {
+  .fa-stack {
+    margin-bottom: 10px;
+  }
+}
+
 // Related posts
 
 .intressting {
@@ -2539,8 +2551,11 @@ $taxheight: 54px;
     justify-content: center;
     margin-left: 12px;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    top: 50%;
+    right: 0px;
+    z-index: 55;
     &:after {
       content: "";
       background: lighten($blue, 5%);

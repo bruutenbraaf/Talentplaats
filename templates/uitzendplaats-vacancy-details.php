@@ -251,6 +251,23 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="shareBlock"></div>
+					<script>
+						jQuery(document).ready(function() {
+							jQuery('#SideShareBlock').cShare({
+								show_buttons: [
+									'fb',
+									'twitter',
+									'linkedin',
+									'email'
+								]
+							});
+						});
+					</script>
+				</div>
+			</div>
 		</section>
 	</main>
 
