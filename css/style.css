@@ -1185,7 +1185,7 @@ nav {
 
 .sollicteer-e {
   margin-top: 140px;
-  margin-bottom: -170px; }
+  margin-bottom: -110px; }
   .sollicteer-e .sollicteer-e__inner {
     background: #1772dd;
     border-radius: 5px;
@@ -1253,7 +1253,7 @@ nav {
 footer {
   background: #ffffff;
   width: 100%;
-  padding-top: 110px;
+  padding-top: calc(110px + 110px);
   padding-bottom: 20px;
   margin-top: 60px; }
   footer h2 {
@@ -1323,9 +1323,6 @@ footer {
       footer .payoff a:hover {
         text-decoration: none;
         color: #2d2d46; }
-
-body.page-template-single-vacansie footer {
-  padding-top: calc(110px + 170px); }
 
 .break {
   width: 94vw;

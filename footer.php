@@ -1,5 +1,72 @@
 </main> <?php // closing the main header.php 
         ?>
+<?php if (!is_page_template('templates/contact.php')) { ?>
+    <?php if (have_rows('aanmelden_nieuwsbrief', 'option')) : ?>
+        <?php while (have_rows('aanmelden_nieuwsbrief', 'option')) : the_row(); ?>
+            <?php if (get_sub_field('aanmelden_nieuwsbrief_tonen') == 1) { ?>
+                <?php if (have_rows('newsletter_content')) : ?>
+                    <?php while (have_rows('newsletter_content')) : the_row(); ?>
+                        <section class="sollicteer-e">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sollicteer-e__inner">
+                                            <div class="row">
+                                                <div class="col-md-10 offset-md-1 text-center nws--content">
+                                                    <?php the_sub_field('titel'); ?>
+                                                </div>
+                                                <div class="col-md-8 offset-md-2 text-center nws--content">
+                                                    <?php the_sub_field('content'); ?>
+                                                </div>
+                                                <div class="col-md-10 offset-md-1 text-center nws--content">
+                                                    <form>
+                                                        <input class="thismail" placeholder="Wat is uw e-mailadres?">
+                                                        <div class="setmail">
+                                                            <?php _e('Aanmelden', 'talentplaats'); ?>
+                                                        </div>
+                                                    </form>
+                                                    <?php $aanmelden_pagina = get_field('aanmelden_pagina', 'option'); ?>
+                                                    <script>
+                                                        jQuery('.setmail').click(function() {
+                                                            var currentPage = "<?php echo $aanmelden_pagina['url']; ?>";
+                                                            var mail = jQuery(".thismail").val();
+                                                            jQuery.cookie('e-mailadres', mail, {
+                                                                expires: 7,
+                                                                path: '/'
+                                                            });
+                                                            location.href = currentPage;
+                                                        });
+                                                        jQuery(".thismail").on('keyup', function(e) {
+                                                            if (e.keyCode === 13) {
+                                                                var currentPage = "<?php echo $aanmelden_pagina['url']; ?>";
+                                                                var mail = jQuery(".thismail").val();
+                                                                jQuery.cookie('e-mailadres', mail, {
+                                                                    expires: 7,
+                                                                    path: '/'
+                                                                });
+                                                                location.href = currentPage;
+                                                            }
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <svg width="209" height="306" viewBox="0 0 209 306" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.04">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M89.5075 157.954C127.31 157.954 157.954 127.31 157.954 89.5075C157.954 51.7053 127.31 21.0606 89.5075 21.0606C51.7053 21.0606 21.0606 51.7053 21.0606 89.5075C21.0606 127.31 51.7053 157.954 89.5075 157.954ZM89.5075 179.015C138.941 179.015 179.015 138.941 179.015 89.5075C179.015 40.0739 138.941 0 89.5075 0C40.0739 0 0 40.0739 0 89.5075C0 138.941 40.0739 179.015 89.5075 179.015Z" fill="#2D2D46" />
+                                                    <path d="M3.9563 235.215C19.7093 219.44 39.5117 208.335 61.1742 203.127C82.8368 197.92 105.516 198.812 126.703 205.706C147.891 212.599 166.762 225.226 181.231 242.19C195.699 259.153 205.201 279.793 208.686 301.827L184.824 305.612C182.036 287.985 174.434 271.473 162.859 257.902C151.285 244.331 136.188 234.23 119.237 228.715C102.287 223.2 84.1443 222.486 66.8142 226.652C49.4842 230.818 33.6423 239.702 21.0399 252.322L3.9563 235.215Z" fill="#2D2D46" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php } ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+<?php } ?>
 <footer <?php if (is_page_template('templates/contact.php')) { ?>class="nop" <?php } ?>>
     <div class="container">
         <div class="row">

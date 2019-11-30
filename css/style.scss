@@ -1494,7 +1494,7 @@ nav {
 }
 
 // Aanmelden nieuwsbrief
-$formmargin: 170px;
+$formmargin: 110px;
 
 .sollicteer-e {
   margin-top: 140px;
@@ -1577,7 +1577,7 @@ $formmargin: 170px;
 footer {
   background: #ffffff;
   width: 100%;
-  padding-top: 110px;
+  padding-top: calc(110px + #{$formmargin});
   padding-bottom: 20px;
   margin-top: 60px;
   h2 {
@@ -1677,12 +1677,6 @@ footer {
         color: $midnight;
       }
     }
-  }
-}
-
-body.page-template-single-vacansie {
-  footer {
-    padding-top: calc(110px + #{$formmargin});
   }
 }
 
