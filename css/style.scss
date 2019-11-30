@@ -159,7 +159,12 @@ h2 {
     color: $midnight;
     strong,
     b {
-      color: $orange;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      -moz-text-stroke-color: #fff;
+      -webkit-text-stroke-color: #fff;
+      -moz-text-stroke-width: 4px;
+      -webkit-text-stroke-width: 1px;
     }
   }
 }
@@ -2467,7 +2472,7 @@ $taxheight: 54px;
   }
 }
 
-// Share post 
+// Share post
 
 .p-share {
   padding: 30px 15px;

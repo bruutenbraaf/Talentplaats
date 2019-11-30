@@ -117,7 +117,12 @@ h2 {
   color: #2d2d46; }
   .header h1 strong,
   .header h1 b {
-    color: #ff6600; }
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-stroke-color: #fff;
+    -webkit-text-stroke-color: #fff;
+    -moz-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 1px; }
 
 a:hover {
   text-decoration: none; }
