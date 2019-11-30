@@ -20,7 +20,7 @@
                                                 </div>
                                                 <div class="col-md-10 offset-md-1 text-center nws--content">
                                                     <form>
-                                                        <input class="thismail" placeholder="Wat is uw e-mailadres?">
+                                                        <input class="thismail" id="mailinput" placeholder="Wat is uw e-mailadres?">
                                                         <div class="setmail">
                                                             <?php _e('Aanmelden', 'talentplaats'); ?>
                                                         </div>
@@ -28,25 +28,28 @@
                                                     <?php $aanmelden_pagina = get_field('aanmelden_pagina', 'option'); ?>
                                                     <script>
                                                         jQuery('.setmail').click(function() {
-                                                            var currentPage = "<?php echo $aanmelden_pagina['url']; ?>";
+                                                            var redirectPage = "<?php echo $aanmelden_pagina['url']; ?>";
                                                             var mail = jQuery(".thismail").val();
                                                             jQuery.cookie('e-mailadres', mail, {
                                                                 expires: 7,
                                                                 path: '/'
                                                             });
-                                                            location.href = currentPage;
+                                                            location.href = redirectPage;
                                                         });
-                                                        jQuery(".thismail").on('keyup', function(e) {
-                                                            if (e.keyCode === 13) {
-                                                                var currentPage = "<?php echo $aanmelden_pagina['url']; ?>";
+                                                        document.getElementById('mailinput').onkeypress = function(e) {
+                                                            if (!e) e = window.event;
+                                                            var keyCode = e.keyCode || e.which;
+                                                            if (keyCode == '13') {
                                                                 var mail = jQuery(".thismail").val();
+                                                                var redirectPage = "<?php echo $aanmelden_pagina['url']; ?>";
                                                                 jQuery.cookie('e-mailadres', mail, {
                                                                     expires: 7,
                                                                     path: '/'
                                                                 });
-                                                                location.href = currentPage;
+                                                                location.href = redirectPage;
+                                                                return false;
                                                             }
-                                                        });
+                                                        }
                                                     </script>
                                                 </div>
                                             </div>
