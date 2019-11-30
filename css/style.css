@@ -674,10 +674,10 @@ nav {
   z-index: 10; }
   .hpsf .sfv {
     background: #ffffff;
-    border-top: 1px solid #cfcedf;
-    border-right: 0px solid #cfcedf;
-    border-bottom: 1px solid #cfcedf;
-    border-left: 1px solid #cfcedf;
+    border-top: 1px solid #9290b7;
+    border-right: 0px solid #9290b7;
+    border-bottom: 1px solid #9290b7;
+    border-left: 1px solid #9290b7;
     border-radius: 10px 10px 10px 10px;
     height: 72px;
     display: flex;
@@ -747,9 +747,9 @@ nav {
             color: #2d2d46;
             font-family: "Muli", sans-serif;
             font-size: 16px;
-            border-right: 1px solid rgba(207, 206, 223, 0.25); }
+            border-right: 1px solid rgba(146, 144, 183, 0.25); }
             .hpsf .sfv form .uzp-row div[class*="uzp-col"] input::placeholder {
-              color: #cfcedf;
+              color: #9290b7;
               font-family: "Muli", sans-serif;
               font-style: normal;
               font-weight: normal;
@@ -1078,7 +1078,7 @@ nav {
   padding: 20px;
   margin: 50px 0px; }
   .cntrs .cntrs--items .cntrs--item {
-    border-right: 1px solid rgba(207, 206, 223, 0.5);
+    border-right: 1px solid rgba(146, 144, 183, 0.5);
     flex-grow: 1;
     flex-basis: 0; }
     .cntrs .cntrs--items .cntrs--item:last-child {
@@ -1136,7 +1136,7 @@ nav {
   .lnws .nws--items .nws--item .nws--ct {
     font-size: 16px;
     line-height: 32px;
-    color: #cfcedf; }
+    color: #9290b7; }
   .lnws .nws--items .nws--item .smll-btn {
     font-weight: 600;
     font-size: 16px;
@@ -1222,7 +1222,7 @@ nav {
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
-          color: #cfcedf; }
+          color: #9290b7; }
       .sollicteer-e .sollicteer-e__inner form .setmail {
         height: 64px;
         border-radius: 0 10px 10px 0;
@@ -1270,7 +1270,7 @@ footer {
     footer li a {
       font-size: 16px;
       line-height: 20px;
-      color: #cfcedf; }
+      color: #9290b7; }
       footer ul a:hover,
       footer li a:hover {
         text-decoration: none;
@@ -1283,7 +1283,7 @@ footer {
       float: left;
       margin: 0px 30px; }
   footer .socket {
-    color: #cfcedf;
+    color: #9290b7;
     font-size: 14px; }
     footer .socket a {
       font-size: 14px; }
@@ -1297,7 +1297,7 @@ footer {
       footer .socket .terms li:after {
         content: "•";
         padding: 0px 5px;
-        color: #cfcedf; }
+        color: #9290b7; }
       footer .socket .terms li:last-child:after {
         content: ""; }
       footer .socket .terms li a:hover {
@@ -1319,7 +1319,7 @@ footer {
     padding: 20px 15px 0px 15px; }
     footer .payoff a {
       text-decoration: underline;
-      color: #cfcedf; }
+      color: #9290b7; }
       footer .payoff a:hover {
         text-decoration: none;
         color: #2d2d46; }
@@ -1333,7 +1333,7 @@ body.page-template-single-vacansie footer {
   display: block;
   margin: 0 auto;
   opacity: 0.2;
-  background: #cfcedf;
+  background: #9290b7;
   margin-bottom: 30px; }
 
 .feedbackcompany-simple {
@@ -1676,7 +1676,7 @@ body.page-template-single-vacansie footer {
 .s .int {
   padding-top: 60px;
   margin-top: 60px;
-  border-top: 1px solid #cfcedf; }
+  border-top: 1px solid #9290b7; }
   .s .int p {
     font-weight: 600;
     font-size: 16px;
@@ -1690,7 +1690,7 @@ body.page-template-single-vacansie footer {
 .header-single {
   background: #ffffff;
   position: relative;
-  border-top: 1px solid #cfcedf;
+  border-top: 1px solid #9290b7;
   padding-top: 80px; }
   .header-single .imghdr {
     position: absolute;
@@ -1724,10 +1724,10 @@ body.page-template-single-vacansie footer {
           position: relative;
           top: -1px; }
   .header-single .breadcrumbs {
-    color: #cfcedf;
+    color: #9290b7;
     padding-bottom: 30px; }
     .header-single .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .header-single .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -1756,7 +1756,7 @@ body.page-template-single-vacansie footer {
     padding-top: 60px;
     padding-bottom: 0px;
     margin-top: 30px;
-    border-top: 1px solid #cfcedf; }
+    border-top: 1px solid #9290b7; }
 
 .tax-header {
   background-size: cover;
@@ -1791,9 +1791,9 @@ body.page-template-single-vacansie footer {
   .taxs .bread .row {
     width: 100%; }
   .taxs .bread .breadcrumbs {
-    color: #cfcedf; }
+    color: #9290b7; }
     .taxs .bread .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .taxs .bread .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -1852,7 +1852,7 @@ body.page-template-single-vacansie footer {
   .posts .the--post {
     margin-bottom: 40px; }
     .posts .the--post .date {
-      color: #cfcedf;
+      color: #9290b7;
       padding-bottom: 10px;
       display: block; }
   .posts .in-post {
@@ -1907,7 +1907,7 @@ body.page-template-single-vacansie footer {
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
-  color: #cfcedf; }
+  color: #9290b7; }
 .sngl--content .the-cnt {
   padding-top: 60px; }
 .sngl--content p {
@@ -2327,7 +2327,7 @@ body.page-template-single-vacansie footer {
   .qoute blockquote .name {
     font-size: 14px;
     line-height: 27px;
-    color: #cfcedf; }
+    color: #9290b7; }
 
 .header-vac {
   padding: 150px 0px 80px 0px;
@@ -2458,10 +2458,10 @@ body.page-template-single-vacansie footer {
     position: relative;
     z-index: 2; }
   .vacansie-view .breadcrumbs {
-    color: #cfcedf;
+    color: #9290b7;
     padding: 20px 15px; }
     .vacansie-view .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .vacansie-view .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -2490,10 +2490,10 @@ body.page-template-single-vacansie footer {
     line-height: 120%;
     color: #2d2d46; }
   .vac-header .breadcrumbs {
-    color: #cfcedf;
+    color: #9290b7;
     padding: 20px 0px; }
     .vac-header .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .vac-header .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -2510,7 +2510,7 @@ body.page-template-single-vacansie footer {
       margin-right: 5px; }
   .vac-header .refnr {
     font-size: 14px;
-    color: #cfcedf; }
+    color: #9290b7; }
   .vac-header hr {
     margin: 0px;
     margin-top: 20px;
@@ -2680,9 +2680,9 @@ body.page-template-single-vacansie footer {
       .vac--inf .recruiter .vac-act .grey {
         color: #ffffff; }
         .vac--inf .recruiter .vac-act .grey:before {
-          background: #cfcedf; }
+          background: #9290b7; }
         .vac--inf .recruiter .vac-act .grey:after {
-          background: #dedde9; }
+          background: #a19fc1; }
 
 .app-form {
   padding: 60px 0px; }
@@ -2711,7 +2711,7 @@ body.page-template-single-vacansie footer {
       font-weight: 600;
       font-size: 16px;
       line-height: 32px;
-      color: #cfcedf; }
+      color: #9290b7; }
   .app-form .uzp input[type="file"] {
     padding: 10px; }
   .app-form .btn {
@@ -2790,10 +2790,10 @@ th {
     color: #ffffff; }
 
 .regi .breadcrumbs {
-  color: #cfcedf;
+  color: #9290b7;
   padding-bottom: 30px; }
   .regi .breadcrumbs span a {
-    color: #cfcedf; }
+    color: #9290b7; }
   .regi .breadcrumbs .seperator {
     background-image: url(../img/seperator--dark.svg);
     background-size: 6px;
@@ -2835,7 +2835,7 @@ th {
       .regi .regio .branches .inner a {
         font-size: 16px;
         line-height: 34px;
-        color: #cfcedf; }
+        color: #9290b7; }
 
 .is--open h2 span {
   color: #ff6600; }
@@ -2843,10 +2843,10 @@ th {
   transform: rotate(180deg); }
 
 .dark {
-  color: #cfcedf;
+  color: #9290b7;
   padding-bottom: 0px; }
   .dark span a {
-    color: #cfcedf; }
+    color: #9290b7; }
   .dark .seperator {
     background-image: url(../img/seperator--dark.svg);
     background-size: 6px;
@@ -2863,7 +2863,7 @@ th {
   .brnch .overview a {
     font-size: 16px;
     line-height: 34px;
-    color: #cfcedf; }
+    color: #9290b7; }
 
 .members .member {
   margin-bottom: 30px; }
@@ -2927,10 +2927,10 @@ th {
   .contact .bread .row {
     width: 100%; }
   .contact .bread .breadcrumbs {
-    color: #cfcedf;
+    color: #9290b7;
     margin-left: 15px; }
     .contact .bread .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .contact .bread .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -2993,7 +2993,7 @@ th {
     pointer-events: none;
     font-size: 16px;
     line-height: 19px;
-    color: #cfcedf;
+    color: #9290b7;
     background: #ffffff;
     padding: 4px;
     outline: 0;
@@ -3010,7 +3010,7 @@ th {
     padding: 10px;
     width: 100%;
     background: #ffffff;
-    border: 1px solid #cfcedf;
+    border: 1px solid #9290b7;
     border-radius: 3px;
     margin: 20px 0px; }
 
@@ -3023,7 +3023,7 @@ th {
   margin: 0px 15px 0px 0px;
   pointer-events: all;
   cursor: pointer;
-  border: 1px solid #cfcedf !important; }
+  border: 1px solid #9290b7 !important; }
   .frm_checkbox input[type="checkbox"]:checked {
     background-image: url(../img/checked.svg);
     background-position: center center;
@@ -3182,7 +3182,7 @@ input:focus {
           margin-left: 5px; }
     .mgm .news-nav .nws--ct {
       font-size: 16px;
-      color: #cfcedf;
+      color: #9290b7;
       margin-bottom: 5px;
       display: inline-block; }
     .mgm .news-nav h3 {
@@ -3317,9 +3317,9 @@ input:focus {
     font-weight: 800;
     font-size: 24px; }
   .relation-header .breadcrumbs {
-    color: #cfcedf; }
+    color: #9290b7; }
     .relation-header .breadcrumbs span a {
-      color: #cfcedf; }
+      color: #9290b7; }
     .relation-header .breadcrumbs .seperator {
       background-image: url(../img/seperator--dark.svg);
       background-size: 6px;
@@ -3393,7 +3393,7 @@ input:focus {
     flex-grow: 11; }
     .search-form label input {
       width: 100%;
-      border: 1px solid #cfcedf;
+      border: 1px solid #9290b7;
       padding: 10px 15px;
       border-radius: 5px 0px 0px 5px; }
   .search-form .search-submit {
