@@ -4284,46 +4284,36 @@ input:focus {
   }
 }
 
-@media (max-width: 768px) {
-  .vac--inf .recruiter {
-    margin-top: 60px;
+@media (min-width: 1920px) {
+  .container {
+    max-width: 90vw;
   }
-  .hdbtn {
-    margin-top: 15px;
-    justify-content: start !important;
+}
+
+@media (max-width: 1366px) {
+  nav {
+    .row {
+      .main--nav,
+      .d-lex {
+        display: none !important;
+      }
+    }
   }
-  .vac-header .information-vacansie span {
-    width: 100%;
-    margin-bottom: 10px;
-    display: block;
-  }
-  .frm {
-    margin-bottom: 30px;
-  }
-  .uzp .justify-content-end {
-    justify-content: start !important;
-  }
-  .ovw-vac .arch--vac-item .arch--vac-item-inner .arch--inf div {
-    width: 100%;
-    display: block;
-    margin-bottom: 5px;
-  }
-  .arch-edu .edu--item .edu--inner .edu--inf div {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .vac-items-w .arch--vac-items .arch--vac-item .arch--vac-item-inner .arch--inf div {
-    display: block;
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .mob-btn {
-    margin-top: 80px;
-    transition-delay: 1s;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+  .mobnav {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    div {
+      span {
+        width: 100%;
+        height: 2px;
+        background: $blue;
+        border-radius: 99px;
+        display: block;
+        margin: 6px 0;
+      }
+    }
   }
   .mobile-nav {
     display: block;
@@ -4413,6 +4403,30 @@ input:focus {
       }
     }
   }
+  .is--active {
+    span {
+      &:first-child {
+        transform: rotate(45deg);
+        transform-origin: left;
+      }
+      &:nth-child(2) {
+        width: 0px;
+        margin-left: 12px;
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+        transform-origin: left;
+      }
+    }
+  }
+  .mob-btn {
+    margin-top: 80px;
+    transition-delay: 1s;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
   .nav-open {
     height: 100vh;
     pointer-events: all;
@@ -4432,40 +4446,65 @@ input:focus {
       transform: rotate(180deg);
     }
   }
-  .is--active {
-    span {
-      &:first-child {
-        transform: rotate(45deg);
-        transform-origin: left;
-      }
-      &:nth-child(2) {
-        width: 0px;
-        margin-left: 12px;
-      }
-      &:last-child {
-        transform: rotate(-45deg);
-        transform-origin: left;
+}
+
+@media (max-width: 768px) {
+  .nwsletter .nws--inner form .setmail {
+    margin-right: 30px;
+  }
+  .container {
+    max-width: 100vw;
+  }
+  .mobnav {
+    div {
+      span {
+        background: #ffffff;
       }
     }
+  }
+  nav {
+    background: $blue;
+    .row {
+      .main_nav,
+      .mg_nav {
+        display: none;
+      }
+    }
+  }
+  .vac--inf .recruiter {
+    margin-top: 60px;
+  }
+  .hdbtn {
+    margin-top: 15px;
+    justify-content: start !important;
+  }
+  .vac-header .information-vacansie span {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .frm {
+    margin-bottom: 30px;
+  }
+  .uzp .justify-content-end {
+    justify-content: start !important;
+  }
+  .ovw-vac .arch--vac-item .arch--vac-item-inner .arch--inf div {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .arch-edu .edu--item .edu--inner .edu--inf div {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .vac-items-w .arch--vac-items .arch--vac-item .arch--vac-item-inner .arch--inf div {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
   }
   .main--nav {
     display: none !important;
-  }
-  .mobnav {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    margin-left: auto;
-    div {
-      span {
-        width: 100%;
-        height: 2px;
-        background: #ffffff;
-        border-radius: 99px;
-        display: block;
-        margin: 6px 0;
-      }
-    }
   }
   nav {
     .container {
@@ -4506,15 +4545,6 @@ input:focus {
       top: 83px;
       left: 60px;
       z-index: 100;
-    }
-  }
-  nav {
-    background: $blue;
-    .row {
-      .main_nav,
-      .mg_nav {
-        display: none;
-      }
     }
   }
   .hpsf .sfv form .uzp-row input[name="postal_code"],
@@ -4655,7 +4685,6 @@ input:focus {
     margin-left: -15px;
   }
 }
-
 .nav-ct {
   width: 0%;
   opacity: 0;
