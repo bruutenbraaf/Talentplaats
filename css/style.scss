@@ -1494,12 +1494,12 @@ nav {
 }
 
 // Aanmelden nieuwsbrief
-$formmargin: 110px;
+$formmargin: 170px;
 
-.nwsletter {
+.sollicteer-e {
   margin-top: 140px;
   margin-bottom: -$formmargin;
-  .nws--inner {
+  .sollicteer-e__inner {
     background: $blue;
     border-radius: 5px;
     padding-top: 40px;
@@ -1577,8 +1577,9 @@ $formmargin: 110px;
 footer {
   background: #ffffff;
   width: 100%;
-  padding-top: calc(110px + #{$formmargin});
+  padding-top: 110px;
   padding-bottom: 20px;
+  margin-top: 60px;
   h2 {
     font-weight: bold;
     font-size: 20px;
@@ -1676,6 +1677,12 @@ footer {
         color: $midnight;
       }
     }
+  }
+}
+
+body.page-template-single-vacansie {
+  footer {
+    padding-top: calc(110px + #{$formmargin});
   }
 }
 
