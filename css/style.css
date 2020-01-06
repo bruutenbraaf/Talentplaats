@@ -118,12 +118,7 @@ h2 {
   .header h1 strong,
   .header h1 b {
     font-family: Arial, Helvetica, sans-serif;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    -moz-text-stroke-color: #fff;
-    -webkit-text-stroke-color: #fff;
-    -moz-text-stroke-width: 4px;
-    -webkit-text-stroke-width: 1px; }
+    color: #ff6600; }
 
 a:hover {
   text-decoration: none; }
@@ -1249,6 +1244,82 @@ nav {
       left: 0;
       transform: translateY(-50%);
       z-index: 1; }
+
+.uzp__panel {
+  display: none; }
+
+#prevBtn {
+  display: none; }
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5; }
+
+.step.active {
+  opacity: 1; }
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50; }
+
+.uzp__registration-wrap p.uzp__registration-intro {
+  font-family: "Muli", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  font-size: 32px !important;
+  line-height: 34px !important;
+  color: #2d2d46 !important; }
+.uzp__registration-wrap .uzp button,
+.uzp__registration-wrap .uzp a.uzp-button,
+.uzp__registration-wrap .uzp input[type="button"],
+.uzp__registration-wrap .uzp input[type="submit"] {
+  background-color: #1772dd !important;
+  border-radius: 5px !important; }
+.uzp__registration-wrap .uzp button:hover,
+.uzp__registration-wrap .uzp a.uzp-button:hover,
+.uzp__registration-wrap .uzp input[type="button"]:hover,
+.uzp__registration-wrap .uzp input[type="submit"]:hover {
+  background-color: #0e519c !important;
+  border-radius: 5px !important; }
+.uzp__registration-wrap div#current {
+  border: none; }
+.uzp__registration-wrap .uzp__fieldset legend {
+  font-family: "Muli", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  font-size: 32px !important;
+  line-height: 34px !important;
+  color: #2d2d46 !important;
+  border-bottom: 0px !important; }
+.uzp__registration-wrap .uzp__registration-form label {
+  font-family: "Muli", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  line-height: 34px !important;
+  color: #2d2d46 !important; }
+.uzp__registration-wrap [class*="uzp-col"] {
+  width: 100% !important;
+  border: none !important; }
+.uzp__registration-wrap .uzp__panel {
+  box-shadow: none !important;
+  border: none !important; }
+.uzp__registration-wrap input {
+  background: #ffffff !important;
+  border: 1px solid #cfcedf !important;
+  box-sizing: border-box !important;
+  border-radius: 3px !important;
+  padding: 25px 15px !important; }
+.uzp__registration-wrap input.invalid,
+.uzp__registration-wrap select.invalid {
+  border: 1px #f78484 solid !important;
+  background: #ffcece !important; }
 
 footer {
   background: #ffffff;
