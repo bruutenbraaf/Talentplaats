@@ -3586,6 +3586,7 @@ th {
   position: relative;
   background-size: cover;
   background-position: center center;
+  margin-top: 80px;
   &:after {
     content: "";
     width: 100%;
@@ -3669,6 +3670,11 @@ th {
         }
       }
     }
+    .regio--name-small {
+      h2 {
+        font-size: 22px;
+      }
+    }
     .branches {
       display: none;
       .inner {
@@ -3683,6 +3689,9 @@ th {
         }
       }
     }
+  }
+  .regio--heading {
+    margin-bottom: 30px;
   }
 }
 

@@ -143,9 +143,9 @@ get_header(); ?>
             <?php elseif (get_row_layout() == 'ons_team') : ?>
                 <section class="o-team">
                     <?php $loop = new WP_Query(array(
-                                    'post_type' => 'ons_team',
-                                    'order' => 'DESC'
-                                )); ?>
+                        'post_type' => 'ons_team',
+                        'order' => 'DESC'
+                    )); ?>
                     <?php if ($loop->have_posts()) : ?>
                         <div class="our-team">
                             <div class="team-mem">
@@ -351,7 +351,7 @@ get_header(); ?>
                                                                 <?php while (have_rows('informatie_review')) : the_row(); ?>
                                                                     <div class="rating">
                                                                         <?php $rating = get_sub_field('rating');
-                                                                                                    for ($i = 0; $i < $rating; $i++) { ?>
+                                                                        for ($i = 0; $i < $rating; $i++) { ?>
                                                                             <span class="star">
                                                                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                                     <path d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z" fill="#F2C94C" />
@@ -489,13 +489,13 @@ get_header(); ?>
                             <div class="col-md-10 offset-md-1">
                                 <div class="nws--items">
                                     <?php
-                                                $aantal = get_sub_field('toon_aantal_laatste_berichten');
-                                                $loop = new WP_Query(array(
-                                                    'post_type' => 'nieuws',
-                                                    'posts_per_page' => 3,
-                                                    'order' => 'DESC'
-                                                ));
-                                                ?>
+                                    $aantal = get_sub_field('toon_aantal_laatste_berichten');
+                                    $loop = new WP_Query(array(
+                                        'post_type' => 'nieuws',
+                                        'posts_per_page' => 3,
+                                        'order' => 'DESC'
+                                    ));
+                                    ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                             <div class="nws--item">
@@ -549,6 +549,31 @@ get_header(); ?>
                 </script>
             <?php endif; ?>
         <?php endwhile; ?>
+    <?php endif; ?>
+    hi
+    <?php $loop = new WP_Query(array(
+        'post_type' => 'regios',
+        'posts_per_page' => -1,
+        'order' => 'DESC'
+    )); ?>
+    <?php if ($loop->have_posts()) : ?>
+        <div class="container">
+            <div class="row">
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                    <div class="col-md-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="vkgb--inner">
+                                <span><?php the_title(); ?></span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.528514 0.528514C0.788864 0.268165 1.21097 0.268165 1.47132 0.528514L5.47132 4.52851C5.73167 4.78886 5.73167 5.21097 5.47132 5.47132L1.47132 9.47132C1.21097 9.73167 0.788864 9.73167 0.528514 9.47132C0.268165 9.21097 0.268165 8.78886 0.528514 8.52851L4.05711 4.99992L0.528514 1.47132C0.268165 1.21097 0.268165 0.788864 0.528514 0.528514Z" fill="black" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+        <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 </main>
 

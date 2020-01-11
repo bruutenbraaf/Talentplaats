@@ -16,7 +16,7 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
 <?php $regio_header = get_field('regio_header', $term_id_prefixed); ?>
 <?php if (have_rows('header_inf', $term_id_prefixed)) : ?>
     <?php while (have_rows('header_inf', $term_id_prefixed)) : the_row(); ?>
-        <section class="header-reg" <?php if ($regio_header) { ?> style="background-image:url(<?php echo $regio_header['sizes']['large'];?>);" alt="<?php echo $achtergrond_afbeelding['alt']; ?>" <?php } ?>>
+        <section class="header-reg" <?php if ($regio_header) { ?> style="background-image:url(<?php echo $regio_header['sizes']['large']; ?>);" alt="<?php echo $achtergrond_afbeelding['alt']; ?>" <?php } ?>>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center d-flex align-items-center col-reg">
@@ -157,9 +157,9 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
             <?php elseif (get_row_layout() == 'ons_team') : ?>
                 <section class="o-team">
                     <?php $loop = new WP_Query(array(
-                                    'post_type' => 'ons_team',
-                                    'order' => 'DESC'
-                                )); ?>
+                        'post_type' => 'ons_team',
+                        'order' => 'DESC'
+                    )); ?>
                     <?php if ($loop->have_posts()) : ?>
                         <div class="our-team">
                             <div class="team-mem">
@@ -365,7 +365,7 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
                                                                 <?php while (have_rows('informatie_review')) : the_row(); ?>
                                                                     <div class="rating">
                                                                         <?php $rating = get_sub_field('rating');
-                                                                                                    for ($i = 0; $i < $rating; $i++) { ?>
+                                                                        for ($i = 0; $i < $rating; $i++) { ?>
                                                                             <span class="star">
                                                                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                                     <path d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z" fill="#F2C94C" />
@@ -503,13 +503,13 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
                             <div class="col-md-10 offset-md-1">
                                 <div class="nws--items">
                                     <?php
-                                                $aantal = get_sub_field('toon_aantal_laatste_berichten');
-                                                $loop = new WP_Query(array(
-                                                    'post_type' => 'nieuws',
-                                                    'posts_per_page' => 3,
-                                                    'order' => 'DESC'
-                                                ));
-                                                ?>
+                                    $aantal = get_sub_field('toon_aantal_laatste_berichten');
+                                    $loop = new WP_Query(array(
+                                        'post_type' => 'nieuws',
+                                        'posts_per_page' => 3,
+                                        'order' => 'DESC'
+                                    ));
+                                    ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                             <div class="nws--item">
@@ -564,6 +564,65 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
+
+    <section class="regi">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 regio--heading">
+                    <h2><?php _e("Onze andere <b>regio's</b>"); ?></h2>
+                </div>
+                <div class="col-md-12">
+                    <?php $terms = get_terms('regio'); ?>
+                    <?php foreach ($terms as $term) { ?>
+                        <?php $term_link = get_term_link($term); ?>
+                        <div class="regio">
+                            <div class="regio--name regio--name-small">
+                                <h2><?php _e('Regio', 'talentplaats'); ?> <span><?php echo $term->name; ?></span></h2>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="branches">
+                                <div class="inner">
+                                    <?php
+                                    $termid = $term->term_id;
+                                    $args = array(
+                                        'post_type' => 'regios',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'regio',
+                                                'field' => 'term_id',
+                                                'terms' => $termid
+                                            )
+                                        )
+                                    );
+                                    $loop = new WP_Query($args); ?>
+                                    <?php if ($loop->have_posts()) : ?>
+                                        <div class="row">
+                                            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                                <div class="col-md-4">
+                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                </div>
+                                            <?php endwhile; ?>
+                                            <?php wp_reset_postdata(); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 justify-content-end d-flex">
+                                        <a class="all" href="<?php echo $term_link; ?>">
+                                            <?php _e('Lees meer over', 'talentplaats'); ?> <?php echo $term->name; ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <?php get_footer(); ?>
