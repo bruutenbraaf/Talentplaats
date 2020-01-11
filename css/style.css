@@ -3214,10 +3214,11 @@ input:focus {
     background: #ffffff;
     height: 100vh;
     position: fixed;
-    left: 50vw;
+    right: 0px;
     top: 0;
     display: none;
-    z-index: -1; }
+    z-index: -1;
+    float: right; }
   .mgm h2 {
     color: #ffffff;
     opacity: 0;
@@ -3276,6 +3277,9 @@ input:focus {
       opacity: 0;
       margin-left: 60px; }
 
+@supports (-ms-ime-align: auto) {
+  .mgm .r {
+    right: -16px; } }
 .news-nav:nth-child(1n) {
   animation-delay: 0.1s; }
 

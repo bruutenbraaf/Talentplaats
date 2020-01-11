@@ -151,11 +151,11 @@
                         <?php wp_nav_menu(array('theme_location' => 'mega_menu')); ?>
                     </div>
                 </div>
-                <div class="l">
-                </div>
-                <div class="r">
-                </div>
             </div>
+        </div>
+        <div class="l">
+        </div>
+        <div class="r">
         </div>
     </div>
 

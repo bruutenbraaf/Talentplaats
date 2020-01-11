@@ -4093,10 +4093,11 @@ input:focus {
     background: #ffffff;
     height: 100vh;
     position: fixed;
-    left: 50vw;
+    right: 0px;
     top: 0;
     display: none;
     z-index: -1;
+    float: right;
   }
   h2 {
     color: #ffffff;
@@ -4170,6 +4171,11 @@ input:focus {
   }
 }
 
+@supports (-ms-ime-align:auto) {
+  .mgm .r {
+    right: -16px;
+  }
+}
 @for $i from 1 through 10 {
   .news-nav:nth-child(#{$i}n) {
     animation-delay: #{$i * 0.1}s;
