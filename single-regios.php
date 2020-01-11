@@ -550,31 +550,64 @@ get_header(); ?>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
-    hi
-    <?php $loop = new WP_Query(array(
-        'post_type' => 'regios',
-        'posts_per_page' => -1,
-        'order' => 'DESC'
-    )); ?>
-    <?php if ($loop->have_posts()) : ?>
+
+    <section class="regi">
         <div class="container">
             <div class="row">
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <div class="col-md-4">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="vkgb--inner">
-                                <span><?php the_title(); ?></span>
-                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.528514 0.528514C0.788864 0.268165 1.21097 0.268165 1.47132 0.528514L5.47132 4.52851C5.73167 4.78886 5.73167 5.21097 5.47132 5.47132L1.47132 9.47132C1.21097 9.73167 0.788864 9.73167 0.528514 9.47132C0.268165 9.21097 0.268165 8.78886 0.528514 8.52851L4.05711 4.99992L0.528514 1.47132C0.268165 1.21097 0.268165 0.788864 0.528514 0.528514Z" fill="black" />
+                <div class="col-md-12 regio--heading">
+                    <h2><?php _e("Onze andere <b>regio's</b>"); ?></h2>
+                </div>
+                <div class="col-md-12">
+                    <?php $terms = get_terms('regio'); ?>
+                    <?php foreach ($terms as $term) { ?>
+                        <?php $term_link = get_term_link($term); ?>
+                        <div class="regio">
+                            <div class="regio--name regio--name-small">
+                                <h2><?php _e('Regio', 'talentplaats'); ?> <span><?php echo $term->name; ?></span></h2>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                        </a>
-                    </div>
-                <?php endwhile; ?>
+                            <div class="branches">
+                                <div class="inner">
+                                    <?php
+                                    $termid = $term->term_id;
+                                    $args = array(
+                                        'post_type' => 'regios',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'regio',
+                                                'field' => 'term_id',
+                                                'terms' => $termid
+                                            )
+                                        )
+                                    );
+                                    $loop = new WP_Query($args); ?>
+                                    <?php if ($loop->have_posts()) : ?>
+                                        <div class="row">
+                                            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                                <div class="col-md-4">
+                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                </div>
+                                            <?php endwhile; ?>
+                                            <?php wp_reset_postdata(); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 justify-content-end d-flex">
+                                        <a class="all" href="<?php echo $term_link; ?>">
+                                            <?php _e('Lees meer over', 'talentplaats'); ?> <?php echo $term->name; ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
-        <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
+    </section>
 </main>
 
 <?php get_footer(); ?>
