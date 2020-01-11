@@ -23,8 +23,7 @@ span,
 path,
 a,
 .vkgb--inner,
-.all,
-.regio--name h2:after {
+.all {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2882,16 +2881,8 @@ th {
     .regi .regio .regio--name h2 {
       display: inherit;
       position: relative; }
-      .regi .regio .regio--name h2:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        height: 2px;
-        width: 0%;
-        background: #ff6600; }
-      .regi .regio .regio--name h2:hover:after {
-        width: 100%; }
+      .regi .regio .regio--name h2:hover span {
+        color: #ff6600; }
     .regi .regio .regio--name a:hover {
       text-decoration: none; }
   .regi .regio .regio--name-small h2 {
