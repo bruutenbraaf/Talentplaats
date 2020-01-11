@@ -3214,7 +3214,7 @@ input:focus {
     background: #ffffff;
     height: 100vh;
     position: fixed;
-    right: 0;
+    left: 50vw;
     top: 0;
     display: none;
     z-index: -1; }
