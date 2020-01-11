@@ -3502,9 +3502,6 @@ input:focus {
 .h--open:hover:after {
   left: -6px !important; }
 
-@media (min-width: 1920px) {
-  .container {
-    max-width: 90vw; } }
 @media (max-width: 1366px) {
   nav .row .main--nav,
   nav .row .d-lex {
