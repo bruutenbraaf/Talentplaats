@@ -256,6 +256,7 @@ get_header(); ?>
                                     dots: true,
                                     arrows: false,
                                     appendDots: jQuery(".rev--dots"),
+                                    adaptiveHeight: true,
                                 });
                             });
                         </script>
