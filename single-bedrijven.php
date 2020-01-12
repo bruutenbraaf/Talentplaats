@@ -46,9 +46,8 @@ get_header();
             </div>
 
             <?php
-            $currentdate = date('m / d');
             $loop = new WP_Query(array(
-                'post_type' => 'ons_netwerk',
+                'post_type' => 'bedrijven',
                 'posts_per_page' => 6,
                 'order' => 'DESC'
             )); ?>
