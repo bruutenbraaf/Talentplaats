@@ -1179,19 +1179,6 @@ nav {
 .rev {
   background: radial-gradient(344.66px at 50% 41.6%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
-  svg.li {
-    width: calc(100vw + 200px);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100px;
-    overflow: visible;
-    z-index: -1;
-    path {
-      stroke-width: 40px;
-      stroke: $blue;
-    }
-  }
   p {
     color: $midnight;
     opacity: 0.8;
@@ -1364,6 +1351,19 @@ nav {
 // counters
 
 .cntrs {
+  svg.li {
+    width: calc(100vw + 200px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    overflow: visible;
+    z-index: -1;
+    path {
+      stroke-width: 40px;
+      stroke: $blue;
+    }
+  }
   .cntrs--items {
     background: #ffffff;
     border-radius: 5px;

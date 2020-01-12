@@ -938,17 +938,6 @@ nav {
 .rev {
   background: radial-gradient(344.66px at 50% 41.6%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   position: relative; }
-  .rev svg.li {
-    width: calc(100vw + 200px);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100px;
-    overflow: visible;
-    z-index: -1; }
-    .rev svg.li path {
-      stroke-width: 40px;
-      stroke: #1772dd; }
   .rev p {
     color: #2d2d46;
     opacity: 0.8;
@@ -1083,6 +1072,17 @@ nav {
   color: #2d2d46;
   opacity: 0.8; }
 
+.cntrs svg.li {
+  width: calc(100vw + 200px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  overflow: visible;
+  z-index: -1; }
+  .cntrs svg.li path {
+    stroke-width: 40px;
+    stroke: #1772dd; }
 .cntrs .cntrs--items {
   background: #ffffff;
   border-radius: 5px;

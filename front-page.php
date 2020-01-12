@@ -261,9 +261,6 @@ get_header(); ?>
                         </script>
                     </div>
                 </div>
-                <svg class="li" preserveAspectRatio="none" viewBox="0 0 1028 719" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 2.00019C107.667 -13.9998 401 108 571 392C741 676 958.333 748.667 1027 708" stroke="black" />
-                </svg>
             </section>
         <?php elseif (get_row_layout() == 'over_ons') : ?>
             <section class="abh">
@@ -334,6 +331,9 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                    <svg class="li" preserveAspectRatio="none" viewBox="0 0 1028 719" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 2.00019C107.667 -13.9998 401 108 571 392C741 676 958.333 748.667 1027 708" stroke="black" />
+                    </svg>
                 </section>
                 <script>
                     var a = 0;
