@@ -3740,11 +3740,14 @@ input:focus {
       .header .row .int {
         position: relative;
         z-index: 9;
+        padding: 80px 15px 60px 15px;
         width: 100% !important;
         flex: 100% !important;
         max-width: 100vw !important; }
         .header .row .int:after {
           display: none; }
+      .header .row .block {
+        padding: 70px 0px 60px 0px; }
       .header .row .nopadding {
         padding: 90px 0;
         margin-left: 15px; }

@@ -4676,12 +4676,16 @@ input:focus {
       .int {
         position: relative;
         z-index: 9;
+        padding: 80px 15px 60px 15px;
         width: 100% !important;
         flex: 100% !important;
         max-width: 100vw !important;
         &:after {
           display: none;
         }
+      }
+      .block {
+        padding: 70px 0px 60px 0px;
       }
       .nopadding {
         padding: 90px 0;
