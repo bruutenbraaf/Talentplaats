@@ -3908,6 +3908,8 @@ input:focus {
       background: none; }
     .is__scrolled .hours a:hover:after {
       display: block; }
+  .is__scrolled .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
+    border: none; }
 
 @supports (-ms-ime-align: auto) {
   .mgm .r {

@@ -4868,6 +4868,9 @@ input:focus {
       display: block;
     }
   }
+  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
+    border: none;
+  }
 }
 
 @supports (-ms-ime-align: auto) {
@@ -4887,7 +4890,7 @@ input:focus {
     width: 50%;
     margin-left: -15px;
     justify-content: left;
-}
+  }
   .sollicteer-e .sollicteer-e__inner form {
     display: block;
   }
