@@ -73,28 +73,28 @@
 <footer <?php if (is_page_template('templates/contact.php')) { ?>class="nop" <?php } ?>>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 order-4 order-md-1 f-br">
                 <?php $footer_logo = get_field('footer_logo', 'option'); ?>
                 <?php if ($footer_logo) { ?>
                     <img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" />
                 <?php } ?>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 order-1 order-md-2">
                 <?php if (is_active_sidebar('footer_een')) {
                     dynamic_sidebar('footer_een');
                 } ?>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 order-2 order-md-3">
                 <?php if (is_active_sidebar('footer_twee')) {
                     dynamic_sidebar('footer_twee');
                 } ?>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 order-3 order-md-4">
                 <?php if (is_active_sidebar('footer_drie')) {
                     dynamic_sidebar('footer_drie');
                 } ?>
             </div>
-            <div class="col-md-12 justify-content-center d-flex ang-by">
+            <div class="col-md-12 justify-content-center d-flex ang-by order-5 order-md-5">
                 <?php if (have_rows('aangesloten_bij', 'option')) : ?>
                     <ul>
                         <?php while (have_rows('aangesloten_bij', 'option')) : the_row(); ?>
@@ -122,13 +122,13 @@
     <div class="socket">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-4">
-                    <?php _e('© Talentplaats 2017 - 2019', 'talentplaats'); ?>
+                <div class="col-lg-3 col-md-4 d-flex p-2 justify-content-center justify-content-md-start">
+                    <span><?php _e('© Talentplaats 2017 - 2019', 'talentplaats'); ?></span>
                 </div>
-                <div class="col-lg-8 col-md-5 d-flex justify-content-center terms">
+                <div class="col-lg-6 col-md-5 d-flex p-2 justify-content-center justify-content-md-center terms">
                     <?php wp_nav_menu(array('theme_location' => 'socket_menu')); ?>
                 </div>
-                <div class="col-lg-2 col-md-3 socials justify-content-end d-flex">
+                <div class="col-lg-3 col-md-3 socials p-2 justify-content-center justify-content-md-end d-flex">
                     <?php if (have_rows('socials', 'option')) : ?>
                         <ul>
                             <?php while (have_rows('socials', 'option')) : the_row(); ?>
@@ -168,7 +168,7 @@
                 </div>
                 <?php $payoff = get_field('pay-off_socket', 'option'); ?>
                 <?php if ($payoff) { ?>
-                    <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0 text-center payoff">
+                    <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0 col-12 text-center payoff">
                         <?php echo $payoff; ?>
                     </div>
                 <?php } ?>

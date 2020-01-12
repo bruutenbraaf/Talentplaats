@@ -3672,6 +3672,9 @@ input:focus {
   margin: 0px !important; }
 
 @media (max-width: 768px) {
+  .sollicteer-e .sollicteer-e__inner {
+    padding: 30px 15px; }
+
   .header .imghdr {
     width: 100vw;
     height: 50vw;
@@ -3918,7 +3921,11 @@ input:focus {
 
   .branding {
     width: calc(-16px + 50%); } }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
+  .f-br img {
+    margin-top: 15px;
+    display: block; }
+
   nav {
     background: #1772dd; }
 
