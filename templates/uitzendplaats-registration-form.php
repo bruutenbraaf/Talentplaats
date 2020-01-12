@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="uzp__registration-form">
-		<form class="uzp__registration-form" name="uzp__registration-form">
+		<form class="uzp__registration-form" id="regForm" name="uzp__registration-form">
 			<div class="uzp__form-success-message">
 				<?php _e('Your registration has been submitted. We will contact you as soon as possible.', 'uitzendplaats'); ?>
 			</div>
@@ -29,21 +29,21 @@
 							<div class="uzp-col-sm-4">
 								<div>
 									<label for="inputFirstName"><?php _e('First name', 'uitzendplaats'); ?></label>
-									<input id="inputFirstName" name="first_name" class="uzp__form-control" type="text">
+									<input id="inputFirstName" name="first_name" class="uzp__form-control required" type="text">
 									<p class="uzp__help-block" data-validate-for="first_name"></p>
 								</div>
 							</div>
 							<div class="uzp-col-sm-3">
 								<div>
 									<label for="inputPrefix"><?php _e('Prefix', 'uitzendplaats'); ?></label>
-									<input id="inputPrefix" name="prefix" class="uzp__form-control"  type="text">
+									<input id="inputPrefix" name="prefix" class="uzp__form-control" type="text">
 									<p class="uzp__help-block" data-validate-for="prefix"></p>
 								</div>
 							</div>
 							<div class="uzp-col-sm-5">
 								<div>
 									<label for="inputLastName"><?php _e('Last name', 'uitzendplaats'); ?></label>
-									<input id="inputLastName" name="last_name" class="uzp__form-control" type="text">
+									<input id="inputLastName" name="last_name" class="uzp__form-control required" type="text">
 									<p class="uzp__help-block" data-validate-for="last_name"></p>
 								</div>
 							</div>
@@ -61,13 +61,13 @@
 							<label class="uzp-col-sm-4 uzp__control-label"><?php _e('Birth date', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-2">
 								<label for="inputBirthdayDay" class="uzp__hidden-label"><?php _e('Birth date day', 'uitzendplaats'); ?></label>
-								<input id="inputBirthdayDay" name="birthday_day" class="uzp__form-control" placeholder="Dag" type="number">
+								<input id="inputBirthdayDay" name="birthday_day" class="uzp__form-control required" placeholder="Dag" type="number">
 								<p class="uzp__help-block" data-validate-for="birthday_day"></p>
 							</div>
 							<div class="uzp-col-sm-3">
 								<label for="inputBirthdayMonth" class="uzp__hidden-label"><?php _e('Birth date month', 'uitzendplaats'); ?></label>
 								<div class="uzp__select">
-									<select id="inputBirthdayMonth" name="birthday_month" class="uzp__form-control">
+									<select id="inputBirthdayMonth" name="birthday_month" class="uzp__form-control required">
 										<option value=""><?php _e('Month', 'uitzendplaats'); ?></option>
 										<option value="1"><?php _e('January', 'uitzendplaats'); ?></option>
 										<option value="2"><?php _e('February', 'uitzendplaats'); ?></option>
@@ -87,19 +87,19 @@
 							</div>
 							<div class="uzp-col-sm-3">
 								<label for="inputBirthdayYear" class="uzp__hidden-label"><?php _e('Birth date year', 'uitzendplaats'); ?></label>
-								<input id="inputBirthdayYear" name="birthday_year" class="uzp__form-control" placeholder="<?php _e('Year', 'uitzendplaats'); ?>" type="number">
+								<input id="inputBirthdayYear" name="birthday_year" class="uzp__form-control required" placeholder="<?php _e('Year', 'uitzendplaats'); ?>" type="number">
 								<p class="uzp__help-block" data-validate-for="birthday_year"></p>
 							</div>
 						</div>
 
 						<div class="uzp__form-group uzp-row">
-							<label class="uzp-col-sm-4 uzp__control-label"><?php _e('Gender', 'uitzendplaats'); ?></label>
+							<label class="uzp-col-sm-4 uzp__control-label" ><?php _e('Gender', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-8">
 								<label class="uzp__radio-inline">
-									<input name="gender" id="optionsGenderMale" value="M" type="radio"> <?php _e('Male', 'uitzendplaats'); ?>
+									<input name="gender" id="optionsGenderMale" value="M" type="radio" class="required"> <?php _e('Male', 'uitzendplaats'); ?>
 								</label>
 								<label class="uzp__radio-inline">
-									<input name="gender" id="optionsGenderFemale" value="F" type="radio"> <?php _e('Female', 'uitzendplaats'); ?>
+									<input name="gender" id="optionsGenderFemale" value="F" type="radio" class="required"> <?php _e('Female', 'uitzendplaats'); ?>
 								</label>
 								<p class="uzp__help-block" data-validate-for="gender"></p>
 							</div>
@@ -112,7 +112,7 @@
 							<div class="uzp-col-sm-8">
 								<div>
 									<label for="inputStreet" class="uzp__control-label--sub"><?php _e('Street', 'uitzendplaats'); ?></label>
-									<input class="uzp__form-control" id="inputStreet" name="street" type="text">
+									<input class="uzp__form-control required" id="inputStreet" name="street" type="text">
 									<p class="uzp__help-block" data-validate-for="street"></p>
 								</div>
 							</div>
@@ -122,7 +122,7 @@
 							<div class="uzp-col-sm-4 uzp-col-sm-offset-4">
 								<div>
 									<label for="inputNumber" class="uzp__control-label--sub"><?php _e('Number', 'uitzendplaats'); ?></label>
-									<input class="uzp__form-control" id="inputNumber" name="number" type="number">
+									<input class="uzp__form-control required" id="inputNumber" name="number" type="number">
 									<p class="uzp__help-block" data-validate-for="number"></p>
 								</div>
 							</div>
@@ -138,14 +138,14 @@
 						<div class="uzp__form-group uzp-row">
 							<label class="uzp-col-sm-4 uzp__control-label" for="inputZip"><?php _e('Zipcode', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-8">
-								<input id="inputZip" class="uzp__form-control" name="zip" type="text">
+								<input id="inputZip" class="uzp__form-control required" name="zip" type="text">
 								<p class="uzp__help-block" data-validate-for="zip"></p>
 							</div>
 						</div>
 						<div class="uzp__form-group uzp-row">
 							<label class="uzp-col-sm-4 uzp__control-label" for="inputCity"><?php _e('City', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-8">
-								<input id="inputCity" class="uzp__form-control" name="city" type="text">
+								<input id="inputCity" class="uzp__form-control required" name="city" type="text">
 								<p class="uzp__help-block" data-validate-for="city"></p>
 							</div>
 						</div>
@@ -153,7 +153,7 @@
 						<div class="uzp__form-group uzp-row">
 							<label class="uzp-col-sm-4 uzp__control-label" for="inputPhone"><?php _e('Phone', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-8">
-								<input id="inputPhone" class="uzp__form-control" name="phone" type="text">
+								<input id="inputPhone" class="uzp__form-control required" name="phone" type="text">
 								<p class="uzp__help-block" data-validate-for="phone"></p>
 							</div>
 						</div>
@@ -179,7 +179,7 @@
 							<div class="uzp-col-sm-8">
 								<div class="uzp__select">
 									<select class="uzp__form-control" id="inputEducation" name="education[]">
-										<?php foreach( $education_data->data as $ed_item) {
+										<?php foreach ($education_data->data as $ed_item) {
 											$selected = '';
 											if ($ed_item->name === 'MBO') {
 												$selected = ' selected';
@@ -197,7 +197,7 @@
 							<div class="uzp-col-sm-8">
 								<div class="uzp__select">
 									<select class="uzp__form-control" id="inputEmploymentType" name="employment_type" tabindex="-1" aria-hidden="true">
-										<?php foreach( $employment_types_data->data as $et_item) {
+										<?php foreach ($employment_types_data->data as $et_item) {
 											echo '<option value="' . $et_item->id . '">' . $et_item->name . '</option>';
 										} ?>
 									</select>
@@ -230,7 +230,7 @@
 								<div class="uzp-row">
 									<div class="uzp-col-xs-12 uzp__driving-licences">
 										<select multiple="" class="uzp__form-control uzp__multiselect" id="inputLicences" name="licenses[]">
-											<?php foreach( $licences_data->data as $br_item) { ?>
+											<?php foreach ($licences_data->data as $br_item) { ?>
 												<option value="<?php echo $br_item->id ?>"><?php echo $br_item->name ?></option>
 											<?php } ?>
 										</select>
@@ -250,8 +250,8 @@
 						<div class="uzp__form-group uzp-row">
 							<label class="uzp-col-sm-4" for="inputBranches"><?php _e('Branches', 'uitzendplaats'); ?></label>
 							<div class="uzp-col-sm-8">
-								<select multiple="" class="uzp__form-control uzp__multiselect" id="inputBranches" name="branches[]">
-									<?php foreach( $branches_data->data as $br_item) { ?>
+								<select multiple="" class="uzp__form-control uzp__multiselect required" id="inputBranches" name="branches[]">
+									<?php foreach ($branches_data->data as $br_item) { ?>
 										<option value="<?php echo $br_item->id ?>"><?php echo $br_item->name ?></option>
 									<?php } ?>
 								</select>
@@ -331,13 +331,29 @@
 							</div>
 						</div>
 					</fieldset>
+					<div class="uzp__form-group">
+						<button type="submit">
+							<?php _e('Send', 'uitzendplaats'); ?>
+						</button>
+					</div>
 				</div>
 			</div>
 
-			<div class="uzp__form-group">
-				<button type="submit">
-					<?php _e('Send', 'uitzendplaats'); ?>
-				</button>
+			<div style="overflow:auto;">
+				<div style="float:right;">
+					<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+					<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+				</div>
+			</div>
+			<!-- Circles which indicates the steps of the form: -->
+			<div style="text-align:center;margin-top:40px;">
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
 			</div>
 		</form>
 	</div>
