@@ -4599,8 +4599,11 @@ input:focus {
 
 @media (max-width: 768px) {
   .header .imghdr {
+    width: 100vw;
     height: 50vw;
-    position: relative;
+    left: 0px;
+    position: absolute;
+    background-size: cover;
   }
   .nwsletter .nws--inner form .setmail {
     margin-right: 30px;

@@ -6,7 +6,7 @@ get_header(); ?>
             <section class="header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-12 d-flex align-items-center int">
+                        <div class="col-md-12 col-lg-6 col-12 d-flex align-items-center int">
                             <?php if (have_rows('content_links')) : ?>
                                 <div class="inner">
                                     <?php while (have_rows('content_links')) : the_row(); ?>
@@ -23,10 +23,10 @@ get_header(); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <div class="col-md-6 d-flex align-items-center lvh">
+                        <div class="col-md-12 col-lg-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <div class="block offset-md-1 col-md-11">
+                                    <div class="block col-md-12 offset-md-0 offset-lg-1 col-lg-11">
                                         <h3><?php the_sub_field('titel'); ?></h3>
                                         <div class="lvhi">
                                             <div class="inner">
