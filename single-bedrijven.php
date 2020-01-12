@@ -53,7 +53,7 @@ get_header();
             )); ?>
             <?php if ($loop->have_posts()) : ?>
                 <?php $count = $loop->post_count; ?>
-                <div class="<?php if ($count > 3) { ?>col-11<?php } else { ?>col-md-12<?php } ?>">
+                <div class="<?php if ($count > 3) { ?>col-md-11<?php } else { ?>col-md-12<?php } ?>">
                     <div class="post--items">
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php $countitems++; ?>
