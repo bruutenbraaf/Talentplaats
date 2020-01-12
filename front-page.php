@@ -203,7 +203,7 @@ get_header(); ?>
                                         <?php setup_postdata($post); ?>
                                         <div class="rev--item">
                                             <div class="row">
-                                                <div class="col-md-6 revcnt">
+                                                <div class="col-md-11 offset-md-0 col-lg-6 offset-lg-0 revcnt">
                                                     <div class="rev--content">
                                                         <h5><?php the_title(); ?></h5>
                                                         <?php the_content(); ?>
@@ -223,7 +223,7 @@ get_header(); ?>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 revimg">
+                                                <div class="col-md-11 offset-md-1 offset-lg-0 col-lg-6 revimg">
                                                     <div class="rev--img" style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
                                                     </div>
                                                 </div>
@@ -266,14 +266,14 @@ get_header(); ?>
             <section class="abh">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-10 col-lg-6">
                             <?php $afbeelding = get_sub_field('afbeelding'); ?>
                             <?php if ($afbeelding) { ?>
                                 <div class="abh--img" style="background-image:url(<?php echo $afbeelding['sizes']['large']; ?>);">
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-11 offset-md-1 col-lg-6 offset-lg-0">
                             <?php if (have_rows('content')) : ?>
                                 <?php while (have_rows('content')) : the_row(); ?>
                                     <div class="abh--content">

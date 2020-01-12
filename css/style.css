@@ -3801,13 +3801,6 @@ input:focus {
       padding: 16px 10px;
       margin: 8px 0; }
 
-  .edu .edu--item {
-    padding: 20px 20px; }
-    .edu .edu--item .edu--inner .edu--inf div {
-      display: block;
-      float: none;
-      margin-bottom: 7px; }
-
   .edu .justify-content-end {
     justify-content: center !important; }
 
@@ -3853,25 +3846,6 @@ input:focus {
       height: 300px;
       width: 100%;
       border-radius: 5px 5px 0px 0px; }
-
-  .cntrs--items {
-    flex-wrap: wrap; }
-    .cntrs--items .cntrs--item {
-      padding-bottom: 40px;
-      margin-bottom: 40px;
-      min-width: 100%;
-      border-right: 0px !important;
-      position: relative; }
-      .cntrs--items .cntrs--item:after {
-        content: "";
-        position: absolute;
-        width: 30%;
-        height: 1px;
-        bottom: 0;
-        background: rgba(207, 206, 223, 0.5);
-        left: 0;
-        right: 0;
-        margin: 0 auto; }
 
   .lnws .nws--items .nws--item .nws--img {
     margin-bottom: 22px; }
@@ -3945,5 +3919,31 @@ input:focus {
 
   .branding {
     width: calc(-16px + 50%); } }
+@media (max-width: 425px) {
+  .edu .edu--item {
+    padding: 20px 20px; }
+    .edu .edu--item .edu--inner .edu--inf div {
+      display: block;
+      float: none;
+      margin-bottom: 7px; }
+
+  .cntrs--items {
+    flex-wrap: wrap; }
+    .cntrs--items .cntrs--item {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      min-width: 100%;
+      border-right: 0px !important;
+      position: relative; }
+      .cntrs--items .cntrs--item:after {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 1px;
+        bottom: 0;
+        background: rgba(207, 206, 223, 0.5);
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
