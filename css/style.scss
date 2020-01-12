@@ -4604,7 +4604,6 @@ input:focus {
   }
   .header .imghdr {
     width: 100vw;
-    height: 50vw;
     left: 0px;
     position: absolute;
     background-size: cover;
@@ -4687,10 +4686,6 @@ input:focus {
         padding: 90px 0;
         margin-left: 15px;
       }
-    }
-    .imghdr {
-      width: 120vw;
-      left: -14vw;
     }
     &:before {
       content: "";

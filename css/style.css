@@ -3677,7 +3677,6 @@ input:focus {
 
   .header .imghdr {
     width: 100vw;
-    height: 50vw;
     left: 0px;
     position: absolute;
     background-size: cover; }
@@ -3750,9 +3749,6 @@ input:focus {
       .header .row .nopadding {
         padding: 90px 0;
         margin-left: 15px; }
-    .header .imghdr {
-      width: 120vw;
-      left: -14vw; }
     .header:before {
       content: "";
       background-image: url(../img/watermark.svg);
