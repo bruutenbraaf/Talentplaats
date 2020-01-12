@@ -53,7 +53,7 @@ get_header();
             )); ?>
             <?php if ($loop->have_posts()) : ?>
                 <?php $count = $loop->post_count; ?>
-                <div class="<?php if ($count > 3) { ?>col-11<?php } else { ?>col-12<?php } ?>">
+                <div class="<?php if ($count > 3) { ?>col-md-11 col-9<?php } else { ?>col-12<?php } ?>">
                     <div class="post--items">
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php $countitems++; ?>
@@ -90,7 +90,7 @@ get_header();
                     </script>
                 </div>
                 <?php if ($count > 3) { ?>
-                    <div class="col-1 d-flex align-items-center">
+                    <div class="col-md-1 col-3 d-flex align-items-center">
                         <span class="next">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
