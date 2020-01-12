@@ -27,7 +27,7 @@ get_header(); ?>
                     yoast_breadcrumb('');
                 } ?>
             </div>
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-12">
                 <?php the_content(); ?>
             </div>
         </div>
