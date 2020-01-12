@@ -3757,7 +3757,8 @@ input:focus {
       min-height: 45%;
       top: 83px;
       left: 60px;
-      z-index: 100; }
+      z-index: 100;
+      transform: translate(-40%, 10vw); }
 
   .hpsf .sfv form .uzp-row input[name="postal_code"],
   .hpsf .uzp__input-radius {
