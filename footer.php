@@ -122,13 +122,13 @@
     <div class="socket">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-4">
                     <?php _e('© Talentplaats 2017 - 2019', 'talentplaats'); ?>
                 </div>
-                <div class="col-md-8 d-flex justify-content-center terms">
+                <div class="col-lg-8 col-md-5 d-flex justify-content-center terms">
                     <?php wp_nav_menu(array('theme_location' => 'socket_menu')); ?>
                 </div>
-                <div class="col-md-2 socials justify-content-end d-flex">
+                <div class="col-lg-2 col-md-3 socials justify-content-end d-flex">
                     <?php if (have_rows('socials', 'option')) : ?>
                         <ul>
                             <?php while (have_rows('socials', 'option')) : the_row(); ?>
@@ -168,7 +168,7 @@
                 </div>
                 <?php $payoff = get_field('pay-off_socket', 'option'); ?>
                 <?php if ($payoff) { ?>
-                    <div class="col-md-12 text-center payoff">
+                    <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0 text-center payoff">
                         <?php echo $payoff; ?>
                     </div>
                 <?php } ?>

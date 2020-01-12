@@ -4759,11 +4759,11 @@ input:focus {
       background-size: cover;
       background-position: center center;
       height: 300px !important;
-      border-radius: 5px 5px 0px 0px !important;
+      border-radius: 5px 5px !important;
     }
   }
   .rev .rev--items .rev--item .rev--content {
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 5px;
     width: 100%;
   }
   .da {
@@ -4789,13 +4789,13 @@ input:focus {
       width: 100%;
       margin-left: 0px;
       background: #fff;
-      border-radius: 0px 0px 5px 5px;
+      border-radius: 5px;
       padding: 70px 50px;
     }
     .abh--img {
       height: 300px;
       width: 100%;
-      border-radius: 5px 5px 0px 0px;
+      border-radius: 5px 5px;
     }
   }
   .lnws .nws--items .nws--item .nws--img {
