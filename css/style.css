@@ -3748,7 +3748,7 @@ input:focus {
         padding: 70px 0px 60px 0px; }
       .header .row .nopadding {
         padding: 90px 0;
-        margin-left: 15px; }
+        margin-left: 0px; }
     .header:before {
       content: "";
       background-image: url(../img/watermark.svg);
