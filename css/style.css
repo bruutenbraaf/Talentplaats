@@ -2975,6 +2975,17 @@ th {
     text-decoration: none; }
     .members .member a:hover h3 {
       color: #ff6600; }
+.members svg.li {
+  width: calc(100vw + 200px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  overflow: visible;
+  z-index: -1; }
+  .members svg.li path {
+    stroke-width: 60px;
+    stroke: #ff6600; }
 
 .ctnc--inner {
   background: #ffffff;

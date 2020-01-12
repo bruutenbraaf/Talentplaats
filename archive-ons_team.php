@@ -56,8 +56,8 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <svg class="bg" reserveAspectRatio="none" viewBox="0 0 1051 644" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
+    <svg class="li" preserveAspectRatio="none" viewBox="0 0 1028 745" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 707C137 769 451.4 797 621 413C779.117 55 962.333 -19.0002 1027 4.99978" stroke="black" />
     </svg>
 </section>
 

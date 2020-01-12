@@ -3789,6 +3789,19 @@ th {
       }
     }
   }
+  svg.li {
+    width: calc(100vw + 200px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    overflow: visible;
+    z-index: -1;
+    path {
+      stroke-width: 60px;
+      stroke: $orange;
+    }
+  }
 }
 
 // Contact pagina
