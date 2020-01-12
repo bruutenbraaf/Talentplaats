@@ -186,6 +186,10 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+
+                <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1051 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 565C119.667 629 384.6 688.2 591 413C797.4 137.8 979.667 39.6667 1045 25" stroke="#FF6600" stroke-width="50" />
+                </svg>
             </section>
         <?php elseif (get_row_layout() == 'reviews') : ?>
             <section class="rev">
