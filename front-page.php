@@ -215,7 +215,7 @@ get_header(); ?>
                                                             <?php while (have_rows('informatie_review')) : the_row(); ?>
                                                                 <div class="rating">
                                                                     <?php $rating = get_sub_field('rating');
-                                                                                                for ($i = 0; $i < $rating; $i++) { ?>
+                                                                    for ($i = 0; $i < $rating; $i++) { ?>
                                                                         <span class="star">
                                                                             <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                                 <path d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z" fill="#F2C94C" />
@@ -292,8 +292,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <svg preserveAspectRatio="none" class="bg" viewBox="0 0 1024 753" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 33.9999C97 20.6666 312.6 39.1999 423 220C561 446 679 648 811 688C916.6 720 996.333 724 1023 722" stroke="#1772DD" stroke-width="60" />
+                <svg class="li" preserveAspectRatio="none" viewBox="0 0 1028 745" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 707C137 769 451.4 797 621 413C779.117 55 962.333 -19.0002 1027 4.99978" stroke="black" />
                 </svg>
             </section>
         <?php elseif (get_row_layout() == 'inschrijven') : ?>
@@ -384,13 +384,13 @@ get_header(); ?>
                         <div class="col-md-10 offset-md-1">
                             <div class="nws--items">
                                 <?php
-                                            $aantal = get_sub_field('toon_aantal_laatste_berichten');
-                                            $loop = new WP_Query(array(
-                                                'post_type' => 'nieuws',
-                                                'posts_per_page' => 3,
-                                                'order' => 'DESC'
-                                            ));
-                                            ?>
+                                $aantal = get_sub_field('toon_aantal_laatste_berichten');
+                                $loop = new WP_Query(array(
+                                    'post_type' => 'nieuws',
+                                    'posts_per_page' => 3,
+                                    'order' => 'DESC'
+                                ));
+                                ?>
                                 <?php if ($loop->have_posts()) : ?>
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <div class="nws--item">
