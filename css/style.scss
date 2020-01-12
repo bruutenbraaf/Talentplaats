@@ -1291,7 +1291,7 @@ nav {
 // About
 
 .abh {
-  padding: 200px 0px;
+  padding: 120px 0px 60px 0px;
   position: relative;
   .container {
     position: relative;
@@ -1328,7 +1328,7 @@ nav {
     overflow: visible;
     z-index: -1;
     path {
-      stroke-width: 40px;
+      stroke-width: 60px;
       stroke: $orange;
     }
   }
@@ -1361,7 +1361,7 @@ nav {
     overflow: visible;
     z-index: -1;
     path {
-      stroke-width: 40px;
+      stroke-width: 60px;
       stroke: $blue;
     }
   }
@@ -4587,7 +4587,6 @@ input:focus {
   }
 }
 
-.abh,
 .edu,
 .rev,
 .vkgb,

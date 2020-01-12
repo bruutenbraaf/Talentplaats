@@ -1029,7 +1029,7 @@ nav {
         box-shadow: 0 0 0 6px rgba(23, 114, 221, 0.5); }
 
 .abh {
-  padding: 200px 0px;
+  padding: 120px 0px 60px 0px;
   position: relative; }
   .abh .container {
     position: relative;
@@ -1062,7 +1062,7 @@ nav {
     overflow: visible;
     z-index: -1; }
     .abh svg.li path {
-      stroke-width: 40px;
+      stroke-width: 60px;
       stroke: #ff6600; }
 
 .insc p {
@@ -1083,7 +1083,7 @@ nav {
     overflow: visible;
     z-index: -1; }
     .cntrs svg.li path {
-      stroke-width: 40px;
+      stroke-width: 60px;
       stroke: #1772dd; }
   .cntrs .cntrs--items {
     background: #ffffff;
@@ -3661,7 +3661,6 @@ input:focus {
 
   .is--open:after {
     transform: rotate(180deg); } }
-.abh,
 .edu,
 .rev,
 .vkgb,
