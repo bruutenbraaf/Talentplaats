@@ -3672,6 +3672,9 @@ input:focus {
   margin: 0px !important; }
 
 @media (max-width: 992px) {
+  .fw {
+    padding: 0px 15px; }
+
   .sollicteer-e .sollicteer-e__inner {
     padding: 30px 15px; }
 
@@ -3923,7 +3926,7 @@ input:focus {
 @media (max-width: 500px) {
   .is__scrolled .branding {
     width: 50%;
-    margin-left: -15px;
+    margin-left: 0px;
     justify-content: left; }
 
   .sollicteer-e .sollicteer-e__inner form {
