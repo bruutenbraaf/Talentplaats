@@ -3530,7 +3530,8 @@ input:focus {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-top: -6px; }
     .mobnav div span {
       width: 100%;
       height: 2px;
@@ -3684,14 +3685,9 @@ input:focus {
   .container {
     max-width: 100vw; }
 
-  .mobnav div span {
-    background: #ffffff; }
-
-  nav {
-    background: #1772dd; }
-    nav .row .main_nav,
-    nav .row .mg_nav {
-      display: none; }
+  nav .row .main_nav,
+  nav .row .mg_nav {
+    display: none; }
 
   .vac--inf .recruiter {
     margin-top: 60px; }
@@ -3923,6 +3919,9 @@ input:focus {
   .branding {
     width: calc(-16px + 50%); } }
 @media (max-width: 425px) {
+  nav {
+    background: #1772dd; }
+
   .edu .edu--item {
     padding: 20px 20px; }
     .edu .edu--item .edu--inner .edu--inf div {
@@ -3947,6 +3946,9 @@ input:focus {
         background: rgba(207, 206, 223, 0.5);
         left: 0;
         right: 0;
-        margin: 0 auto; } }
+        margin: 0 auto; }
+
+  .mobnav div span {
+    background: #ffffff; } }
 
 /*# sourceMappingURL=style.css.map */
