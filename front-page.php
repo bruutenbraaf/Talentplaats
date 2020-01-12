@@ -59,6 +59,7 @@ get_header(); ?>
                                                 prevArrow: jQuery('.prev'),
                                                 nextArrow: jQuery('.next'),
                                                 appendDots: jQuery(".dots"),
+                                                adaptiveHeight: true,
                                             });
                                         });
                                     </script>
@@ -432,6 +433,7 @@ get_header(); ?>
                         fade: true,
                         dots: true,
                         arrows: false,
+                        adaptiveHeight: true,
                         appendDots: jQuery(".nws--dots"),
                     });
                 });
