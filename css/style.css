@@ -3918,6 +3918,11 @@ input:focus {
   .branding {
     width: calc(-16px + 50%); } }
 @media (max-width: 500px) {
+  .is__scrolled .branding {
+    width: 50%;
+    margin-left: -15px;
+    justify-content: left; }
+
   .sollicteer-e .sollicteer-e__inner form {
     display: block; }
 
