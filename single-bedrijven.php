@@ -70,6 +70,21 @@ get_header();
                                 slidesToShow: 3,
                                 prevArrow: jQuery('.prev'),
                                 nextArrow: jQuery('.next'),
+                                responsive: [{
+                                        breakpoint: 991,
+                                        settings: {
+                                            slidesToShow: 3,
+                                            slidesToScroll: 1
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 768,
+                                        settings: {
+                                            slidesToShow: 2,
+                                            slidesToScroll: 1
+                                        }
+                                    }
+                                ]
                             });
                         });
                     </script>
