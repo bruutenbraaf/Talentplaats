@@ -1351,6 +1351,7 @@ nav {
 // counters
 
 .cntrs {
+  position: relative;
   svg.li {
     width: calc(100vw + 200px);
     height: 100%;
