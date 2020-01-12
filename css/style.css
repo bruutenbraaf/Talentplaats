@@ -2956,6 +2956,7 @@ th {
     color: #9290b7; }
 
 .members {
+  overflow: visible;
   position: relative; }
   .members .member {
     margin-bottom: 30px; }
