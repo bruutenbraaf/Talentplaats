@@ -2955,37 +2955,39 @@ th {
     line-height: 34px;
     color: #9290b7; }
 
-.members .member {
-  margin-bottom: 30px; }
-  .members .member h3 {
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 24px;
-    margin-top: 20px;
-    color: #2d2d46;
-    margin-bottom: 0px; }
-  .members .member span {
-    color: #2d2d46; }
-  .members .member .team--member {
-    width: 100%;
-    height: 365px;
-    background-size: cover;
-    background-position: top center; }
-  .members .member a:hover {
-    text-decoration: none; }
-    .members .member a:hover h3 {
-      color: #ff6600; }
-.members svg.li {
-  width: calc(100vw + 200px);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -100px;
-  overflow: visible;
-  z-index: -1; }
-  .members svg.li path {
-    stroke-width: 60px;
-    stroke: #ff6600; }
+.members {
+  position: relative; }
+  .members .member {
+    margin-bottom: 30px; }
+    .members .member h3 {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 20px;
+      color: #2d2d46;
+      margin-bottom: 0px; }
+    .members .member span {
+      color: #2d2d46; }
+    .members .member .team--member {
+      width: 100%;
+      height: 365px;
+      background-size: cover;
+      background-position: top center; }
+    .members .member a:hover {
+      text-decoration: none; }
+      .members .member a:hover h3 {
+        color: #ff6600; }
+  .members svg.li {
+    width: calc(100vw + 200px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    overflow: visible;
+    z-index: -1; }
+    .members svg.li path {
+      stroke-width: 60px;
+      stroke: #ff6600; }
 
 .ctnc--inner {
   background: #ffffff;
