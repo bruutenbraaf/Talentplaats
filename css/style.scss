@@ -4882,6 +4882,18 @@ input:focus {
 }
 
 @media (max-width: 500px) {
+  .sollicteer-e .sollicteer-e__inner form {
+    display: block;
+  }
+  .sollicteer-e .sollicteer-e__inner form input {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .sollicteer-e .sollicteer-e__inner form .setmail {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
   .abh .abh--content {
     padding: 20px 15px;
   }
