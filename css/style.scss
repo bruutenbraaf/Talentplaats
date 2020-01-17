@@ -524,6 +524,12 @@ nav {
   }
 }
 
+tbody {
+  tr {
+    border: 1px solid $blue;
+  }
+}
+
 .fw {
   max-width: 100vw;
   padding: 0px 30px;
