@@ -45,10 +45,8 @@ add_action('init', 'register_my_menus');
 
 function my_acf_init()
 {
-
 	acf_update_setting('google_api_key', 'AIzaSyBwjs5yVQERqyM-MUa52sJa1a7jeBHiEes');
 }
-
 add_action('acf/init', 'my_acf_init');
 
 
@@ -76,6 +74,8 @@ acf_add_options_page(array(
 
 ));
 
+
+// Excerpt
 function excerpt($limit)
 {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
@@ -89,10 +89,9 @@ function excerpt($limit)
 	return $excerpt;
 }
 
-
+// Widgets
 function arphabet_widgets_init()
 {
-
 	register_sidebar(array(
 		'name'          => 'Footer een',
 		'id'            => 'footer_een',
@@ -111,7 +110,7 @@ function arphabet_widgets_init()
 
 add_action('widgets_init', 'arphabet_widgets_init');
 
-
+// Archive post page options
 function option_page_posttypes()
 {
 	$args  = array('public'   => true, '_builtin' => false);
