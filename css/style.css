@@ -3975,6 +3975,9 @@ input:focus {
   .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="radius"] {
     padding: 15px 0px; } }
 @media (max-width: 500px) {
+  .secondair {
+    padding: 12px 0px; }
+
   .is__scrolled .branding {
     width: 50%;
     margin-left: 0px;
