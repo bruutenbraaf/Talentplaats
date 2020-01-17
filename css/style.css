@@ -414,8 +414,10 @@ nav {
     nav .hours a:hover:after {
       display: none; }
 
-tbody tr {
+tbody {
   border: 1px solid #1772dd; }
+  tbody tr {
+    border: 1px solid #1772dd; }
 
 .fw {
   max-width: 100vw;
