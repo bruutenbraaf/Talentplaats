@@ -32,7 +32,7 @@ body {
 
 main {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h2,
@@ -4892,8 +4892,11 @@ input:focus {
 }
 
 @supports (-ms-ime-align: auto) {
+  main {
+    width: calc(-16px + 100vw);
+  }
   .mgm .r {
-    right: 0px;
+    left: calc(50vw - 16px);
   }
   .mgm .l {
     width: calc(-16px + 50vw);
