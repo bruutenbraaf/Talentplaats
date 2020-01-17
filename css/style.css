@@ -414,10 +414,10 @@ nav {
     nav .hours a:hover:after {
       display: none; }
 
-tbody {
-  border: 1px solid #1772dd; }
-  tbody tr {
-    border: 1px solid #1772dd; }
+table {
+  border: 1px solid #2d2d46; }
+  table tr {
+    border: 1px solid #2d2d46; }
 
 .fw {
   max-width: 100vw;
