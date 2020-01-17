@@ -23,8 +23,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
-
 <?php if (have_posts()) { ?>
     <section class="vkgb">
         <div class="container">
@@ -103,7 +101,6 @@ get_header(); ?>
         </div>
     </section>
 <?php } ?>
-
 <?php if (get_field('vakgebieden_overzicht_seo', 'option')) { ?>
     <section class="s">
         <div class="container">
@@ -117,8 +114,4 @@ get_header(); ?>
         </div>
     </section>
 <?php } ?>
-
-
-
-
 <?php get_footer(); ?>
