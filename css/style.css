@@ -3171,7 +3171,8 @@ th {
   color: #1772dd !important; }
 
 .c--socials a {
-  margin-right: 32px; }
+  margin-right: 32px;
+  float: left; }
   .c--socials a:hover {
     text-decoration: none; }
     .c--socials a:hover svg path {
