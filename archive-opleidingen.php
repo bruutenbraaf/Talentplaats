@@ -87,7 +87,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
 <section class="pagination">
     <div class="d-flex justify-content-center align-items-center inner">
         <?php echo paginate_links(array(
@@ -106,7 +105,6 @@ get_header(); ?>
         )); ?>
     </div>
 </section>
-
 <?php if (get_field('opleidingen_overzicht_vacatures', 'option') == 1) { ?>
     <section class="vac-items-w">
         <div class="container">

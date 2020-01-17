@@ -3957,6 +3957,22 @@ input:focus {
 
   .branding {
     width: calc(-16px + 50%); } }
+@-moz-document url-prefix() {
+  main {
+    overflow-x: hidden;
+    width: calc(-17px + 100vw); }
+
+  .header {
+    width: 100vw; }
+
+  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
+    padding: 15px 25px; }
+
+  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="postal_code"] {
+    padding: 15px 0px; }
+
+  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="radius"] {
+    padding: 15px 0px; } }
 @media (max-width: 500px) {
   .is__scrolled .branding {
     width: 50%;
