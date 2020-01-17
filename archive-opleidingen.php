@@ -1,6 +1,5 @@
 <?php
 get_header(); ?>
-
 <section class="header">
     <div class="container">
         <div class="row">
@@ -23,7 +22,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
 <section class="int-archive">
     <div class="container">
         <div class="row">
