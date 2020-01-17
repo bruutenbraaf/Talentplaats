@@ -123,7 +123,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 d-flex p-2 justify-content-center justify-content-md-start">
-                    <span><?php _e('© Talentplaats 2017 - 2019', 'talentplaats'); ?></span>
+                    <span><?php _e('© Talentplaats 2017 - 2020', 'talentplaats'); ?></span>
                 </div>
                 <div class="col-lg-6 col-md-5 d-flex p-2 justify-content-center justify-content-md-center terms">
                     <?php wp_nav_menu(array('theme_location' => 'socket_menu')); ?>
