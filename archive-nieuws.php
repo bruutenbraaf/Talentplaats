@@ -1,50 +1,29 @@
 <?php
 get_header(); ?>
 
-
-
-<?php
-// Define taxonomy prefix
-// Replace NULL with the name of the taxonomy eg 'category'
-$taxonomy_prefix = 'nieuws_categorie';
-
-// Define term ID
-// Replace NULL with ID of term to be queried eg '123' 
-$term_id = get_queried_object()->term_id;
-
-// Define prefixed term ID
-$term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
-$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-?>
-
-
-
-<?php $afbeelding = get_field('nieuws_overzicht_afbeelding', 'option'); ?>
-<section class="tax-header" style="background-image:url(<?php echo $afbeelding['sizes']['large']; ?>);">
+<section class="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 inner d-flex align-items-center">
-                <div class="cnt">
-                    <span class="tax-name"><?php _e('nieuws', 'talentplaats'); ?></span>
+            <div class="col-md-6 d-flex align-items-center int">
+                <div class="inner">
+                    <div class="breadcrumbs">
+                        <?php if (function_exists('yoast_breadcrumb')) {
+                            yoast_breadcrumb('');
+                        } ?>
+                    </div>
+                    <?php the_field('nieuws_overzicht_title', 'option'); ?>
                     <?php the_field('nieuws_overzicht_intro', 'option'); ?>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-1 d-flex align-items-center lvh nopadding">
+                <?php $achtergrond_afbeelding = get_field('nieuws_overzicht_afbeelding', 'option'); ?>
+                <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);" <?php } ?>>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<div class="taxs">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 terms d-flex align-items-end">
-                <div class="breadcrumbs dark">
-                    <?php if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('');
-                    } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <?php if (have_posts()) { ?>
     <section class="posts">
         <div class="container">

@@ -114,14 +114,6 @@ jQuery("body").on('click', '#newsletterbtn', function () {
   jQuery('.newsletter--bar').animate({ 'height': 'toggle' }, 200);
 });
 
-
-jQuery(document).ready(function () {
-  jQuery("body").on('click', '.regio--name', function () {
-    jQuery(this).next('.branches').slideToggle(200);
-    jQuery(this).toggleClass('is--open');
-  });
-});
-
 // Change nav class on scroll
 jQuery(window).scroll(function () {
   var scroll = jQuery(window).scrollTop();

@@ -10,37 +10,32 @@ $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 ?>
 
 
-<section class="sngl-header " style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>);">
-</section>
-<div class="taxs">
+<section class="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 terms d-flex align-items-center bread">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div class="breadcrumbs">
-                            <?php if (function_exists('yoast_breadcrumb')) {
-                                yoast_breadcrumb('');
-                            } ?>
-                        </div>
+            <div class="col-md-6 d-flex align-items-center int">
+                <div class="inner">
+                    <div class="breadcrumbs">
+                        <?php if (function_exists('yoast_breadcrumb')) {
+                            yoast_breadcrumb('');
+                        } ?>
                     </div>
+                    <?php the_field('nieuws_overzicht_title', 'option'); ?>
+                    <h2><?php the_title(); ?></h2>
                 </div>
-                <svg width="5" height="5" class="left" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.5 3.5C5 2 5 0.65625 5 0.65625V5H0C0 5 2 5 3.5 3.5Z" fill="#F5F5FA" />
-                </svg>
-                <svg width="5" height="5" class="right" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 3.5C0 2 0 0.65625 0 0.65625V5H5C5 5 3 5 1.5 3.5Z" fill="#F5F5FA" />
-                </svg>
+            </div>
+            <div class="col-md-5 offset-md-1 d-flex align-items-center lvh nopadding">
+                <div class="imghdr" style="background-image:url(<?php echo get_the_post_thumbnail_url($post, 'large'); ?>" alt="<?php echo $achtergrond_afbeelding['alt']; ?>);">
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <section class="sngl--content">
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 text-center">
-                <h1><?php the_title(); ?></h1>
                 <span class="the--date"><?php echo the_time('j F, Y g:i A'); ?></span>
             </div>
             <div class="col-md-1">

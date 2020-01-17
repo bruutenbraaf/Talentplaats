@@ -11,6 +11,9 @@ $calltoaction: #1cd265;
 // font family
 $muli: "Muli", sans-serif;
 
+// font size
+$fontsize: 18px;
+
 // Searchform homepagina
 $hpformheight: 72px;
 
@@ -32,7 +35,6 @@ body {
 
 main {
   width: 100vw;
-  overflow-x: hidden;
 }
 
 h2,
@@ -56,7 +58,7 @@ a,
 main {
   ul {
     li {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
@@ -67,7 +69,7 @@ main {
 .all {
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: $fontsize;
   line-height: 32px;
   text-decoration-line: underline;
   color: $midnight;
@@ -266,7 +268,7 @@ nav {
           font-family: $muli;
           font-style: normal;
           font-weight: 600;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 19px;
           color: $midnight;
           margin: 0px 15px;
@@ -676,7 +678,7 @@ nav {
         p {
           font-family: $muli;
           color: #ffffff;
-          font-size: 18px;
+          font-size: $fontsize;
           line-height: 23px;
         }
       }
@@ -705,7 +707,7 @@ nav {
       h3 {
         font-family: $muli;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 28px;
         line-height: 25px;
         color: #ffffff;
         margin-bottom: 0px;
@@ -715,13 +717,13 @@ nav {
         float: left;
         a {
           color: #ffffff;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 20px;
+          padding: 10px 0px;
         }
         .item {
           display: flex;
           align-items: center;
-          height: 38px;
         }
       }
       .arws {
@@ -744,6 +746,8 @@ nav {
         }
       }
       .dots {
+        display: inline-block;
+        margin-left: -6px;
         ul {
           list-style: none;
           clear: both;
@@ -751,11 +755,11 @@ nav {
           margin: 0px;
           padding: 0px;
           margin-top: 14px;
-          margin-left: -14px;
+          margin-left: -8px;
           li {
             float: left;
             button {
-              opacity: 0.25;
+              opacity: 1;
               text-indent: -9999px;
               -webkit-appearance: none;
               outline: none;
@@ -765,9 +769,9 @@ nav {
               width: 12px;
               height: 12px;
               padding: 0px;
-              background: #fff;
+              background: $orange;
               border-radius: 999px;
-              margin: 0 14px;
+              margin: 0 8px;
               box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
               -webkit-transition: all 0.3s ease-in-out;
               -moz-transition: all 0.3s ease-in-out;
@@ -777,8 +781,8 @@ nav {
           }
           .slick-active {
             button {
-              opacity: 0.8;
-              box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15);
+              opacity: 1;
+              box-shadow: 0 0 0 6px rgba($orange, 0.15);
             }
           }
         }
@@ -817,13 +821,13 @@ nav {
 .breadcrumbs {
   color: #ffffff;
   font-family: $muli;
-  font-size: 16px;
+  font-size: $fontsize;
   line-height: 34px;
   span {
     a {
       color: #ffffff;
       font-family: $muli;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 34px;
     }
   }
@@ -879,7 +883,7 @@ nav {
             font-family: Muli, sans-serif;
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: $fontsize;
             line-height: 23px;
             z-index: 2;
             position: relative;
@@ -924,14 +928,14 @@ nav {
             border: 0px;
             color: $midnight;
             font-family: $muli;
-            font-size: 16px;
+            font-size: $fontsize;
             border-right: 1px solid rgba($lightgray, 0.25);
             &::placeholder {
               color: $lightgray;
               font-family: $muli;
               font-style: normal;
               font-weight: normal;
-              font-size: 16px !important;
+              font-size: $fontsize !important;
               line-height: 20px;
             }
           }
@@ -971,7 +975,7 @@ nav {
     font-family: $muli;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
   }
   a {
@@ -996,7 +1000,7 @@ nav {
       z-index: 2;
       color: $midnight;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
     }
     svg {
       position: absolute;
@@ -1054,7 +1058,7 @@ nav {
     font-family: $muli;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
   }
   .edu--items {
@@ -1183,7 +1187,7 @@ nav {
     color: $midnight;
     opacity: 0.8;
     font-weight: 600;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
   }
   .rev--items {
@@ -1198,13 +1202,13 @@ nav {
         margin-right: -15px;
         h5 {
           font-weight: bold;
-          font-size: 18px;
+          font-size: $fontsize;
           line-height: 32px;
           color: $midnight;
         }
         p {
           font-weight: 300;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 32px;
           color: $midnight;
           opacity: 0.8;
@@ -1297,7 +1301,7 @@ nav {
     position: relative;
     z-index: 2;
     p {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
@@ -1338,7 +1342,7 @@ nav {
 
 .insc {
   p {
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
     text-align: center;
     color: $midnight;
@@ -1386,7 +1390,7 @@ nav {
         padding: 10px 0px;
       }
       h5 {
-        font-size: 16px;
+        font-size: $fontsize;
         color: $midnight;
         opacity: 0.6;
       }
@@ -1437,24 +1441,24 @@ nav {
       }
       h3 {
         font-weight: 800;
-        font-size: 18px;
+        font-size: $fontsize;
         line-height: 24px;
         color: $midnight;
       }
       p {
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $midnight;
         opacity: 0.8;
       }
       .nws--ct {
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $lightgray;
       }
       .smll-btn {
         font-weight: 600;
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $midnight;
         svg {
@@ -1546,13 +1550,13 @@ $formmargin: 110px;
         font-family: $muli;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: $fontsize;
         color: $midnight;
         &::placeholder {
           font-family: $muli;
           font-style: normal;
           font-weight: normal;
-          font-size: 16px;
+          font-size: $fontsize;
           color: $lightgray;
         }
       }
@@ -1562,7 +1566,7 @@ $formmargin: 110px;
         font-family: Muli, sans-serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
+        font-size: $fontsize;
         line-height: 23px;
         z-index: 2;
         position: relative;
@@ -1663,7 +1667,7 @@ $formmargin: 110px;
     font-family: $muli !important;
     font-style: normal !important;
     font-weight: 800 !important;
-    font-size: 18px !important;
+    font-size: $fontsize !important;
     line-height: 34px !important;
     color: $midnight !important;
   }
@@ -1710,7 +1714,7 @@ footer {
     margin: 16px 0px;
     padding: 0;
     a {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 20px;
       color: $lightgray;
       &:hover {
@@ -1828,7 +1832,7 @@ footer {
     position: relative;
     z-index: 2;
     p {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
@@ -1896,7 +1900,7 @@ $padding-edu: 20px;
         span {
           color: #ffffff;
           font-weight: 600;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 32px;
           opacity: 0;
           margin-right: 15px;
@@ -2087,7 +2091,7 @@ $padding-edu: 20px;
     display: flex !important;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: $fontsize;
     color: $midnight;
     position: relative;
     &:after {
@@ -2239,7 +2243,7 @@ $padding-edu: 20px;
     border-top: 1px solid $lightgray;
     p {
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
@@ -2275,7 +2279,7 @@ $padding-edu: 20px;
       font-family: $muli;
       font-style: normal;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
     }
     .edu--inf {
@@ -2322,7 +2326,7 @@ $padding-edu: 20px;
       color: $midnight;
       opacity: 0.75;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
     }
   }
@@ -2363,21 +2367,26 @@ $taxheight: 54px;
         background: $orange;
         border-radius: 5px;
         font-weight: 600;
-        font-size: 16px;
+        font-size: $fontsize;
         color: #ffffff;
         padding: 6px 18px;
+        margin-bottom: 20px;
       }
       h1,
       h2,
       h3,
       h4 {
-        font-size: 32px;
+        font-size: 20px;
+        line-height: 28px;
         padding-top: 30px;
-        padding-bottom: calc(30px + #{$taxheight});
-        font-weight: 800;
-        color: #ffffff;
+        padding-bottom: calc(30px + 54px);
+        font-weight: 700;
+        color: #fff;
         box-sizing: border-box;
-        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+      }
+      p {
+        color: #ffffff;
       }
     }
   }
@@ -2449,7 +2458,7 @@ $taxheight: 54px;
         }
         a {
           font-weight: 600;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 34px;
           color: $midnight;
           &:hover {
@@ -2496,7 +2505,7 @@ $taxheight: 54px;
         color: $midnight;
       }
       p {
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $midnight;
         opacity: 0.8;
@@ -2506,7 +2515,7 @@ $taxheight: 54px;
       background: $orange;
       border-radius: 5px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       color: #ffffff;
       padding: 6px 18px;
       float: left;
@@ -2547,15 +2556,17 @@ $taxheight: 54px;
   .the--date {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
     color: $lightgray;
+    display: block;
+    margin-top: 60px;
   }
   .the-cnt {
     padding-top: 60px;
   }
   p {
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 28px;
     letter-spacing: -0.02em;
     color: $midnight;
@@ -2819,7 +2830,7 @@ $taxheight: 54px;
 .tx-fl {
   padding: 80px 0px;
   p {
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
     color: $midnight;
     opacity: 0.8;
@@ -2960,14 +2971,14 @@ $teamheight: 280px;
     }
   }
   p {
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
     color: $midnight;
     opacity: 0.8;
   }
   .smlli {
     font-weight: 600;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 32px;
     color: $midnight;
     position: relative;
@@ -3150,7 +3161,7 @@ $teamheight: 280px;
         span {
           color: #ffffff;
           font-weight: 600;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 32px;
           opacity: 0;
           margin-right: 15px;
@@ -3253,7 +3264,7 @@ $teamheight: 280px;
     color: $orange;
   }
   .totalc {
-    font-size: 18px;
+    font-size: $fontsize;
     line-height: 23px;
     color: $midnight;
   }
@@ -3296,7 +3307,7 @@ $teamheight: 280px;
       }
     }
     span {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 20px;
       color: $midnight;
       margin-right: 30px;
@@ -3325,7 +3336,7 @@ $teamheight: 280px;
       font-family: $muli;
       font-style: normal;
       font-weight: bold;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 20px;
       color: $midnight;
       svg {
@@ -3435,7 +3446,7 @@ $teamheight: 280px;
     p {
       font-family: $muli;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       mix-blend-mode: normal;
@@ -3458,13 +3469,13 @@ $teamheight: 280px;
       padding: 15px;
       h2 {
         font-weight: 800;
-        font-size: 18px;
+        font-size: $fontsize;
         line-height: 24px;
         color: #ffffff;
         margin: 0px;
       }
       span {
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 24px;
         color: #ffffff;
       }
@@ -3481,7 +3492,7 @@ $teamheight: 280px;
       border-bottom: 1px solid #eeeeee;
       h3 {
         font-weight: bold;
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $midnight;
         margin: 0;
@@ -3547,7 +3558,7 @@ $teamheight: 280px;
         font-family: $muli;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $lightgray;
       }
@@ -3562,7 +3573,7 @@ $teamheight: 280px;
     font-family: $muli;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 20px;
     padding: 15px 30px;
     height: auto;
@@ -3571,7 +3582,7 @@ $teamheight: 280px;
     font-family: $muli;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: $fontsize;
     color: $midnight;
     a {
       text-decoration: underline;
@@ -3666,29 +3677,28 @@ th {
   }
   .regio {
     border-bottom: 1px solid #cfcedf;
-    padding-bottom: 20px;
     margin-bottom: 20px;
     .regio--name {
       position: relative;
       cursor: pointer;
+      a {
+        display: block;
+        text-decoration: none;
+        padding-bottom: 20px;
+        &:hover {
+          h2 {
+            span {
+              color: $orange;
+            }
+          }
+        }
+      }
       svg {
         position: absolute;
         right: 0px;
         top: 10px;
-      }
-      h2 {
-        display: inherit;
-        position: relative;
-        &:hover {
-          span {
-            color: $orange;
-          }
-        }
-      }
-      a {
-        &:hover {
-          text-decoration: none;
-        }
+        transform: rotate(-90deg);
+        pointer-events: none;
       }
     }
     .regio--name-small {
@@ -3704,7 +3714,7 @@ th {
         padding: 20px 60px;
         margin: 20px 0px;
         a {
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 34px;
           color: $lightgray;
         }
@@ -3751,7 +3761,7 @@ th {
     padding: 20px 60px;
     margin: 20px 0px;
     a {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 34px;
       color: $lightgray;
     }
@@ -3817,21 +3827,21 @@ th {
   h3 {
     font-family: $muli;
     font-weight: 800;
-    font-size: 18px;
+    font-size: $fontsize;
     line-height: 28px;
     letter-spacing: -0.02em;
     color: $midnight;
   }
   p {
     font-family: $muli;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 28px;
     letter-spacing: -0.02em;
     color: $midnight;
   }
   a {
     font-family: $muli;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 28px;
     letter-spacing: -0.02em;
     color: $midnight;
@@ -3919,7 +3929,7 @@ th {
         }
         a {
           font-weight: 600;
-          font-size: 16px;
+          font-size: $fontsize;
           line-height: 34px;
           color: $midnight;
           &:hover {
@@ -3945,7 +3955,7 @@ th {
     transform: translateY(-50%);
     z-index: 9;
     pointer-events: none;
-    font-size: 16px;
+    font-size: $fontsize;
     line-height: 19px;
     color: $lightgray;
     background: #ffffff;
@@ -4168,7 +4178,7 @@ input:focus {
     a.smll-btn {
       font-family: $muli;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       text-align: right;
       color: $orange;
@@ -4180,7 +4190,7 @@ input:focus {
       }
     }
     .nws--ct {
-      font-size: 16px;
+      font-size: $fontsize;
       color: $lightgray;
       margin-bottom: 5px;
       display: inline-block;
@@ -4197,7 +4207,7 @@ input:focus {
     a {
       font-family: $muli;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       &:hover {
@@ -4327,7 +4337,7 @@ input:focus {
     position: relative;
     z-index: 2;
     p {
-      font-size: 16px;
+      font-size: $fontsize;
       line-height: 32px;
       color: $midnight;
       opacity: 0.8;
@@ -4359,7 +4369,7 @@ input:focus {
         color: $midnight;
       }
       p {
-        font-size: 16px;
+        font-size: $fontsize;
         line-height: 32px;
         color: $midnight;
         opacity: 0.8;
@@ -4369,7 +4379,7 @@ input:focus {
       background: $orange;
       border-radius: 5px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: $fontsize;
       color: #ffffff;
       padding: 6px 18px;
       float: left;
@@ -4894,6 +4904,7 @@ input:focus {
 
 @supports (-ms-ime-align: auto) {
   main {
+    overflow-x: hidden;
     width: calc(-16px + 100vw);
   }
   .mgm .r {

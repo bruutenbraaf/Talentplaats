@@ -13,8 +13,7 @@ body {
   max-width: 100vw; }
 
 main {
-  width: 100vw;
-  overflow-x: hidden; }
+  width: 100vw; }
 
 h2,
 h3,
@@ -34,7 +33,7 @@ a,
   transition: all 0.2s ease-in-out; }
 
 main ul li {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
   color: #2d2d46;
   opacity: 0.8; }
@@ -42,7 +41,7 @@ main ul li {
 .all {
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
   text-decoration-line: underline;
   color: #2d2d46;
@@ -206,7 +205,7 @@ nav {
           font-family: "Muli", sans-serif;
           font-style: normal;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 19px;
           color: #2d2d46;
           margin: 0px 15px;
@@ -562,7 +561,7 @@ nav {
       .header .row .lvh h3 {
         font-family: "Muli", sans-serif;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 28px;
         line-height: 25px;
         color: #ffffff;
         margin-bottom: 0px; }
@@ -571,12 +570,12 @@ nav {
         float: left; }
         .header .row .lvh .inner a {
           color: #ffffff;
-          font-size: 16px;
-          line-height: 20px; }
+          font-size: 18px;
+          line-height: 20px;
+          padding: 10px 0px; }
         .header .row .lvh .inner .item {
           display: flex;
-          align-items: center;
-          height: 38px; }
+          align-items: center; }
       .header .row .lvh .arws {
         margin-left: auto;
         display: flex; }
@@ -593,38 +592,41 @@ nav {
           .header .row .lvh .arws .prev:hover {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 5px; }
-      .header .row .lvh .dots ul {
-        list-style: none;
-        clear: both;
-        display: block;
-        margin: 0px;
-        padding: 0px;
-        margin-top: 14px;
-        margin-left: -14px; }
-        .header .row .lvh .dots ul li {
-          float: left; }
-          .header .row .lvh .dots ul li button {
-            opacity: 0.25;
-            text-indent: -9999px;
-            -webkit-appearance: none;
-            outline: none;
-            border: none;
-            cursor: pointer;
-            max-width: 12px;
-            width: 12px;
-            height: 12px;
-            padding: 0px;
-            background: #fff;
-            border-radius: 999px;
-            margin: 0 14px;
-            box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out; }
-        .header .row .lvh .dots ul .slick-active button {
-          opacity: 0.8;
-          box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15); }
+      .header .row .lvh .dots {
+        display: inline-block;
+        margin-left: -6px; }
+        .header .row .lvh .dots ul {
+          list-style: none;
+          clear: both;
+          display: block;
+          margin: 0px;
+          padding: 0px;
+          margin-top: 14px;
+          margin-left: -8px; }
+          .header .row .lvh .dots ul li {
+            float: left; }
+            .header .row .lvh .dots ul li button {
+              opacity: 1;
+              text-indent: -9999px;
+              -webkit-appearance: none;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              max-width: 12px;
+              width: 12px;
+              height: 12px;
+              padding: 0px;
+              background: #ff6600;
+              border-radius: 999px;
+              margin: 0 8px;
+              box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out; }
+          .header .row .lvh .dots ul .slick-active button {
+            opacity: 1;
+            box-shadow: 0 0 0 6px rgba(255, 102, 0, 0.15); }
     .header .row .lvhi {
       width: 100%; }
       .header .row .lvhi .inner {
@@ -650,12 +652,12 @@ nav {
 .breadcrumbs {
   color: #ffffff;
   font-family: "Muli", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 34px; }
   .breadcrumbs span a {
     color: #ffffff;
     font-family: "Muli", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 34px; }
   .breadcrumbs .seperator {
     width: 14px;
@@ -744,14 +746,14 @@ nav {
             border: 0px;
             color: #2d2d46;
             font-family: "Muli", sans-serif;
-            font-size: 16px;
+            font-size: 18px;
             border-right: 1px solid rgba(146, 144, 183, 0.25); }
             .hpsf .sfv form .uzp-row div[class*="uzp-col"] input::placeholder {
               color: #9290b7;
               font-family: "Muli", sans-serif;
               font-style: normal;
               font-weight: normal;
-              font-size: 16px !important;
+              font-size: 18px !important;
               line-height: 20px; }
           .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
             padding: 0px 25px;
@@ -778,7 +780,7 @@ nav {
     font-family: "Muli", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px; }
   .vkgb a {
     text-decoration: none; }
@@ -800,7 +802,7 @@ nav {
       z-index: 2;
       color: #2d2d46;
       font-weight: 600;
-      font-size: 16px; }
+      font-size: 18px; }
     .vkgb .vkgb--inner svg {
       position: absolute;
       right: 15px;
@@ -844,7 +846,7 @@ nav {
     font-family: "Muli", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px; }
   .edu .edu--items {
     background: #ffffff;
@@ -942,7 +944,7 @@ nav {
     color: #2d2d46;
     opacity: 0.8;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px; }
   .rev .rev--items {
     margin-top: 40px; }
@@ -961,7 +963,7 @@ nav {
           color: #2d2d46; }
         .rev .rev--items .rev--item .rev--content p {
           font-weight: 300;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 32px;
           color: #2d2d46;
           opacity: 0.8; }
@@ -1035,7 +1037,7 @@ nav {
     position: relative;
     z-index: 2; }
     .abh .container p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #2d2d46;
       opacity: 0.8; }
@@ -1066,7 +1068,7 @@ nav {
       stroke: #ff6600; }
 
 .insc p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
   text-align: center;
   color: #2d2d46;
@@ -1104,7 +1106,7 @@ nav {
         color: #2d2d46;
         padding: 10px 0px; }
       .cntrs .cntrs--items .cntrs--item h5 {
-        font-size: 16px;
+        font-size: 18px;
         color: #2d2d46;
         opacity: 0.6; }
 
@@ -1144,17 +1146,17 @@ nav {
       line-height: 24px;
       color: #2d2d46; }
     .lnws .nws--items .nws--item p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #2d2d46;
       opacity: 0.8; }
     .lnws .nws--items .nws--item .nws--ct {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #9290b7; }
     .lnws .nws--items .nws--item .smll-btn {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #2d2d46; }
       .lnws .nws--items .nws--item .smll-btn svg {
@@ -1230,13 +1232,13 @@ nav {
         font-family: "Muli", sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 18px;
         color: #2d2d46; }
         .sollicteer-e .sollicteer-e__inner form input::placeholder {
           font-family: "Muli", sans-serif;
           font-style: normal;
           font-weight: normal;
-          font-size: 16px;
+          font-size: 18px;
           color: #9290b7; }
       .sollicteer-e .sollicteer-e__inner form .setmail {
         height: 64px;
@@ -1362,7 +1364,7 @@ footer {
     padding: 0; }
     footer ul a,
     footer li a {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
       color: #9290b7; }
       footer ul a:hover,
@@ -1444,7 +1446,7 @@ footer {
     position: relative;
     z-index: 2; }
     .int-archive .int-cont p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #2d2d46;
       opacity: 0.8; }
@@ -1500,7 +1502,7 @@ footer {
       .arch-edu .edu--item .edu--inner .edu--arr span {
         color: #ffffff;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 32px;
         opacity: 0;
         margin-right: 15px;
@@ -1653,7 +1655,7 @@ footer {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     color: #2d2d46;
     position: relative; }
     .pagination span:after,
@@ -1770,7 +1772,7 @@ footer {
   border-top: 1px solid #9290b7; }
   .s .int p {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46;
     opacity: 0.8; }
@@ -1799,7 +1801,7 @@ footer {
       font-family: "Muli", sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px; }
     .header-single .inner .edu--inf {
       display: inline-block; }
@@ -1831,7 +1833,7 @@ footer {
     color: #2d2d46;
     opacity: 0.75;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px; }
 .sngl-cnt .fllimg {
   width: 100%;
@@ -1861,20 +1863,24 @@ footer {
         background: #ff6600;
         border-radius: 5px;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
         color: #ffffff;
-        padding: 6px 18px; }
+        padding: 6px 18px;
+        margin-bottom: 20px; }
       .tax-header .inner .cnt h1,
       .tax-header .inner .cnt h2,
       .tax-header .inner .cnt h3,
       .tax-header .inner .cnt h4 {
-        font-size: 32px;
+        font-size: 20px;
+        line-height: 28px;
         padding-top: 30px;
         padding-bottom: calc(30px + 54px);
-        font-weight: 800;
-        color: #ffffff;
+        font-weight: 700;
+        color: #fff;
         box-sizing: border-box;
-        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45); }
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45); }
+      .tax-header .inner .cnt p {
+        color: #ffffff; }
 
 .taxs {
   margin-top: -54px;
@@ -1928,7 +1934,7 @@ footer {
           opacity: 1; }
         .taxs .terms ul li a {
           font-weight: 600;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 34px;
           color: #2d2d46; }
           .taxs .terms ul li a:hover {
@@ -1959,7 +1965,7 @@ footer {
         line-height: 24px;
         color: #2d2d46; }
       .posts .in-post .inf p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 32px;
         color: #2d2d46;
         opacity: 0.8; }
@@ -1967,7 +1973,7 @@ footer {
       background: #ff6600;
       border-radius: 5px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       color: #ffffff;
       padding: 6px 18px;
       float: left;
@@ -1996,13 +2002,15 @@ footer {
 .sngl--content .the--date {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
-  color: #9290b7; }
+  color: #9290b7;
+  display: block;
+  margin-top: 60px; }
 .sngl--content .the-cnt {
   padding-top: 60px; }
 .sngl--content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.02em;
   color: #2d2d46; }
@@ -2219,7 +2227,7 @@ footer {
 .tx-fl {
   padding: 80px 0px; }
   .tx-fl p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46;
     opacity: 0.8; }
@@ -2337,13 +2345,13 @@ footer {
       min-height: 280px;
       background-size: cover; }
   .o-team p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46;
     opacity: 0.8; }
   .o-team .smlli {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46;
     position: relative; }
@@ -2490,7 +2498,7 @@ footer {
         .ovw-vac .arch--vac-item .arch--vac-item-inner .arch--arr span {
           color: #ffffff;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 32px;
           opacity: 0;
           margin-right: 15px;
@@ -2595,7 +2603,7 @@ footer {
   .vac-header .information-vacansie svg path {
     fill: #ff6600; }
   .vac-header .information-vacansie span {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     color: #2d2d46;
     margin-right: 30px; }
@@ -2619,7 +2627,7 @@ footer {
       font-family: "Muli", sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
       color: #2d2d46; }
       .vac-header .inf--vac .posted svg {
@@ -2711,7 +2719,7 @@ footer {
   .vac--inf .description-vacansie p {
     font-family: "Muli", sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46;
     mix-blend-mode: normal;
@@ -2736,7 +2744,7 @@ footer {
         color: #ffffff;
         margin: 0px; }
       .vac--inf .recruiter .contact-person span {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 24px;
         color: #ffffff; }
     .vac--inf .recruiter .cpimg {
@@ -2750,7 +2758,7 @@ footer {
       border-bottom: 1px solid #eeeeee; }
       .vac--inf .recruiter .recruiterinfo h3 {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 32px;
         color: #2d2d46;
         margin: 0; }
@@ -2802,7 +2810,7 @@ footer {
       font-family: "Muli", sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #9290b7; }
   .app-form .uzp input[type="file"] {
@@ -2813,7 +2821,7 @@ footer {
     font-family: "Muli", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     padding: 15px 30px;
     height: auto; }
@@ -2895,22 +2903,22 @@ th {
     background-repeat: no-repeat; }
 .regi .regio {
   border-bottom: 1px solid #cfcedf;
-  padding-bottom: 20px;
   margin-bottom: 20px; }
   .regi .regio .regio--name {
     position: relative;
     cursor: pointer; }
+    .regi .regio .regio--name a {
+      display: block;
+      text-decoration: none;
+      padding-bottom: 20px; }
+      .regi .regio .regio--name a:hover h2 span {
+        color: #ff6600; }
     .regi .regio .regio--name svg {
       position: absolute;
       right: 0px;
-      top: 10px; }
-    .regi .regio .regio--name h2 {
-      display: inherit;
-      position: relative; }
-      .regi .regio .regio--name h2:hover span {
-        color: #ff6600; }
-    .regi .regio .regio--name a:hover {
-      text-decoration: none; }
+      top: 10px;
+      transform: rotate(-90deg);
+      pointer-events: none; }
   .regi .regio .regio--name-small h2 {
     font-size: 22px; }
   .regi .regio .branches {
@@ -2921,7 +2929,7 @@ th {
       padding: 20px 60px;
       margin: 20px 0px; }
       .regi .regio .branches .inner a {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 34px;
         color: #9290b7; }
 .regi .regio--heading {
@@ -2951,7 +2959,7 @@ th {
   padding: 20px 60px;
   margin: 20px 0px; }
   .brnch .overview a {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 34px;
     color: #9290b7; }
 
@@ -3003,13 +3011,13 @@ th {
   color: #2d2d46; }
 .cntc--inf p {
   font-family: "Muli", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.02em;
   color: #2d2d46; }
 .cntc--inf a {
   font-family: "Muli", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.02em;
   color: #2d2d46; }
@@ -3078,7 +3086,7 @@ th {
           opacity: 1; }
         .contact .cntct-ofs ul li a {
           font-weight: 600;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 34px;
           color: #2d2d46; }
           .contact .cntct-ofs ul li a:hover {
@@ -3095,7 +3103,7 @@ th {
     transform: translateY(-50%);
     z-index: 9;
     pointer-events: none;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
     color: #9290b7;
     background: #ffffff;
@@ -3278,7 +3286,7 @@ input:focus {
     .mgm .news-nav a.smll-btn {
       font-family: "Muli", sans-serif;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       text-align: right;
       color: #ff6600; }
@@ -3287,7 +3295,7 @@ input:focus {
         .mgm .news-nav a.smll-btn:hover svg {
           margin-left: 5px; }
     .mgm .news-nav .nws--ct {
-      font-size: 16px;
+      font-size: 18px;
       color: #9290b7;
       margin-bottom: 5px;
       display: inline-block; }
@@ -3300,7 +3308,7 @@ input:focus {
   .mgm .mgm--nav a {
     font-family: "Muli", sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     color: #2d2d46; }
     .mgm .mgm--nav a:hover {
@@ -3447,7 +3455,7 @@ input:focus {
     position: relative;
     z-index: 2; }
     .posts-n .int-cont p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 32px;
       color: #2d2d46;
       opacity: 0.8; }
@@ -3471,7 +3479,7 @@ input:focus {
         line-height: 24px;
         color: #2d2d46; }
       .posts-n .in-post .inf p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 32px;
         color: #2d2d46;
         opacity: 0.8; }
@@ -3479,7 +3487,7 @@ input:focus {
       background: #ff6600;
       border-radius: 5px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       color: #ffffff;
       padding: 6px 18px;
       float: left;
@@ -3931,6 +3939,7 @@ input:focus {
 
 @supports (-ms-ime-align: auto) {
   main {
+    overflow-x: hidden;
     width: calc(-16px + 100vw); }
 
   .mgm .r {
