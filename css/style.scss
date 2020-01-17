@@ -319,7 +319,7 @@ nav {
           height: 20px;
           position: absolute;
           top: -20px;
-          left:0px;
+          left: 0px;
         }
         li {
           width: 100%;
@@ -4636,6 +4636,10 @@ input:focus {
 }
 
 @media (max-width: 992px) {
+  main {
+    width: 100vw;
+    overflow: hidden;
+  }
   .fw {
     padding: 0px 15px;
   }
@@ -4940,7 +4944,7 @@ input:focus {
   .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
     padding: 15px 25px;
   }
-  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="postal_code"]{
+  .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="postal_code"] {
     padding: 15px 0px;
   }
   .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="radius"] {

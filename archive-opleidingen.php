@@ -121,8 +121,6 @@ get_header(); ?>
         </div>
     </section>
 <?php } ?>
-
-
 <?php if (get_field('opleidingen_overzicht_seo', 'option')) { ?>
     <section class="s">
         <div class="container">
@@ -136,5 +134,4 @@ get_header(); ?>
         </div>
     </section>
 <?php } ?>
-
 <?php get_footer(); ?>

@@ -3703,6 +3703,10 @@ input:focus {
   margin: 0px !important; }
 
 @media (max-width: 992px) {
+  main {
+    width: 100vw;
+    overflow: hidden; }
+
   .fw {
     padding: 0px 15px; }
 
