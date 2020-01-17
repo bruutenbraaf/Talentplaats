@@ -418,6 +418,8 @@ table {
   border: 1px solid #2d2d46; }
   table tr {
     border: 1px solid #2d2d46; }
+    table tr:nth-child(odd) {
+      background: #e1e1e8; }
 
 .fw {
   max-width: 100vw;
