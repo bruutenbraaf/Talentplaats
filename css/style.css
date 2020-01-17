@@ -418,8 +418,8 @@ table {
   border: 1px solid #2d2d46; }
   table tr {
     border: 1px solid #2d2d46; }
-    table tr:nth-child(odd) {
-      background: #ffffff; }
+    table tr:nth-child(even) {
+      background: #e7e7f5; }
 
 .fw {
   max-width: 100vw;

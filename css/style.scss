@@ -528,8 +528,8 @@ table {
   border: 1px solid $midnight;
   tr {
     border: 1px solid $midnight;
-    &:nth-child(odd) {
-      background: #ffffff;
+    &:nth-child(even) {
+      background: #e7e7f5;
     }
   }
 }
