@@ -4043,7 +4043,7 @@ th {
 .c--socials {
   a {
     margin-right: 32px;
-    float:left;
+    float: left;
     &:hover {
       text-decoration: none;
       svg {
@@ -4465,6 +4465,80 @@ input:focus {
   &:hover:after {
     left: -6px !important;
   }
+}
+
+.ltsts {
+  padding: 10px 40px;
+  .last-title {
+    display: block;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $midnight;
+    margin-right: 20px;
+  }
+  .item {
+    &:focus,
+    &:hover {
+      outline: none !important;
+    }
+    a {
+      color: $blue;
+      transition: ease-in-out 0.2s;
+      &:hover,
+      &:focus {
+        color: $orange;
+        outline: none;
+      }
+    }
+  }
+  .dots {
+    display: inline-block;
+    margin-left: -6px;
+    ul {
+      list-style: none;
+      clear: both;
+      display: block;
+      margin: 0px;
+      padding: 0px;
+      margin-top: 14px;
+      margin-left: -8px;
+      li {
+        float: left;
+        button {
+          opacity: 1;
+          text-indent: -9999px;
+          -webkit-appearance: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          max-width: 12px;
+          width: 12px;
+          height: 12px;
+          padding: 0px;
+          background: $orange;
+          border-radius: 999px;
+          margin: 0 8px;
+          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .slick-active {
+        button {
+          opacity: 1;
+          box-shadow: 0 0 0 6px rgba($orange, 0.15);
+        }
+      }
+    }
+  }
+}
+
+.slick-slide {
+  outline: none !important;
 }
 
 @media (max-width: 1366px) {

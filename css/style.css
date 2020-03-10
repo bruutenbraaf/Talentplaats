@@ -3553,6 +3553,63 @@ input:focus {
 .h--open:hover:after {
   left: -6px !important; }
 
+.ltsts {
+  padding: 10px 40px; }
+  .ltsts .last-title {
+    display: block;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #2d2d46;
+    margin-right: 20px; }
+  .ltsts .item:focus, .ltsts .item:hover {
+    outline: none !important; }
+  .ltsts .item a {
+    color: #1772dd;
+    transition: ease-in-out 0.2s; }
+    .ltsts .item a:hover, .ltsts .item a:focus {
+      color: #ff6600;
+      outline: none; }
+  .ltsts .dots {
+    display: inline-block;
+    margin-left: -6px; }
+    .ltsts .dots ul {
+      list-style: none;
+      clear: both;
+      display: block;
+      margin: 0px;
+      padding: 0px;
+      margin-top: 14px;
+      margin-left: -8px; }
+      .ltsts .dots ul li {
+        float: left; }
+        .ltsts .dots ul li button {
+          opacity: 1;
+          text-indent: -9999px;
+          -webkit-appearance: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          max-width: 12px;
+          width: 12px;
+          height: 12px;
+          padding: 0px;
+          background: #ff6600;
+          border-radius: 999px;
+          margin: 0 8px;
+          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+      .ltsts .dots ul .slick-active button {
+        opacity: 1;
+        box-shadow: 0 0 0 6px rgba(255, 102, 0, 0.15); }
+
+.slick-slide {
+  outline: none !important; }
+
 @media (max-width: 1366px) {
   nav .row .main--nav,
   nav .row .d-lex {

@@ -26,31 +26,6 @@ get_header(); ?>
                         <div class="col-md-12 col-lg-6 d-flex align-items-center lvh">
                             <?php if (have_rows('content_rechts')) : ?>
                                 <?php while (have_rows('content_rechts')) : the_row(); ?>
-                                    <div class="block col-md-12 offset-md-0 offset-lg-1 col-lg-11">
-                                        <h3><?php the_sub_field('titel'); ?></h3>
-                                        <div class="lvhi">
-                                            <div class="inner">
-                                                <?php echo do_shortcode('[uitzendplaats_latest_vacancies]'); ?>
-                                            </div>
-                                            <div class="dots">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script>
-                                        jQuery(document).ready(function() {
-                                            jQuery('.lvhi .inner').slick({
-                                                infinite: true,
-                                                slidesToShow: 1,
-                                                slidesToScroll: 1,
-                                                fade: true,
-                                                dots: true,
-                                                prevArrow: jQuery('.prev'),
-                                                nextArrow: jQuery('.next'),
-                                                appendDots: jQuery(".dots"),
-                                                adaptiveHeight: true,
-                                            });
-                                        });
-                                    </script>
                                     <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
                                     <div class="imghdr" <?php if ($achtergrond_afbeelding) { ?> style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['home']; ?>);" <?php } ?>>
                                     </div>
@@ -68,6 +43,37 @@ get_header(); ?>
                                 <?php echo do_shortcode('[uitzendplaats_vacancy_search]'); ?>
                             </div>
                         </div>
+                        <div class="col-lg-10 d-md-flex flex-fill align-items-center ltsts">
+                            <span class="last-title"><?php _e("Laatste vacature's:","talentplaats")?></span>
+                            <div class="last-viewed">
+                                <div class="item" v-for="company in companies.slice(0, 3)">
+                                    <div class="inner align-items-center d-flex">
+                                        <div class="itms">
+                                            <?php echo do_shortcode('[uitzendplaats_latest_vacancies]'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-lg-2 justify-content-end d-flex align-items-center ltsts">
+                            <div class="dots">
+                            </div>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function() {
+                                jQuery('.itms').slick({
+                                    infinite: true,
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                    fade: true,
+                                    dots: true,
+                                    prevArrow: jQuery('.prev'),
+                                    nextArrow: jQuery('.next'),
+                                    appendDots: jQuery(".dots"),
+                                    adaptiveHeight: true,
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </section>
