@@ -49,13 +49,6 @@
                             </div>
                         <?php endif; ?>
                     </div>
-                    <div class="mg_nav hamburger">
-                        <div>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
                 </div>
                 <div class="mobnav">
                     <div>
