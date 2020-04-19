@@ -55,7 +55,7 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2 col-lg-2 justify-content-start justify-md-content-end d-flex align-items-center ltsts">
+                        <div class="col-lg-2 col-md-12 justify-content-start justify-md-content-end d-flex align-items-center ltsts">
                             <div class="dots">
                             </div>
                         </div>
