@@ -3595,7 +3595,7 @@ input:focus {
           width: 12px;
           height: 12px;
           padding: 0px;
-          background: #ff6600;
+          background: #1772dd;
           border-radius: 999px;
           margin: 0 8px;
           box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.15);
@@ -3605,7 +3605,7 @@ input:focus {
           transition: all 0.3s ease-in-out; }
       .ltsts .dots ul .slick-active button {
         opacity: 1;
-        box-shadow: 0 0 0 6px rgba(255, 102, 0, 0.15); }
+        box-shadow: 0 0 0 6px rgba(23, 114, 221, 0.15); }
 
 .slick-slide {
   outline: none !important; }
@@ -3761,6 +3761,18 @@ input:focus {
   margin: 0px !important; }
 
 @media (max-width: 992px) {
+  .ltsts {
+    padding-top: 30px; }
+    .ltsts .dots ul {
+      padding-top: 0px;
+      margin-top: -15px;
+      margin-left: 5px; }
+
+  .header .row .lvh {
+    display: none !important; }
+  .header:before {
+    min-height: 100% !important; }
+
   main {
     width: 100vw;
     overflow: hidden; }
