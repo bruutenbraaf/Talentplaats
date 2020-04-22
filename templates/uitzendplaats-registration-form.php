@@ -333,18 +333,17 @@
 					</fieldset>
 					<div class="uzp__form-group">
 						<button type="submit">
-							<?php _e('Send', 'uitzendplaats'); ?>
+							<?php _e('Versturen', 'uitzendplaats'); ?>
 						</button>
 					</div>
 				</div>
 			</div>
 
-			<div style="overflow:auto;">
-				<div style="float:right;">
-					<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-					<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-				</div>
+			<div class="d-flex justify-content-between f-btn">	
+					<button type="button" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
+					<button type="button" id="nextBtn" onclick="nextPrev(1)">Volgende</button>
 			</div>
+
 			<!-- Circles which indicates the steps of the form: -->
 			<div style="text-align:center;margin-top:40px;">
 				<span class="step"></span>

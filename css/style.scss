@@ -35,6 +35,9 @@ body {
 
 main {
   width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 h2,
@@ -1683,7 +1686,6 @@ $formmargin: 110px;
     color: $midnight !important;
   }
   [class*="uzp-col"] {
-    width: 100% !important;
     border: none !important;
   }
   .uzp__panel {
@@ -1702,6 +1704,28 @@ $formmargin: 110px;
   select.invalid {
     border: 1px #f78484 solid !important;
     background: #ffcece !important;
+  }
+}
+
+.f-btn {
+  #prevBtn,
+  #nextBtn {
+    width: initial;
+  }
+  #nextBtn {
+    margin-left: auto;
+  }
+}
+
+.select2-selection__rendered {
+  height: 2.3em;
+  input {
+    width: 0.75em;
+    height: 2em;
+    max-height: 1em;
+    line-height: initial;
+    padding: 15px 20px !important;
+    margin: 5px 0px;
   }
 }
 

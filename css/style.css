@@ -13,7 +13,10 @@ body {
   max-width: 100vw; }
 
 main {
-  width: 100vw; }
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 h2,
 h3,
@@ -1338,7 +1341,6 @@ table {
   line-height: 34px !important;
   color: #2d2d46 !important; }
 .uzp__registration-wrap [class*="uzp-col"] {
-  width: 100% !important;
   border: none !important; }
 .uzp__registration-wrap .uzp__panel {
   box-shadow: none !important;
@@ -1353,6 +1355,22 @@ table {
 .uzp__registration-wrap select.invalid {
   border: 1px #f78484 solid !important;
   background: #ffcece !important; }
+
+.f-btn #prevBtn,
+.f-btn #nextBtn {
+  width: initial; }
+.f-btn #nextBtn {
+  margin-left: auto; }
+
+.select2-selection__rendered {
+  height: 2.3em; }
+  .select2-selection__rendered input {
+    width: 0.75em;
+    height: 2em;
+    max-height: 1em;
+    line-height: initial;
+    padding: 15px 20px !important;
+    margin: 5px 0px; }
 
 footer {
   background: #ffffff;
