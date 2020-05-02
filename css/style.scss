@@ -1613,9 +1613,6 @@ $formmargin: 110px;
   margin-bottom: 120px;
 }
 
-.uzp__panel {
-  display: none;
-}
 
 #prevBtn {
   display: none;
@@ -1717,16 +1714,20 @@ $formmargin: 110px;
   }
 }
 
-.select2-selection__rendered {
-  height: 2.3em;
-  input {
-    width: 0.75em;
-    height: 2em;
-    max-height: 1em;
-    line-height: initial;
-    padding: 15px 20px !important;
-    margin: 5px 0px;
-  }
+.uzp select, .uzp__select {
+  height: 3.3em !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  height: 2.3em !important;
+}
+
+.uzp__registration-wrap .uzp a.uzp-button, .uzp__registration-wrap .uzp button, .uzp__registration-wrap .uzp input[type=button], .uzp__registration-wrap .uzp input[type=submit] {
+  width: auto;
+}
+
+button.uzp-button--large {
+  width: 100% !important;
 }
 
 // Footer
