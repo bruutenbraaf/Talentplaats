@@ -10,13 +10,32 @@
 
 body {
   background: #f5f5fa;
-  max-width: 100vw; }
+  max-width: 100%; }
 
 main {
-  width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll; }
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; }
+
+.mgm::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
+/* Optional: show position indicator in red */
+.mgm::-webkit-scrollbar-thumb {
+  background: #FF0000; }
+
+section::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
+/* Optional: show position indicator in red */
+section::-webkit-scrollbar-thumb {
+  background: #FF0000; }
 
 h2,
 h3,
@@ -132,7 +151,7 @@ nav {
   top: 0;
   left: 0;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
@@ -426,7 +445,7 @@ table {
       background: #e7e7f5; }
 
 .fw {
-  max-width: 100vw;
+  max-width: 100%;
   padding: 0px 30px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -468,7 +487,7 @@ table {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: scroll;
   z-index: 9;
@@ -529,7 +548,7 @@ table {
       content: "";
       background: #1772dd;
       position: absolute;
-      z-index: -1;
+      z-index: 0;
       height: 100%;
       width: 50vw;
       right: 0px;
@@ -941,7 +960,7 @@ table {
         .edu a:hover .edu--item .edu--arr svg {
           stroke: #ffffff; }
   .edu svg.bg {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     height: 100%;
     margin-left: -100px;
     position: absolute;
@@ -1067,7 +1086,7 @@ table {
     border-radius: 0px 5px 5px 0px;
     padding: 70px 50px; }
   .abh svg.li {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -1088,7 +1107,7 @@ table {
 .cntrs {
   position: relative; }
   .cntrs svg.li {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -1127,7 +1146,7 @@ table {
   position: relative;
   overflow: hidden; }
   .sch svg.bg {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     max-height: 100%;
     position: absolute;
     top: 0;
@@ -1138,7 +1157,7 @@ table {
   overflow: hidden;
   margin: 30px 0px; }
   .scht svg {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     margin-left: -100px; }
     .scht svg path {
       stroke-width: 34; }
@@ -1359,13 +1378,17 @@ table {
 .f-btn #nextBtn {
   margin-left: auto; }
 
-.uzp select, .uzp__select {
+.uzp select,
+.uzp__select {
   height: 3.3em !important; }
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {
   height: 2.3em !important; }
 
-.uzp__registration-wrap .uzp a.uzp-button, .uzp__registration-wrap .uzp button, .uzp__registration-wrap .uzp input[type=button], .uzp__registration-wrap .uzp input[type=submit] {
+.uzp__registration-wrap .uzp a.uzp-button,
+.uzp__registration-wrap .uzp button,
+.uzp__registration-wrap .uzp input[type="button"],
+.uzp__registration-wrap .uzp input[type="submit"] {
   width: auto; }
 
 button.uzp-button--large {
@@ -2274,11 +2297,11 @@ footer {
   background-size: cover; }
 
 .o-team {
-  width: 100vw;
+  width: 100%;
   position: relative; }
   .o-team .arrows {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 280px;
     top: 0px;
     z-index: 12; }
@@ -2404,7 +2427,7 @@ footer {
   margin-bottom: 60px;
   margin-top: -160px; }
   .sngl-abh svg {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     max-height: 100%;
     position: absolute;
     top: 0;
@@ -2572,7 +2595,7 @@ footer {
   position: relative;
   overflow: hidden; }
   .vacansie-view svg.bg {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     max-height: 100%;
     position: absolute;
     top: 0;
@@ -2678,7 +2701,7 @@ footer {
   pointer-events: none;
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 8888;
   top: 0;
   left: 0;
@@ -2709,7 +2732,7 @@ footer {
   .modal-bx .overlay {
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
     top: 0;
@@ -3012,7 +3035,7 @@ th {
       .members .member a:hover h3 {
         color: #ff6600; }
   .members svg.li {
-    width: calc(100vw + 200px);
+    width: calc(100% + 200px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -3196,7 +3219,7 @@ th {
       fill: #2d2d46; }
 
 .fllimg {
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   background-size: cover;
   background-position: center center; }
@@ -3258,7 +3281,7 @@ input:focus {
 .mgm {
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   top: 0;
@@ -3648,7 +3671,7 @@ input:focus {
 
   .mobile-nav {
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 0vh;
     pointer-events: none;
     background: #1772dd;
@@ -3791,7 +3814,7 @@ input:focus {
     min-height: 100% !important; }
 
   main {
-    width: 100vw;
+    width: 100%;
     overflow: hidden; }
 
   .fw {
@@ -3801,7 +3824,7 @@ input:focus {
     padding: 30px 15px; }
 
   .header .imghdr {
-    width: 100vw;
+    width: 100%;
     left: 0px;
     position: absolute;
     background-size: cover; }
@@ -3810,7 +3833,7 @@ input:focus {
     margin-right: 30px; }
 
   .container {
-    max-width: 100vw; }
+    max-width: 100%; }
 
   nav .row .main_nav,
   nav .row .mg_nav {
@@ -3866,7 +3889,7 @@ input:focus {
         padding: 80px 15px 60px 15px;
         width: 100% !important;
         flex: 100% !important;
-        max-width: 100vw !important; }
+        max-width: 100% !important; }
         .header .row .int:after {
           display: none; }
       .header .row .block {
@@ -3981,7 +4004,7 @@ input:focus {
   .header-single .imghdr {
     position: relative;
     height: 50vw;
-    width: 100vw;
+    width: 100%;
     margin-left: -15px; } }
 .nav-ct {
   width: 0%;
@@ -4039,7 +4062,7 @@ input:focus {
 @supports (-ms-ime-align: auto) {
   main {
     overflow-x: hidden;
-    width: calc(-16px + 100vw); }
+    width: calc(-16px + 100%); }
 
   .mgm .r {
     left: calc(50vw - 16px); }
@@ -4052,10 +4075,10 @@ input:focus {
 @-moz-document url-prefix() {
   main {
     overflow-x: hidden;
-    width: calc(-17px + 100vw); }
+    width: calc(-17px + 100%); }
 
   .header {
-    width: 100vw; }
+    width: 100%; }
 
   .hpsf .sfv form .uzp-row div[class*="uzp-col"] input[name="query"] {
     padding: 15px 25px; }
