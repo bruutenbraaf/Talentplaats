@@ -828,7 +828,7 @@ table {
     }
   }
   .imghdr {
-    width: 50vw;
+    width: 50%;
     height: 100%;
     position: absolute;
     right: 0px;
@@ -2323,7 +2323,7 @@ $padding-edu: 20px;
     position: absolute;
     right: 0px;
     height: 100%;
-    width: 30vw;
+    width: 30%;
     top: 0;
     background-size: cover;
   }
@@ -4988,7 +4988,7 @@ input:focus {
   }
   .header-single .imghdr {
     position: relative;
-    height: 50vw;
+    height: 50%;
     width: 100%;
     margin-left: -15px;
   }
