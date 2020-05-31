@@ -196,14 +196,6 @@
 					<p><?php _e('The vacancy that you were looking for could not be found', 'uitzendplaats'); ?></p>
 				</div>
 			<?php } ?>
-			<script>
-				jQuery('p.description').readmore({
-					speed: 75,
-					collapsedHeight: 155,
-					moreLink: '<a class="readmore" href="#">Lees meer</a>',
-					lessLink: '<a class="readmore" href="#">Verbergen</a>'
-				});
-			</script>
 			<div class="container app-form" id="apply">
 				<div class="row">
 					<div class="col-md-12">
