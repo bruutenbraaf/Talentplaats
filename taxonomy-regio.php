@@ -579,10 +579,11 @@ $term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
                             <div class="regio--name regio--name-small">
                                 <a href="<?php echo $term_link ?>">
                                     <h2><?php _e('Regio', 'talentplaats'); ?> <span><?php echo $term->name; ?></span></h2>
+
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </a>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="#2D2D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
                             </div>
                             <div class="branches">
                                 <div class="inner">
