@@ -36,27 +36,26 @@ body {
 main {
   width: 100%;
   max-width: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .mgm::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 .mgm::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #ff0000;
 }
 
 section::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 section::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #ff0000;
 }
-
 
 h2,
 h3,

@@ -25,7 +25,7 @@ main {
 
 /* Optional: show position indicator in red */
 .mgm::-webkit-scrollbar-thumb {
-  background: #FF0000; }
+  background: #ff0000; }
 
 section::-webkit-scrollbar {
   width: 0px;
@@ -35,7 +35,7 @@ section::-webkit-scrollbar {
 
 /* Optional: show position indicator in red */
 section::-webkit-scrollbar-thumb {
-  background: #FF0000; }
+  background: #ff0000; }
 
 h2,
 h3,
